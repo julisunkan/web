@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>What is Footprinting and Reconnaissance?</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="http://use.fontawesome.com">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../../../../feed/index.html">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"..\/..\/..\/..\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../wp-includes/css/dist/block-library/style.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="my-custom-block-frontend-css-css" href="../../../../wp-content/plugins/wpdm-gutenberg-blocks/build/style.css?ver=6.7" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="wpdm-font-awesome-css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdm-front-bootstrap-css" href="../../../../wp-content/plugins/download-manager/assets/bootstrap/css/bootstrap.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdm-front-css" href="../../../../wp-content/plugins/download-manager/assets/css/front.css?ver=6.7" media="all">
+<link rel="stylesheet" id="Rich_Web_Tabs-css" href="../../../../wp-content/plugins/tabbed//Style/Tabs-Rich-Web-Widget.css?ver=6.7" media="all">
+<link rel="stylesheet" id="rwtabs_fontawesome-css-css" href="../../../../wp-content/plugins/tabbed//Style/richwebicons.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdmpp-front-css" href="../../../../wp-content/plugins/wpdm-premium-packages/assets/css/wpdmpp.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wordpress-popular-posts-css-css" href="../../../../wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.4.0" media="all">
+<link rel="stylesheet" id="phnewsfeed-style-css" href="../../../../wp-content/themes/ph-news-feed/style.css?ver=1.0.1.1" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="../../../../wp-content/themes/ph-news-feed/lib/bootstrap/bootstrap.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="../../../../wp-content/themes/ph-news-feed/lib/font-awesome/css/all.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="acme-ticker-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/acmeticker/css/style.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="owl-carousel-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/assets/owl.carousel.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="owl-carousel-theme-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/assets/owl.theme.default.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="sidr-dark-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/sidr/stylesheets/jquery.sidr.dark.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-primary-font-css" href="http://fonts.googleapis.com/css2?family=Quicksand%3Awght%40100%3B200%3B300%3B400%3B500%3B600%3B700%3B900&amp;display=swap&amp;ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-secondary-font-css" href="http://fonts.googleapis.com/css2?family=Oswald%3Awght%40300%3B400%3B500%3B600%3B700&amp;display=swap&amp;ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-core-css" href="../../../../wp-content/themes/ph-news-feed/design-files/core/core.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-header-css" href="../../../../wp-content/themes/ph-news-feed/design-files/header/style3/header.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-blog-style1-css" href="../../../../wp-content/themes/ph-news-feed/design-files/blog-style/blog-style1.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-single-css" href="../../../../wp-content/themes/ph-news-feed/design-files/single/single.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-sidebar-css" href="../../../../wp-content/themes/ph-news-feed/design-files/sidebar/sidebar.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-footer-css" href="../../../../wp-content/themes/ph-news-feed/design-files/footer/footer.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-featured-modules-css" href="../../../../wp-content/themes/ph-news-feed/design-files/featured-modules/featured-modules.css?ver=6.7" media="all">
+<style id="posts-table-pro-head-inline-css">
+.posts-data-table { visibility: hidden; }
+</style>
+<script src="../../../../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="../../../../wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0" id="jquery-form-js"></script>
+<script src="../../../../wp-content/plugins/download-manager/assets/bootstrap/js/bootstrap.bundle.min.js?ver=6.7" id="wpdm-front-bootstrap-js"></script>
+<script id="wpdm-frontjs-js-extra">
+var wpdm_url = {"home":"..\/..\/..\/..\/index.html","site":"..\/..\/..\/..\/index.html","ajax":"..\/..\/..\/..\/wp-admin\/admin-ajax.php"};
+var wpdm_js = {"spinner":"<i class=\"fas fa-sun fa-spin\"><\/i>"};
+</script>
+<script src="../../../../wp-content/plugins/download-manager/assets/js/front.js?ver=6.1.0" id="wpdm-frontjs-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect.min.js?ver=1.13.3" id="jquery-effects-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-blind.min.js?ver=1.13.3" id="jquery-effects-blind-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-bounce.min.js?ver=1.13.3" id="jquery-effects-bounce-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-clip.min.js?ver=1.13.3" id="jquery-effects-clip-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-drop.min.js?ver=1.13.3" id="jquery-effects-drop-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-explode.min.js?ver=1.13.3" id="jquery-effects-explode-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-fade.min.js?ver=1.13.3" id="jquery-effects-fade-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-fold.min.js?ver=1.13.3" id="jquery-effects-fold-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.13.3" id="jquery-effects-highlight-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-pulsate.min.js?ver=1.13.3" id="jquery-effects-pulsate-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-size.min.js?ver=1.13.3" id="jquery-effects-size-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-scale.min.js?ver=1.13.3" id="jquery-effects-scale-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.13.3" id="jquery-effects-shake-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.13.3" id="jquery-effects-slide-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-puff.min.js?ver=1.13.3" id="jquery-effects-puff-js"></script>
+<script id="Rich_Web_Tabs-js-extra">
+var rwtabs_object = {"ajaxurl":"..\/..\/..\/..\/wp-admin\/admin-ajax.php"};
+</script>
+<script src="../../../../wp-content/plugins/tabbed//Scripts/Tabs-Rich-Web-Widget.js?ver=6.7" id="Rich_Web_Tabs-js"></script>
+<script src="../../../../wp-content/plugins/wpdm-premium-packages/assets/js/wpdmpp-front.js?ver=6.7" id="wpdm-pp-js-js"></script>
+<script id="wpp-json" type="application/json">
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"..\/..\/..\/..\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/index.html","api_url":"..\/..\/..\/..\/wp-json\/wordpress-popular-posts\/index.html","ID":8838,"token":"64a95df02c","lang":0,"debug":0}
+</script>
+<script src="../../../../wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=6.4.0" id="wpp-js-js"></script>
+<link rel="https://api.w.org/" href="../../../../wp-json/index.html"><link rel="alternate" title="JSON" type="application/json" href="../../../../wp-json/wp/v2/posts/8838/index.html"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7">
+<link rel="canonical" href="">
+<link rel="shortlink" href="../../../../index.html?p=8838">
+		<script type="text/javascript">
+			//<![CDATA[
+			var show_msg = '';
+			if (show_msg !== '0') {
+				var options = {view_src: "View Source is disabled!", inspect_elem: "Inspect Element is disabled!", right_click: "Right click is disabled!", copy_cut_paste_content: "Cut/Copy/Paste is disabled!", image_drop: "Image Drag-n-Drop is disabled!" }
+			} else {
+				var options = '';
+			}
+
+         	function nocontextmenu(e) { return false; }
+         	document.oncontextmenu = nocontextmenu;
+         	document.ondragstart = function() { return false;}
+
+			document.onmousedown = function (event) {
+				event = (event || window.event);
+				if (event.keyCode === 123) {
+					if (show_msg !== '0') {show_toast('inspect_elem');}
+					return false;
+				}
+			}
+			document.onkeydown = function (event) {
+				event = (event || window.event);
+				//alert(event.keyCode);   return false;
+				if (event.keyCode === 123 ||
+						event.ctrlKey && event.shiftKey && event.keyCode === 73 ||
+						event.ctrlKey && event.shiftKey && event.keyCode === 75) {
+					if (show_msg !== '0') {show_toast('inspect_elem');}
+					return false;
+				}
+				if (event.ctrlKey && event.keyCode === 85) {
+					if (show_msg !== '0') {show_toast('view_src');}
+					return false;
+				}
+			}
+			function addMultiEventListener(element, eventNames, listener) {
+				var events = eventNames.split(' ');
+				for (var i = 0, iLen = events.length; i < iLen; i++) {
+					element.addEventListener(events[i], function (e) {
+						e.preventDefault();
+						if (show_msg !== '0') {
+							show_toast(listener);
+						}
+					});
+				}
+			}
+			addMultiEventListener(document, 'contextmenu', 'right_click');
+			addMultiEventListener(document, 'cut copy paste print', 'copy_cut_paste_content');
+			addMultiEventListener(document, 'drag drop', 'image_drop');
+			function show_toast(text) {
+				var x = document.getElementById("amm_drcfw_toast_msg");
+				x.innerHTML = eval('options.' + text);
+				x.className = "show";
+				setTimeout(function () {
+					x.className = x.className.replace("show", "")
+				}, 3000);
+			}
+		//]]>
+		</script>
+		<style type="text/css">body * :not(input):not(textarea){user-select:none !important; -webkit-touch-callout: none !important;  -webkit-user-select: none !important; -moz-user-select:none !important; -khtml-user-select:none !important; -ms-user-select: none !important;}#amm_drcfw_toast_msg{visibility:hidden;min-width:250px;margin-left:-125px;background-color:#333;color:#fff;text-align:center;border-radius:2px;padding:16px;position:fixed;z-index:999;left:50%;bottom:30px;font-size:17px}#amm_drcfw_toast_msg.show{visibility:visible;-webkit-animation:fadein .5s,fadeout .5s 2.5s;animation:fadein .5s,fadeout .5s 2.5s}@-webkit-keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@-webkit-keyframes fadeout{from{bottom:30px;opacity:1}to{bottom:0;opacity:0}}@keyframes fadeout{from{bottom:30px;opacity:1}to{bottom:0;opacity:0}}</style>
+		<style>/* CSS added by WP Meta and Date Remover*/.wp-block-post-author__name{display:none !important;}
+.wp-block-post-date{display:none !important;}
+ .entry-meta {display:none !important;}
+	.home .entry-meta { display: none; }
+	.entry-footer {display:none !important;}
+	.home .entry-footer { display: none; }</style>    <script>
+        var wpdmpp_base_url = '../../../../wp-content/plugins/wpdm-premium-packages/index.html';
+        var wpdmpp_currency_sign = '$';
+        var wpdmpp_csign_before = '$';
+        var wpdmpp_csign_after = '';
+        var wpdmpp_currency_code = 'USD';
+        var wpdmpp_cart_url = '<br />
+<b>Warning:  Trying to access array offset on value of type bool in <b>C:\xampp\htdocs\wp-content\plugins\wpdm-premium-packages\includes\libs\functions.php on line <b>412<br />
+';
+
+        var wpdmpp_txt = {"cart_button_label":"<i class=\"fas fa-shopping-basket mr-2\"><\/i>Add To Cart","pay_now":"Complete Purchase","checkout_button_label":"Complete Purchase"};
+
+    </script>
+    <style>p.wpdmpp-notice {
+            margin: 5px;
+        }
+    .wpbtn-success {
+        color: var(--color-success) !important;border-color: var(--color-success ) !important;
+        background: rgba(var(--color-success-rgb),0.03) !important;
+        transition: all ease-in-out 300ms;
+    }
+        .wpbtn-success:active,
+        .wpbtn-success:hover {
+            color: var(--color-success-active) !important;
+            border-color: var(--color-success-active) !important;
+            background: rgba(var(--color-success-rgb),0.07) !important;
+        }
+    </style>
+                <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+             <style>
+ 	:root {
+		 --phnewsfeed-primary: #eded42;
+		 --phnewsfeed-primary-text: #000000;
+		 --phnewsfeed-background-main: #ffffff;
+		 --phnewsfeed-background-darker: #d6c5e2;
+		 
+		 --phnewsfeed-secondary: #1e73be;
+		 --phnewsfeed-secondary-text: #FFFFFF;
+		 --phnewsfeed-secondary-dark: #0e6bd6;
+		 
+		 --phnewsfeed-text-dark: #111;
+		 --phnewsfeed-text: #555;
+		 --phnewsfeed-text-light: #777;
+		 
+		 --phnewsfeed-header-background: #000000;
+		 --phnewsfeed-header-text: #FFFFFF;
+		 --phnewsfeed-header-lighter: #222222;
+		 --phnewsfeed-top-bar-text: #777777;
+		 
+		 --phnewsfeed-mobile-header-background: #000000;
+		 --phnewsfeed-mobile-header-text: #222222;
+	 }
+ </style>
+<style>
+			#masthead.style3 #middle-bar {
+				background: linear-gradient(90deg, 
+					#c90000,
+					#8158ff				 );
+			}
+		</style> <style>
+	 #masthead #site-branding .custom-logo {
+		 max-height: 100px !important;
+	 }
+ </style>
+      <meta name="onesignal" content="wordpress-plugin">
+            <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = 'OneSignalSDKUpdaterWorker.js';
+                      OneSignal.SERVICE_WORKER_PATH = 'OneSignalSDKWorker.js';
+                      OneSignal.SERVICE_WORKER_PARAM = { scope: '/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/push/onesignal/' };
+        OneSignal.setDefaultNotificationUrl("../../../../index.html");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '';
+oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
+oneSignal_options['httpPermissionRequest'] = { };
+oneSignal_options['httpPermissionRequest']['enable'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "../../../../wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/index.html";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+                OneSignal.init(window._oneSignalInitOptions);
+                      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+			}
+			</style>
+	<link rel="icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-32x32.png" sizes="32x32">
+<link rel="icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-180x180.png">
+<meta name="msapplication-TileImage" content="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-270x270.png">
+		<style id="wp-custom-css">
+			p {
+font-size:28px;
+}
+p { color:#000000; }
+@media all and (min-width: 56.25em) {
+
+  .post-title {
+    font-size: 28px;
+    line-height: 1.357;
+  }
+}
+@media all and (min-width: 68.75em) {
+
+  .post-title {
+    font-size: 38px;
+    line-height: 1.5;
+  }
+}
+
+/* Grid style */
+.display-posts-listing.grid {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.display-posts-listing.grid .title {
+	display: block;
+}
+
+.display-posts-listing.grid img { 
+	display: block; 
+	max-width: 100%; 
+	height: auto; 
+}
+
+@media (min-width: 600px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+}
+
+@media (min-width: 1024px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+}		</style>
+		<meta name="generator" content="WordPress Download Manager 6.1.0">
+                <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
+        <style>
+            .w3eden .fetfont,
+            .w3eden .btn,
+            .w3eden .btn.wpdm-front h3.title,
+            .w3eden .wpdm-social-lock-box .IN-widget a span:last-child,
+            .w3eden .card-header,
+            .w3eden .card-footer,
+            .w3eden .badge,
+            .w3eden .label,
+            .w3eden .table,
+            .w3eden .card-body,
+            .w3eden .wpdm-frontend-tabs a,
+            .w3eden .alert:before,
+            .w3eden .discount-msg,
+            .w3eden .panel.dashboard-panel h3,
+            .w3eden #wpdm-dashboard-sidebar .list-group-item,
+            .w3eden #package-description .wp-switch-editor,
+            .w3eden .w3eden.author-dashbboard .nav.nav-tabs li a,
+            .w3eden .wpdm_cart thead th,
+            .w3eden #csp .list-group-item,
+            .w3eden .modal-title {
+                font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+            .w3eden .btn
+            {
+                font-weight: 800 !important;
+            }
+            .w3eden .btn {
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .w3eden #csp .list-group-item {
+                text-transform: unset;
+            }
+
+
+        </style>
+            <style>
+        /* WPDM Link Template Styles */        </style>
+                <style>
+
+            :root {
+                --color-primary: #4a8eff;
+                --color-primary-rgb: 74, 142, 255;
+                --color-primary-hover: #5998ff;
+                --color-primary-active: #3281ff;
+                --color-secondary: #6c757d;
+                --color-secondary-rgb: 108, 117, 125;
+                --color-secondary-hover: #6c757d;
+                --color-secondary-active: #6c757d;
+                --color-success: #018e11;
+                --color-success-rgb: 1, 142, 17;
+                --color-success-hover: #0aad01;
+                --color-success-active: #0c8c01;
+                --color-info: #2CA8FF;
+                --color-info-rgb: 44, 168, 255;
+                --color-info-hover: #2CA8FF;
+                --color-info-active: #2CA8FF;
+                --color-warning: #FFB236;
+                --color-warning-rgb: 255, 178, 54;
+                --color-warning-hover: #FFB236;
+                --color-warning-active: #FFB236;
+                --color-danger: #ff5062;
+                --color-danger-rgb: 255, 80, 98;
+                --color-danger-hover: #ff5062;
+                --color-danger-active: #ff5062;
+                --color-green: #30b570;
+                --color-blue: #0073ff;
+                --color-purple: #8557D3;
+                --color-red: #ff5062;
+                --color-muted: rgba(69, 89, 122, 0.6);
+                --wpdm-font: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+
+            .wpdm-download-link.btn.btn-primary {
+                border-radius: 4px;
+            }
+
+
+        </style>
+                <script>
+            function wpdm_rest_url(request) {
+                return "../../../../wp-json/wpdm/index.html" + request;
+            }
+        </script>
+        </head>
+
+<body class="post-template-default single single-post postid-8838 single-format-standard wp-custom-logo">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+	
+				<header id="masthead" class="site-header style3 d-none d-sm-none d-md-block">
+				<div>
+										<div id="middle-bar">
+	<div class="container">
+		<div class="row">
+			<div id="site-branding" class="col">
+				<a href="../../../../index.html" class="custom-logo-link" rel="home"><img width="687" height="48" src="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png" class="custom-logo" alt="" decoding="async" srcset="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png 687w, ../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview-300x21.png 300w" sizes="(max-width: 687px) 100vw, 687px"></a>					<div class="site-title h1"><a href="../../../../index.html" rel="home"></a></div>
+			</div><!-- .site-branding -->
+			
+			<nav id="site-navigation" class="col main-navigation">
+				<div class="container">
+					<div class="menu-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-8280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8280"><a href="../../../../privacy-policy-2/index.html">Privacy Policy</a></li>
+<li id="menu-item-8562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8562"><a href="../../../../password-cracking-resources-and-tools/index.html">Passwords Cracking Resources and Tools.</a></li>
+<li id="menu-item-8563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8563"><a href="../../../../1-2/index.html">The Ultimate Network Penetration Testing Guide.</a></li>
+<li id="menu-item-8564" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8564"><a href="../../../../2022/07/28/sql-injection-with-shell-access/index.html">SQL Injection with Shell Access</a></li>
+<li id="menu-item-8565" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8565"><a href="../../../../2022/07/28/sql-injections-tools-and-attacks/index.html">SQL Injections: Tools and Attacks</a></li>
+<li id="menu-item-8566" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8566"><a href="../../../../2022/07/28/web-application-security-tools-and-attacks/index.html">Web Application Security: Tools and Attacks</a></li>
+<li id="menu-item-8574" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8574"><a href="../../../../2022/06/03/the-metasploit-framework/index.html">Networking 101</a></li>
+</ul></div>				</div>
+			</nav><!-- #site-navigation -->
+				
+			<div class="social-menu-wrapper col">
+							</div>
+			
+			<div id="top-search" class="col">
+				<form role="search" method="get" class="search-form" action="../../../../index.html">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>	
+			</div>
+			
+			
+		</div>
+	</div>
+</div>	
+				</div>		
+			</header><!-- #masthead -->		
+			
+	 
+	<header id="masthead-mobile" class="d-flex d-sm-flex d-md-none">
+		<a href="#sidr" id="sidr-toggle" class="toggle-menu-hamburger"><i class="fa fa-bars"></i></a>
+		<div id="site-branding-mobile">
+			<a href="../../../../index.html" class="custom-logo-link" rel="home"><img width="687" height="48" src="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png" class="custom-logo" alt="" decoding="async" srcset="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png 687w, ../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview-300x21.png 300w" sizes="(max-width: 687px) 100vw, 687px"></a>	</div><!-- .site-branding -->		<a href="#search-drop" class="search-toggle"><i class="fa fa-search"></i></a>
+	</header>	
+
+	<div class="container">
+		<div class="row">			<div class="acme-ticker-wrapper container d-none d-sm-none d-md-block">
+			<div class="acme-news-ticker">
+					<div class="acme-news-ticker-label">Latest Tools &amp; Resources</div>
+					<div class="acme-news-ticker-box">
+						<ul class="my-news-ticker">
+													
+							<li class="ticker-post"> 
+								<a href="../apache-tomcat-penetration-testing/index.html">
+									Apache Tomcat Penetration Testing																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../penetration-testing-on-mysql-port-3306/index.html">
+									Penetration Testing on MYSQL (Port 3306)																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../advanced-system-network-pen-testing-guides/index.html">
+									Advanced System &amp; Network Pen-Testing Guides																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../vulnerability-scanning/index.html">
+									Vulnerability Scanning																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../network-enumeration/index.html">
+									Network Enumeration																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../scanning-a-target-network/index.html">
+									Scanning a Target Network																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="">
+									What is Footprinting and Reconnaissance?																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../15/how-to-use-hydra-to-crack-passwords-penetration-testing/index.html">
+									How to Use Hydra&#8202; to Crack Passwords &ndash; Penetration Testing.																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../15/password-cracking-hash-gathering/index.html">
+									Password Cracking &amp; Hash Gathering																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../15/cracking-passwords-with-john-the-ripper-a-comprehensive-guide/index.html">
+									Cracking Passwords with John the Ripper: A Comprehensive Guide&nbsp;																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/07/28/sql-injection-with-shell-access/index.html">
+									SQL Injection with Shell Access																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/07/28/sql-injections-tools-and-attacks/index.html">
+									SQL Injections: Tools and Attacks																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/07/28/web-application-security-tools-and-attacks/index.html">
+									Web Application Security: Tools and Attacks																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/06/03/the-metasploit-framework/index.html">
+									Networking 101																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+													</ul>
+					</div>
+					<div class="acme-news-ticker-controls acme-news-ticker-vertical-controls">
+						<button class="acme-news-ticker-arrow acme-news-ticker-prev"></button>
+						<button class="acme-news-ticker-pause"></button>
+						<button class="acme-news-ticker-arrow acme-news-ticker-next"></button>
+					</div>
+			</div> 
+		</div>
+
+	<main id="primary" class="site-main col-md-12">
+
+		<article id="post-8838" class="single-style1 post-8838 post type-post status-publish format-standard has-post-thumbnail hentry category-ethical-hacking-with-kali-linux category-ethical-hacking-botnets-mac-flooding-arp-attacks-ddos-sniffing-penetration-testing category-sql-botnets-and-xss-attacks-tools-and-resources">
+
+	<header class="entry-header">
+		<h1 class="entry-title">What is Footprinting and Reconnaissance?</h1>	
+			<div class="entry-meta">
+				<span class="posted-on">Posted on <a href="" rel="bookmark"><time class="entry-date published" datetime=""></time><time class="updated" datetime=""></time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="../../../../author/julisunkan/index.html"></a></span></span>			</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	
+			<div class="post-thumbnail">
+				<img width="410" height="257" src="../../../../wp-content/uploads/2024/11/3zm9tsff.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchpriority="high">			</div><!-- .post-thumbnail -->
+
+		
+	<div class="entry-content clearfix">
+		
+<p>Footprinting (also known as reconnaissance) is the technique used for gathering information about computer systems and the entities they belong to. To get this information, a hacker might use various tools and technologies. This information is very useful to a hacker who is trying to crack a whole system.</p>
+
+
+
+<p>When used in the computer security lexicon, &ldquo;Footprinting&rdquo; generally refers to one of the pre-attack phases; tasks performed before doing the actual attack. Some of the tools used for Footprinting are Sam Spade, nslookup, traceroute, Nmap and neotrace.</p>
+
+
+
+<p>Footprinting helps to:</p>
+
+
+
+<p><strong>Know Security Posture</strong>&nbsp;&ndash; The data gathered will help us to get an overview of the security posture of the company such as details about the presence of a firewall, security configurations of applications etc.</p>
+
+
+
+<p><strong>Reduce Attack Area</strong>&nbsp;&ndash; Can identify a specific range of systems and concentrate on particular targets only. This will greatly reduce the number of systems we are focussing on.</p>
+
+
+
+<p><strong>Identify vulnerabilities</strong>&nbsp;&ndash; we can build an information database containing the vulnerabilities, threats, loopholes available in the system of the target organization.</p>
+
+
+
+<p><strong>Draw Network map</strong>&nbsp;&ndash; helps to draw a network map of the networks in the target organization covering topology, trusted routers, presence of server and other information.</p>
+
+
+
+<p># Footprinting basics with Windows command line</p>
+
+
+
+<p>The objective of this tutorial is teach the basics of Footprinting methodologies, used for ethical-hackers and pentesters.</p>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Virtual environment</li>
+
+
+
+<li>Windows 8.1/10</li>
+
+
+
+<li>Windows Server 2012 or 2016</li>
+
+
+
+<li>Basics of networking</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Use ping command to find the IP address of target domain.</li>
+
+
+
+<li>Use ping command to emulate the traceroute (tracert command).</li>
+
+
+
+<li>Discover the maximum frame size for the network.</li>
+
+
+
+<li>ICMP type and the code for echo request and echo reply packets.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="commands-used-on-this-tutorial">Commands used on this tutorial<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#commands-used-on-this-tutorial"></a></h2>
+
+
+
+<h2 class="wp-block-heading" id="ping"><code>ping</code><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#ping"></a></h2>
+
+
+
+<p>The ping command sends ICMP (Internet Control Message Protocol) Used to test the reachability of a host on a IP network and measures the travel time for messages sent from the originating host to destinantion target.</p>
+
+
+
+<h2 class="wp-block-heading" id="nslookup"><code>nslookup</code><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#nslookup"></a></h2>
+
+
+
+<p>Used for querying the DNS (Domain Name System), to obtain a domain name or IP address mapping and other specific DNS record.</p>
+
+
+
+<h2 class="wp-block-heading" id="tracert-windows-or-traceroute-linux"><code>tracert</code>&nbsp;(Windows) or&nbsp;<code>traceroute</code>&nbsp;(Linux)<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#tracert-windows-or-traceroute-linux"></a></h2>
+
+
+
+<p>Diagnostic tool for displaying the route and measuring transit delays of packets across an IP network</p>
+
+
+
+<p><strong>NOTE:</strong><br><strong>I strongly recommend you to use the -help command to specify all parameters of a given command</strong></p>
+
+
+
+<p><code>ping -help</code></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h2 class="wp-block-heading" id="finding-the-ip-address-of-httpwwwcertifiedhackercom">Finding the IP address of http://www.certifiedhacker.com<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#finding-the-ip-address-of-httpwwwcertifiedhackercom"></a></h2>
+
+
+
+<p>Open the&nbsp;<strong>Command prompt</strong>&nbsp;or&nbsp;<strong>PowerShell</strong>&nbsp;on Windows and type:</p>
+
+
+
+<p><code>ping www.certifiedhacker.com</code></p>
+
+
+
+<p>The response should be similiar to the message below.<br>Note: The IP address may differ in your environment.</p>
+
+
+
+<pre class="wp-block-code"><code>Reply from 162.241.216.11: bytes=32 time=160ms TTL=40
+Reply from 162.241.216.11: bytes=32 time=151ms TTL=40
+Reply from 162.241.216.11: bytes=32 time=151ms TTL=40
+Reply from 162.241.216.11: bytes=32 time=153ms TTL=40
+
+Ping statistics for 162.241.216.11:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+Approximate round trip times in milli-seconds:
+    Minimum = 151ms, Maximum = 160ms, Average = 153ms
+</code></pre>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h2 class="wp-block-heading" id="finding-the-maximum-frame-size-on-the-network">Finding the maximum frame size on the network<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#finding-the-maximum-frame-size-on-the-network"></a></h2>
+
+
+
+<p>Use the last command and add the&nbsp;<code>-f</code>&nbsp;parameter to not fragment on the ping packet and&nbsp;<code>-l</code>&nbsp;to set the frame size to&nbsp;<code>1500</code>&nbsp;bytes.</p>
+
+
+
+<p><code>ping www.certifiedhacker.com -f -l 1500</code></p>
+
+
+
+<p>Output:</p>
+
+
+
+<pre class="wp-block-code"><code>Packet needs to be fragmented but DF set.
+</code></pre>
+
+
+
+<p>This message above means that the frame is too large to be on the network and needs to be fragmented.</p>
+
+
+
+<p>The propose here is to try different values until you reach the maximum frame size.</p>
+
+
+
+<p><strong>Example:</strong></p>
+
+
+
+<p>` ping www.certifiedhacker.com -f -l 1450<code>&lt;br&gt; _working_&lt;br&gt;&nbsp;</code>ping www.certifiedhacker.com -f -l 1475<code>&lt;br&gt; _reached the limit_&lt;br&gt;&nbsp;</code>ping www.certifiedhacker.com -f -l 1473<code>&lt;br&gt; _reached the limit_&lt;br&gt;&nbsp;</code>ping www.certifiedhacker.com -f -l 1472`<br><em>working</em></p>
+
+
+
+<p>In conclusion, note the last two replies&nbsp;<code>1473</code>&nbsp;bytes and&nbsp;<code>1472</code>&nbsp;bytes shows the&nbsp;<strong>maximum frame size</strong>&nbsp;on this machine&rsquo;s network. ***</p>
+
+
+
+<h2 class="wp-block-heading" id="investigate-the-ttl-time-to-live">Investigate the TTL (Time to Live).<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#investigate-the-ttl-time-to-live"></a></h2>
+
+
+
+<p>Every frame on the network has their own TTL defined.<br>If the TTL reaches 0, the router discards the packet to prevent packet loss.</p>
+
+
+
+<p><code>ping www.certifiedhacker.com -i 3</code></p>
+
+
+
+<pre class="wp-block-code"><code>Reply from 10.10.127.254: TTL expired in transit.
+Reply from 10.10.127.254: TTL expired in transit.
+Reply from 10.10.127.254: TTL expired in transit.
+Reply from 10.10.127.254: TTL expired in transit.
+</code></pre>
+
+
+
+<p>The&nbsp;<code>-i</code>&nbsp;parameter means wait time, that is the number of seconds to wait between each ping (values between&nbsp;<code>1-255</code>).</p>
+
+
+
+<p>TTL expired means that the router discarded the frame, beacuse the TTL has expired (reached 0). ***</p>
+
+
+
+<h2 class="wp-block-heading" id="find-the-traceroute-from-your-machine-to-wwwcertifiedhackercom">Find the traceroute from your machine to www.certifiedhacker.com<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#find-the-traceroute-from-your-machine-to-wwwcertifiedhackercom"></a></h2>
+
+
+
+<p>This command traceroutes the network configuration information of the target domain.</p>
+
+
+
+<p>Open a new window on your prompt or powershell and type:</p>
+
+
+
+<p><code>tracert www.certifiedhacker.com</code></p>
+
+
+
+<p>The system resolves the URL into its IP address and starts to trace the path to the destination. Here it takes 19 hops for the packet to reach the specified destination.</p>
+
+
+
+<p>You can use the help flag to show different options for the command:&nbsp;<code>tracert /?</code>&nbsp;***</p>
+
+
+
+<h2 class="wp-block-heading" id="lets-check-the-life-span-of-the-packet">Let&rsquo;s check the life span of the packet.<br><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#lets-check-the-life-span-of-the-packet"></a></h2>
+
+
+
+<p>Open a new window of your prompt or powershell and type:</p>
+
+
+
+<p><code>ping www.certifiedhacker.com -i 2 -n 1</code></p>
+
+
+
+<p>We are setting the TTL to&nbsp;<code>2</code>&nbsp;in an attempt to check the life span of the packet and&nbsp;<code>-n</code>&nbsp;count of packet to&nbsp;<code>1</code></p>
+
+
+
+<pre class="wp-block-code"><code>Pinging certifiedhacker.com [162.241.216.11] with 32 bytes of data:
+Reply from 10.10.10.45: TTL expired in transit.
+
+Ping statistics for 162.241.216.11:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+</code></pre>
+
+
+
+<p>There is a reply coming from IP address 162.241.216.11 with no packet loss.</p>
+
+
+
+<p>Let&rsquo;s set the TTL value to&nbsp;<code>3</code>&nbsp;to see what happens</p>
+
+
+
+<p><code>ping www.certifiedhacker.com -i 3 -n 1</code></p>
+
+
+
+<pre class="wp-block-code"><code>Pinging certifiedhacker.com [162.241.216.11] with 32 bytes of data:
+Reply from 10.10.127.254: TTL expired in transit.
+
+Ping statistics for 162.241.216.11:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+</code></pre>
+
+
+
+<p>Note there is a different IP address, the same one that we gather on the traceroute command on the first hops.</p>
+
+
+
+<p>Repeat this and increase the TTL value until reach the IP address from www.certifiedhacker.com that we trace routed before.</p>
+
+
+
+<p><code>ping www.certifiedhacker.com -i 19 -n 1</code></p>
+
+
+
+<pre class="wp-block-code"><code>Pinging certifiedhacker.com [162.241.216.11] with 32 bytes of data:
+Reply from 162.241.216.11: bytes=32 time=156ms TTL=40
+
+Ping statistics for 162.241.216.11:
+    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 156ms, Maximum = 156ms, Average = 156ms
+</code></pre>
+
+
+
+<p>Done! These results implies when you set the TTL to 19(in this case) the reply is received from destination host (162.241.216.11). Keep in mind that the output will be similar to the trace route results.</p>
+
+
+
+<p>Make a note of all the IP addresses from which you receive a reply.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h2 class="wp-block-heading" id="using-nslookup-command">Using&nbsp;<code>nslookup</code>&nbsp;command<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/1-Windows-CommandLine.html#using-nslookup-command"></a></h2>
+
+
+
+<p>Used for querying the DNS (Domain Name System), to obtain a domain name or IP address mapping and other specific DNS record.</p>
+
+
+
+<p>Type in your prompt or powershell:</p>
+
+
+
+<p><code>nslookup</code></p>
+
+
+
+<p><strong>Note</strong>: This command will launch a interactive mode, you can type&nbsp;<code>help</code>&nbsp;to list available commands!</p>
+
+
+
+<p>For query IP address of a given domain, you need to set the&nbsp;<code>type</code>&nbsp;to&nbsp;<code>A</code>&nbsp;record, then enter the target domain:</p>
+
+
+
+<p><code>&gt; type=a</code><br><code>&gt; www.certifiedhacker.com</code></p>
+
+
+
+<pre class="wp-block-code"><code>&gt; set type=a
+&gt; www.certifiedhacker.com
+
+Server:  dns.google
+Address:  8.8.8.8
+
+Non-authoritative answer:
+Name:    certifiedhacker.com
+Address:  162.241.216.11
+Aliases:  www.certifiedhacker.com
+</code></pre>
+
+
+
+<p><strong>Note</strong>: This environment uses Google DNS server (8.8.8.8). To configure your own DNS server just type&nbsp;<code>server x.x.x.x</code>.</p>
+
+
+
+<p>The first two lines&nbsp;<strong>dns.google</strong>&nbsp;and&nbsp;<strong>8.8.8.8</strong>&nbsp;specifies that the result was directed to this server to resolve your requested domain. Google&rsquo;s DNS server do not contain domain&rsquo;s original zone files, this is why is&nbsp;<strong>Non-authoritative</strong>.</p>
+
+
+
+<p>The&nbsp;<strong>Authoritative</strong>&nbsp;is a name server that has the original source files of a domain zone files. To obtain the Authoritative name server, set the&nbsp;<code>type</code>&nbsp;to&nbsp;<code>CNAME</code>&nbsp;record and query the target:</p>
+
+
+
+<p><code>set type=cname</code><br><code>certifiedhacker.com</code></p>
+
+
+
+<pre class="wp-block-code"><code>&gt; set type=cname
+&gt; certifiedhacker.com
+Server:  dns.google
+Address:  8.8.8.8
+
+certifiedhacker.com
+        primary name server = ns1.bluehost.com
+        responsible mail addr = dnsadmin.box5331.bluehost.com
+        serial  = 2018011205
+        refresh = 86400 (1 day)
+        retry   = 7200 (2 hours)
+        expire  = 3600000 (41 days 16 hours)
+        default TTL = 300 (5 mins)
+</code></pre>
+
+
+
+<p>The&nbsp;<code>CNAME</code>&nbsp;lookup is done directly against the domain&rsquo;s authoritative name server.</p>
+
+
+
+<p>With the authoritative name server, you can determine the IP address. To query IP address set the&nbsp;<code>type</code>&nbsp;to&nbsp;<code>A</code>, then type the&nbsp;<strong>primary name server</strong>&nbsp;displayed in your lab environment, in my case:&nbsp;<code>ns1.bluehost.com</code>.</p>
+
+
+
+<p><code>set type=a</code><br><code>ns1.bluehost.com</code></p>
+
+
+
+<pre class="wp-block-code"><code>&gt; set type=a
+&gt; ns1.bluehost.com
+Server:  dns.google
+Address:  8.8.8.8
+
+Non-authoritative answer:
+Name:    ns1.bluehost.com
+Address:  162.159.24.80
+</code></pre>
+
+
+
+<p>In conclusion, the&nbsp;<strong>Authoritative name server</strong>&nbsp;stores the records associated with the respective domain. Having the authoritative name server (primary name server) and the IP address associated with it, an attacker can attempt to exploit the server, performing attacks like DDoS, URL redirection and so on.</p>
+
+
+
+<p><strong>Final analysis:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Document all the IP addresses</li>
+
+
+
+<li>Reply request IP addresses</li>
+
+
+
+<li>Information about TTL&rsquo;s</li>
+
+
+
+<li>DNS server names and other DNS information.</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="footprinting-using-maltego">Footprinting using Maltego</h1>
+
+
+
+<p>Maltego is an open source in$$telligence and forensics application. It gathers information about a target and represents in an easily-understandable format.</p>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux virtual machine</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Identify IP address</li>
+
+
+
+<li>Identify Domain and Domain Name Schema</li>
+
+
+
+<li>Identify Server Side Technology</li>
+
+
+
+<li>Identify Service Oriented Architecture (SOA) information</li>
+
+
+
+<li>Identify Name Server</li>
+
+
+
+<li>Identify Mail Exchanger</li>
+
+
+
+<li>Identify Geographical Location</li>
+
+
+
+<li>Identify Entities</li>
+
+
+
+<li>Discover Email addresses and Phone numbers</li>
+</ul>
+
+
+
+<p>Currently there are three versions of the Maltego client namely Maltego CE, Maltego Classic and Maltego XL.&nbsp;<strong>This tutorial will focus on Maltego Community Edition (CE).</strong></p>
+
+
+
+<p>Kali Linux comes with Maltego installed. Launch your Maltego from the applications bar. In case it is your first time using Maltego, just select the Maltego CE (Free) edition and create a free account on https://www.paterva.com/community/community.php</p>
+
+
+
+<h2 class="wp-block-heading" id="maltego-basics">Maltego Basics<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#maltego-basics"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Click on (+) icon located at the top-left corner of the GUI (in the toolbar) to create a new graph window (like a blank document).</li>
+
+
+
+<li>Go to left panel and expand the&nbsp;<strong>Infrastructure</strong>&nbsp;node under Entity Palette. This list have a bunch of useful entities such as AS, DNS Name, Domain, MX Record, etc.</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://s3-eu-central-1.amazonaws.com/euc-cdn.freshdesk.com/data/helpdesk/attachments/production/2015007002780/original/tJmLPIhee9OzhB4xqVKx1pT2NGixIRpdFg.jpg?1545115008" alt="alt text" title="Entity Palette - Maltego"></figure>
+
+
+
+<ol class="wp-block-list">
+<li>Drag the Website entity to your New Graph(1) section.</li>
+
+
+
+<li>Rename the domain name to www.certifiedhacker.com</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="identifying-the-server-side-technology">Identifying the server side technology<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#identifying-the-server-side-technology"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Right-click the entity and select&nbsp;<strong>All Transforms</strong>&nbsp;and click&nbsp;<strong>To Server Technologies [BuiltWith]</strong></li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="813" height="420" src="../../../../wp-content/uploads/2024/11/maltego-server-side-0.png" alt="alt text" class="wp-image-8840" title="Server Side Technologies"></figure>
+
+
+
+<p>Note: Maltego can be useful to show results in more dynamic way processing by visual demonstrating interconnected links between searched items.</p>
+
+
+
+<h2 class="wp-block-heading" id="identifying-the-domain">Identifying the Domain<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#identifying-the-domain"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Create a new graph or delete/save the previous results.</li>
+
+
+
+<li>Right-click the Domain entity and select&nbsp;<strong>All Transforms -&gt; To Domains [DNS]</strong>.</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="1024" height="1025" src="../../../../wp-content/uploads/2024/11/maltego-DNS-names.png" alt="alt text" class="wp-image-8846" title="DNS Names"></figure>
+
+
+
+<p>This transform will attempt to test name schemas against a domain and try to identify a specific name schema for the domain.</p>
+
+
+
+<h2 class="wp-block-heading" id="identifying-the-soa-information">Identifying the SOA information<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#identifying-the-soa-information"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Create a new graph or delete/save the previous results.</li>
+
+
+
+<li>Right-click the Domain entity and select&nbsp;<strong>All Transforms -&gt; To DNS Name &ndash; SOA (Start of Authority)</strong>.</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="1024" height="1137" src="../../../../wp-content/uploads/2024/11/maltego-DNS-SOA-2.png" alt="alt text" class="wp-image-8842" title="DNS Name - SOA"></figure>
+
+
+
+<h2 class="wp-block-heading" id="identifying-the-mail-exchanger">Identifying the Mail Exchanger<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#identifying-the-mail-exchanger"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Create a new graph or delete/save the previous results.</li>
+
+
+
+<li>Right-click the Domain entity and select&nbsp;<strong>All Transforms -&gt; To DNS Name &ndash; MX (mail server)</strong>.</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="1024" height="1432" src="../../../../wp-content/uploads/2024/11/maltego-MX-NameServers-3.png" alt="alt text" class="wp-image-8847" title="DNS MX Server"></figure>
+
+
+
+<h2 class="wp-block-heading" id="identifying-the-name-server">Identifying the Name Server<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#identifying-the-name-server"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Create a new graph or delete/save the previous results.</li>
+
+
+
+<li>Right-click the Domain entity and select&nbsp;<strong>All Transforms -&gt; To DNS Name &ndash; NS (name server)</strong>.</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="1024" height="1265" src="../../../../wp-content/uploads/2024/11/maltego-DNS-Name-Servers-4.png" alt="alt text" class="wp-image-8845" title="NS"></figure>
+
+
+
+<h2 class="wp-block-heading" id="identifying-the-ip-address-location-and-whois">Identifying the IP Address, Location and Whois<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#identifying-the-ip-address-location-and-whois"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Create a new graph or delete/save the previous results.</li>
+
+
+
+<li>Right-click the Website entity and select&nbsp;<strong>All Transforms -&gt; To IP address [DNS]</strong>.</li>
+
+
+
+<li>Right-click the IP entity and select&nbsp;<strong>All Transforms -&gt; To Location [city, country]</strong>.</li>
+
+
+
+<li>Right-click the Website entity and select&nbsp;<strong>All Transforms -&gt; To entities from whois [IBM Watson]</strong>.</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="1024" height="787" src="../../../../wp-content/uploads/2024/11/maltego-WebSite-IP-Location-WhoisOnDomain-5.png" alt="alt text" class="wp-image-8843" title="IP Address, Location"></figure>
+
+
+
+<h2 class="wp-block-heading" id="in-conclusion">In conclusion:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/2-Maltego-Basics.html#in-conclusion"></a></h2>
+
+
+
+<p>Maltego is a powerful tool, you can extract a broad type of information through the network, technologies and personnel(email, phone number, twitter).</p>
+
+
+
+<p>By extracting all this information, an attacker can perform different type of malicious activity.</p>
+
+
+
+<ul class="wp-block-list">
+<li>The built-in technologies of the server: attackers might search for vulnerabilities related to any of them and simulate exploitation techniques.</li>
+
+
+
+<li>SOA information: also can be useful for attackers, they can abuse this information to find vulnerabilities in their services and architectures and exploit them.</li>
+
+
+
+<li>Name Server: attackers can exploit NS using malicious techniques like DNS hijacking and URL redirection.</li>
+
+
+
+<li>IP addresses: attackers can abuse the IP address by scanning and searching for open ports and vulnerabilities, and thereby attempt to intrude in the network and exploit them.</li>
+
+
+
+<li>Geographical location: attackers can perform social engineering attacks to leverage sensitive information.</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="recon-ng-tutorial">Recon-ng Tutorial</h1>
+
+
+
+<p>Recon-ng is a web-based open-source reconnaissance tool used to extract information from a target organization and its personnel.<br><em>Official repository:</em>&nbsp;https://github.com/lanmaster53/recon-ng</p>
+
+
+
+<ul class="wp-block-list">
+<li>Version: v5.0.1</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux virtual machine</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>How to perform network recon.</li>
+
+
+
+<li>Gather hosts related to a domain.</li>
+
+
+
+<li>Personal Information Gathering.</li>
+
+
+
+<li>Generate a report with harvested information.</li>
+</ul>
+
+
+
+<p>Recon-ng has a look and feel similar to the Metasploit Framework, reducing the learning curve for leveraging the framework.</p>
+
+
+
+<h2 class="wp-block-heading" id="first-steps">First steps<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#first-steps"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Open the terminal and type&nbsp;<code>recon-ng</code></li>
+
+
+
+<li>Type&nbsp;<code>help</code>&nbsp;to view all commands that allow you to add/delete records to DB, query, etc.<code>back Exits the current context dashboard Displays a summary of activity db Interfaces with the workspace's database exit Exits the framework help Displays this menu index Creates a module index (dev only) keys Manages third party resource credentials marketplace Interfaces with the module marketplace modules Interfaces with installed modules options Manages the current context options pdb Starts a Python Debugger session (dev only) script Records and executes command scripts shell Executes shell commands show Shows various framework items snapshots Manages workspace snapshots spool Spools output to a file workspaces Manages workspaces </code><strong>Note:<br>On your first load of recon-ng note the message below. You begin with an empty framework (without modules pre-installed).</strong><code>[*] No modules enabled/installed.</code></li>
+
+
+
+<li>Create a new workspace:<br><code>workspaces create CEH</code></li>
+
+
+
+<li>Add the target domain to perform a network recon:<br><code>db insert domains</code><br><code>certifiedhacker.com</code></li>
+</ol>
+
+
+
+<p>You can view the added domain by typing&nbsp;<code>show domains</code></p>
+
+
+
+<pre class="wp-block-code"><code>[recon-ng][CEH] &gt; db insert domains
+domain (TEXT): certifiedhacker.com
+[*] 1 rows affected.
+[recon-ng][CEH] &gt; show domains
+
+  +--------------------------------------------+
+  | rowid |        domain       |    module    |
+  +--------------------------------------------+
+  | 1     | certifiedhacker.com | user_defined |
+  +--------------------------------------------+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-modules-from-recon-ng-marketplace">Using Modules from Recon-ng Marketplace<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#using-modules-from-recon-ng-marketplace"></a></h2>
+
+
+
+<p>Recon-ng works with independent modules, database interaction, built in convenience functions, interactive help, and command completion, Recon-ng provides a powerful environment in which open source web-based reconnaissance can be conducted quickly and thoroughly. To add new modules you will use&nbsp;<strong>marketplace</strong>.</p>
+
+
+
+<p>Recon-ng Marketplace repository:<br>https://github.com/lanmaster53/recon-ng-marketplace</p>
+
+
+
+<p>To view the entire marketplace repo type:&nbsp;<code>marketplace search</code></p>
+
+
+
+<p>Dealing with modules and workspaces process is very easy as shown on the example below:</p>
+
+
+
+<pre class="wp-block-code"><code>0. Installing module using marketplace command:
+&gt; marketplace install recon/domains-hosts/findsubdomains
+
+1. Loading the module using modules load command:
+&gt; modules load /recon/domains-hosts/findsubdomains
+
+2. To show module options:
+&gt; info 
+
+3. Executing the module:
+&gt; run
+
+4. To switch between modules or workspaces type:
+&gt; back
+
+5. Select an existing workspace:
+&gt; workspaces select W0rkspaceName 
+
+6. Select an installed module:
+&gt; modules load path/to/module-name
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-hackertarget-to-find-sub-domains">Using hackertarget to find sub-domains<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#using-hackertarget-to-find-sub-domains"></a></h2>
+
+
+
+<p>You can find another modules to gather some subdomains, we will use hackertarget on this tutorial.</p>
+
+
+
+<p>Let&rsquo;s install and load it:&nbsp;<code>marketplace install hackertarget</code><br><code>modules load hackertarget</code></p>
+
+
+
+<p>Type&nbsp;<code>info</code>&nbsp;to view the SOURCE, currently set at default as show below:&nbsp;<code>info</code></p>
+
+
+
+<pre class="wp-block-code"><code>Name    Current Value  Required  Description
+------  -------------  --------  -----------
+SOURCE  default        yes       source of input (see 'show info' for details)
+</code></pre>
+
+
+
+<p>Now set the SOURCE to:</p>
+
+
+
+<p><code>options set SOURCE certifiedhacker.com</code></p>
+
+
+
+<p>You can use the&nbsp;<code>input</code>&nbsp;command to see the target:</p>
+
+
+
+<p><code>input</code></p>
+
+
+
+<pre class="wp-block-code"><code>+---------------------+
+|    Module Inputs    |
++---------------------+
+| certifiedhacker.com |
++---------------------+
+</code></pre>
+
+
+
+<p>Run the module:</p>
+
+
+
+<p><code>run</code></p>
+
+
+
+<p><strong>Note: If your response is working properly but messy with a bunch of queries and values, just type&nbsp;<code>show hosts</code>&nbsp;to populate a better output.</strong></p>
+
+
+
+<p><code>show hosts</code><br>&hellip;<br><em>(This command will show a clean summary of resources discovered)</em></p>
+
+
+
+<h2 class="wp-block-heading" id="brute-forcing-hostnames">Brute-forcing hostnames<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#brute-forcing-hostnames"></a></h2>
+
+
+
+<p>You can use another modules to harvest more hosts, such as&nbsp;<strong>brute_hosts</strong>.</p>
+
+
+
+<p><strong>Exit</strong>&nbsp;your current module:</p>
+
+
+
+<p><code>back</code></p>
+
+
+
+<p>Install the&nbsp;<strong>brute_hosts</strong>&nbsp;module:</p>
+
+
+
+<p><code>marketplace install recon/domain-hosts/brute_hosts</code></p>
+
+
+
+<p>Load the module:</p>
+
+
+
+<p><code>modules load recon/domain-hosts/brute_hosts</code></p>
+
+
+
+<p>Set the SOURCE to target domain:</p>
+
+
+
+<p><code>options set SOURCE certifiedhacker.com</code></p>
+
+
+
+<p>By typing&nbsp;<code>info</code>&nbsp;you can see on this particular module, you can set your own hostnames wordlist. I recommend to use the default one that is pretty good.</p>
+
+
+
+<pre class="wp-block-code"><code>Name      Current Value                 
+  --------  -------------  
+  SOURCE    certifiedhacker.com         
+  WORDLIST  /root/.recon-ng/data/hostnames.txt 
+</code></pre>
+
+
+
+<ol class="wp-block-list">
+<li>Run the module:&nbsp;<code>run</code><br>&hellip;<br><em>(keep in mind that will take a while)</em></li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="generate-a-report">Generate a report<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#generate-a-report"></a></h2>
+
+
+
+<p>Now that you have harvested a number of hosts, you will prepare a report containing all the information.</p>
+
+
+
+<p>Install the&nbsp;<strong>reporting module</strong>&nbsp;to report in html format.</p>
+
+
+
+<p><code>marketplace install reporting/html</code></p>
+
+
+
+<p><strong>Note:</strong>&nbsp;You can install any of these modules below to export in different formats.</p>
+
+
+
+<pre class="wp-block-code"><code>reporting/csv
+reporting/html
+reporting/json
+reporting/list
+reporting/proxifier
+reporting/pushpin
+reporting/xlsx
+reporting/xml
+</code></pre>
+
+
+
+<p>Load the module:</p>
+
+
+
+<p><code>modules load reporting/html</code></p>
+
+
+
+<p>To configure the reporting information, type&nbsp;<code>info</code>&nbsp;to see the values.</p>
+
+
+
+<pre class="wp-block-code"><code> Name      Current Value                                
+ --------  -------------                                
+ CREATOR                                   
+ CUSTOMER  
+ FILENAME  /root/.recon-ng/workspaces/CEH/results.html
+ SANITIZE  True 
+</code></pre>
+
+
+
+<p>You will need to assign these values, CREATOR, CUSTOMER and FILENAME.</p>
+
+
+
+<p>Set your name[CREATOR], customer name[CUSTOMER], path to export and the file name[FILENAME].</p>
+
+
+
+<p><code>options set CREATOR J0nDoe</code><br><code>options set CUSTOMER CertifiedHacker Network</code><br><code>options set FILENAME /root/Desktop/CE-Results.html</code></p>
+
+
+
+<p>Run the module to export:</p>
+
+
+
+<p><code>run</code></p>
+
+
+
+<p><strong>The generated report is saved to to the Desktop.</strong></p>
+
+
+
+<p>There is not much in this report, but when you start running multiple modules and add in geolocation reports can get very complex. Recon-ng does a great job keeping track of everything.</p>
+
+
+
+<h1 class="wp-block-heading" id="using-recon-ng-to-gather-personnel-information-part-2">Using Recon-ng to Gather Personnel Information (part 2)</h1>
+
+
+
+<p>Objectives:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Obtain contacts of personnel working in a organization.</li>
+
+
+
+<li>Find the existence of user profiles on varios websites.</li>
+</ul>
+
+
+
+<p><strong>Important note:</strong>&nbsp;The&nbsp;<strong>location</strong>&nbsp;and&nbsp;<strong>pushpin modules</strong>&nbsp;mentioned in this tutorial require a valid API key to use and have some GDPR implications about data collection. Some require you to pay money, which will be mentioned below. I suggest as you go along, you save all the API keys to a file so you can use them later. To setup an API key to your recon-ng is very simple, just follow the document below, and manage your keys inside Recon-ng using:&nbsp;<code>keys</code>&nbsp;command.<br>https://github.com/Raikia/Recon-NG-API-Key-Creation/blob/master/README-v4.8.3.md</p>
+
+
+
+<h2 class="wp-block-heading" id="personal-information-gathering">Personal Information Gathering<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#personal-information-gathering"></a></h2>
+
+
+
+<p>Gathering personal information involves discovering contact details such as email, address, etc. present on target organization&rsquo;s web site. The Recon-ng contains various modules for haversting and discovering contact information about a certain company. Some Recon-ng modules for discovering personal information are:</p>
+
+
+
+<ul class="wp-block-list">
+<li>recon/domain-contacts</li>
+
+
+
+<li>recon/companies-contacts</li>
+
+
+
+<li>recon/domain-contacts/namechk</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="setup-your-recon-ng">Setup your Recon-ng<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#setup-your-recon-ng"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Boot your Kali Linux and open the terminal.</li>
+
+
+
+<li>Type&nbsp;<code>recon-ng</code>&nbsp;to launch the application.</li>
+
+
+
+<li>Add a new workspace named recon:</li>
+</ol>
+
+
+
+<p><code>workspaces create recon</code></p>
+
+
+
+<h2 class="wp-block-heading" id="gather-contacts-associated-with-a-domain">Gather contacts associated with a domain<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#gather-contacts-associated-with-a-domain"></a></h2>
+
+
+
+<p>Set a domain and perform footprinting on it to extract contact available in the domain.</p>
+
+
+
+<p>The module selected to perform this technique uses the ARIN Whois RWS to harvest POC data from whois queries for the given domain.</p>
+
+
+
+<p>Install and load the module:</p>
+
+
+
+<p><code>marketplace install recon/domains-contacts/whois_pocs</code></p>
+
+
+
+<p><code>modules load recon/domains-contacts/whois_pocs</code></p>
+
+
+
+<p>Check the options required to run the module:</p>
+
+
+
+<p><code>info</code></p>
+
+
+
+<p>Set the SOURCE value to target domain:</p>
+
+
+
+<p><code>options set SOURCE facebook.com</code></p>
+
+
+
+<p>Run the module:</p>
+
+
+
+<p><code>run</code></p>
+
+
+
+<pre class="wp-block-code"><code>------------
+FACEBOOK.COM
+------------
+[*] URL: http://whois.arin.net/rest/pocs;domain=facebook.com
+[*] URL: http://whois.arin.net/rest/poc/NOL17-ARIN
+[*] [contact] Lea Neteork ops (leigha311@facebook.com) - Whois contact
+[*] URL: http://whois.arin.net/rest/poc/OPERA82-ARIN
+[*] [contact] &lt;blank&gt; Operations (domain@facebook.com) - Whois contact
+[*] URL: http://whois.arin.net/rest/poc/BST184-ARIN
+[*] [contact] Brandon Stout (bstout@facebook.com) - Whois contact
+[*] URL: http://whois.arin.net/rest/poc/DJW23-ARIN
+[*] [contact] Darrell Wayne (tiffany.cameron.507@facebook.com) - Whois contact
+[*] URL: http://whois.arin.net/rest/poc/MZU-ARIN
+[*] [contact] Mark Zuckerberg (zuck@thefacebook.com) - Whois contact
+</code></pre>
+
+
+
+<p>The output will return the contacts related to the domains.</p>
+
+
+
+<h2 class="wp-block-heading" id="profile-existence">Profile existence<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/3-Recon-ng.html#profile-existence"></a></h2>
+
+
+
+<p>The&nbsp;<strong>recon/profiles-profiles/namechk</strong>&nbsp;module validates the username existence of a specified contact, but unfortunately namechk charges to use their API.</p>
+
+
+
+<p>We can search the existence of user profiles in various websites using the&nbsp;<strong>recon/profiles-profiles/profiler</strong>.</p>
+
+
+
+<p>Type&nbsp;<code>back</code>&nbsp;to return to the workspaces home.</p>
+
+
+
+<p>Install and load the module:</p>
+
+
+
+<p><code>marketplace install recon/profiles-profiles/profiler</code></p>
+
+
+
+<p><code>modules load recon/profiles-profiles/profiler</code></p>
+
+
+
+<p>Set the SOURCE value (Target username):</p>
+
+
+
+<p><code>options set SOURCE MarkZuckerberg</code></p>
+
+
+
+<p>Run the module:</p>
+
+
+
+<p><code>run</code></p>
+
+
+
+<p>The recon/profiles-profiles/profiler module searches for this username and returns the URL of the profile in various websites (found with the matching username).</p>
+
+
+
+<h1 class="wp-block-heading" id="open-source-intelligence-gathering-using-osrframework">Open Source Intelligence Gathering using OSRFramework</h1>
+
+
+
+<p>OSRFramework is a set of libraries to perform Open Source Intelligence tasks. They include references to a bunch different applications related to username checking, DNS lookups, information leaks research, deep web search, regular expressions extraction, and many others.</p>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/4-OSRFramework.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Demonstrate how to identify usernames of the target on different social media platforms.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/4-OSRFramework.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux virtual machine. ***
+<ol class="wp-block-list">
+<li>Log into&nbsp;<strong>Kali Linux</strong>&nbsp;machine and open a&nbsp;<strong>Terminal</strong>&nbsp;window..</li>
+</ol>
+</li>
+</ul>
+
+
+
+<ol class="wp-block-list">
+<li>Update APT and install the OSRFramework:</li>
+</ol>
+
+
+
+<p><code>apt update &amp;&amp; apt -y install osrframework</code></p>
+
+
+
+<h2 class="wp-block-heading" id="using-usufypy">Using usufy.py<br><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/4-OSRFramework.html#using-usufypy"></a></h2>
+
+
+
+<p><code>usufy.py</code>&nbsp;checks for the existence of a profile for a given user details in different platforms.</p>
+
+
+
+<p>Usage: **usufy.py -n&nbsp;-p twitter facebook youtube.**</p>
+
+
+
+<p><code>usufy.py -n cehuser us -p twitter facebook youtube</code></p>
+
+
+
+<pre class="wp-block-code"><code>+-----------------------------+---------------+------------------+
+|         i3visio_uri         | i3visio_alias | i3visio_platform |
++=============================+===============+==================+
+| http://twitter.com/us       | us            | Twitter          |
++-----------------------------+---------------+------------------+
+| https://www.facebook.com/us | us            | Facebook         |
++-----------------------------+---------------+------------------+
+| http://twitter.com/cehuser  | cehuser       | Twitter          |
++-----------------------------+---------------+------------------+
+</code></pre>
+
+
+
+<p>The&nbsp;<strong>usufy.py</strong>&nbsp;will search the user details in the mentioned platform and will provide you with existence of the user as shown above.</p>
+
+
+
+<h2 class="wp-block-heading" id="using-searchfypy">Using searchfy.py<br><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/4-OSRFramework.html#using-searchfypy"></a></h2>
+
+
+
+<p><code>searchfy.py</code>&nbsp;checks with the existing users of pages/handlers for a given details in the all social networks.</p>
+
+
+
+<p>Usage:&nbsp;<code>searchfy.py -q &lt;Page Name or Handler Name&gt;</code></p>
+
+
+
+<p><code>searchfy.py -q "ECCouncil"</code></p>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="658" height="665" src="../../../../wp-content/uploads/2024/11/searchfy-eccouncil.png" alt="alt text" class="wp-image-8841" title="serachfy eccouncil screenshot"></figure>
+
+
+
+<p>It will pull out all the user details who are subscribed to targeted social networking pages that are provided.</p>
+
+
+
+<h2 class="wp-block-heading" id="osrframework-cli-subcommands">OSRFramework CLI subcommands:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/4-OSRFramework.html#osrframework-cli-subcommands"></a></h2>
+
+
+
+<p>Subcommands | Description &mdash; | &mdash;<br>usufy.py | This tool that verifies if a username exists in 249 social platforms. mailfy.py | This module checks if a username has been registered in up to 22 email providers. searchfy.py | This module looks for profiles using full names and other info in 7 platforms. domainfy.py | This module checks the existence of a given domain in up to 879 different TLD. phonefy.py | This module checks if a phone number has been linked to spam practices in 4 platforms. entify.py | This module looks for regular expressions using 13 patterns.</p>
+
+
+
+<h1 class="wp-block-heading" id="information-gathering-using-metasploit">Information Gathering using Metasploit</h1>
+
+
+
+<p>The Metasploit Framework is a tool that provides information about secuirty vulnerabilities and aids in penetration testing and IDS signature development.<br><em>Official repository:</em>&nbsp;https://github.com/rapid7/metasploit-framework</p>
+
+
+
+<p><strong>Metasploit version: 5.0.59-dev</strong></p>
+
+
+
+<p>Metasploit can be used to test the vulnerability of computer systems or to break into remote systems.&nbsp;<strong>This lab will demonstrate extracting information using Metasploit Framework.</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="metasploit-overview">Metasploit overview:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/5-Metasploit-Basics.html#metasploit-overview"></a></h2>
+
+
+
+<p>Metasploit Framework is an open-source project that facilitates the task of attackers, exploit and payload writers. A major advantage of the framework is the moduler approach, allowing the combination of any exploit with any payload.</p>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/5-Metasploit-Basics.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux virtual machine.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/5-Metasploit-Basics.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>How to identify vulnerabilities and information disclosures.</li>
+
+
+
+<li>Extract accurate information about a network. ***</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="metasploit-setup">Metasploit setup<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/5-Metasploit-Basics.html#metasploit-setup"></a></h2>
+
+
+
+<p>Log into&nbsp;<strong>Kali Linux</strong>&nbsp;machine and open a&nbsp;<strong>Terminal</strong>&nbsp;window.</p>
+
+
+
+<p>Start PostgreSQL database service to link with Metasploit:</p>
+
+
+
+<p><code>service postgresql start</code></p>
+
+
+
+<p>Now type&nbsp;<code>msfconsole</code>&nbsp;to launch Metasploit.</p>
+
+
+
+<p><code>msfconsole</code></p>
+
+
+
+<p>Check if Metasploit is connected to the database successfully:</p>
+
+
+
+<p><code>db_status</code></p>
+
+
+
+<pre class="wp-block-code"><code>[*] postgresql selected, no connection
+</code></pre>
+
+
+
+<p>If you got this message, it means that database did not connected to msf properly. To fix this issue, type&nbsp;<code>exit</code>&nbsp;to quit Metasploit. Then, to initiate the database, type:</p>
+
+
+
+<p><code>msfdb init</code></p>
+
+
+
+<p>Then, restart the postgresql service:</p>
+
+
+
+<p><code>service postgresql restart</code></p>
+
+
+
+<p>Start Metasploit again and run the&nbsp;<code>db_status</code>&nbsp;to check the database status:</p>
+
+
+
+<p><code>msfconsole</code><br><code>db_status</code></p>
+
+
+
+<pre class="wp-block-code"><code>[*] Connected to msf. Connection type: postgresql.
+</code></pre>
+
+
+
+<p>Now the database is connected successfully to the msf.</p>
+
+
+
+<h2 class="wp-block-heading" id="find-alive-hosts">Find alive hosts<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/5-Metasploit-Basics.html#find-alive-hosts"></a></h2>
+
+
+
+<p>I recommend to boot up a couple VMs in your Lab. In my case I fired up:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Ubuntu Metasploitable</li>
+
+
+
+<li>Windows 7 SP1</li>
+
+
+
+<li>Windows Server 2012 R2</li>
+</ul>
+
+
+
+<p>To scan the subnet, we can use&nbsp;<strong>Nmap</strong>:</p>
+
+
+
+<p><code>nmap -O -oX Test 10.0.2.0/24</code></p>
+
+
+
+<p>Nmap starts scanning the subnet and showing the results on the screen. The&nbsp;<code>-oX Test</code>&nbsp;Nmap command stands for&nbsp;<strong>output in XML</strong>&nbsp;file called&nbsp;<strong>Test</strong>.</p>
+
+
+
+<p>We can import the Nmap results from the database:</p>
+
+
+
+<p><code>db_import Test</code></p>
+
+
+
+<p>To see the hosts and their details discovered by Nmap type:</p>
+
+
+
+<p><code>hosts</code><br>&hellip;<br><em>(Check the OS versions, IP and MAC addresses).</em></p>
+
+
+
+<p>I will select the Windows Server 2012, that I scanned to check the services running on this system.</p>
+
+
+
+<p><code>db_nmap -sS -A 10.0.2.28</code></p>
+
+
+
+<p>Nmap starts to footprint the system and list out the OS details.</p>
+
+
+
+<p>The&nbsp;<code>db_nmap</code>&nbsp;start the Nmap scan and the results would than be stored automatically in our database.</p>
+
+
+
+<p>Type&nbsp;<code>services</code>&nbsp;or&nbsp;<code>db_services</code>&nbsp;to get the whole list of the services running on the host.</p>
+
+
+
+<p><code>db_services</code></p>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="1161" height="674" src="../../../../wp-content/uploads/2024/11/services-nmap-scan.png" alt="alt text" class="wp-image-8844" title="Nmap Services Scan"></figure>
+
+
+
+<h2 class="wp-block-heading" id="scan-for-open-ports-and-services">Scan for open ports and services<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/5-Metasploit-Basics.html#scan-for-open-ports-and-services"></a></h2>
+
+
+
+<p>Search for&nbsp;<strong>portscan</strong>&nbsp;modules:</p>
+
+
+
+<p><code>search portscan</code></p>
+
+
+
+<pre class="wp-block-code"><code>#  Name                                    Disclosure Date  Rank    Check  Description
+-  ----                                    ---------------  ----    -----  -----------
+0  auxiliary/scanner/http/wordpress_pingback_access         normal  Yes    WordPress Pingback Locator
+1  auxiliary/scanner/natpmp/natpmp_portscan                 normal  Yes    NAT-PMP External Port Scanner
+2  auxiliary/scanner/portscan/ack                           normal  Yes    TCP ACK Firewall Scanner
+3  auxiliary/scanner/portscan/ftpbounce                     normal  Yes    FTP Bounce Port Scanner
+4  auxiliary/scanner/portscan/syn                           normal  Yes    TCP SYN Port Scanner
+5  auxiliary/scanner/portscan/tcp                           normal  Yes    TCP Port Scanner
+6  auxiliary/scanner/portscan/xmas                          normal  Yes    TCP "XMas" Port Scanner
+7  auxiliary/scanner/sap/sap_router_portscanner             normal  No     SAPRouter Port Scanner
+</code></pre>
+
+
+
+<p>Select the&nbsp;<strong>scanner/portscan/syn</strong>:</p>
+
+
+
+<p><code>use scanner/portscan/syn</code></p>
+
+
+
+<p>Now we need to see the module options:</p>
+
+
+
+<p><code>show options</code></p>
+
+
+
+<pre class="wp-block-code"><code>Name       Current Setting  Required 
+----       ---------------  -------- 
+BATCHSIZE  256              yes      
+DELAY      0                yes      
+INTERFACE                   no       
+JITTER     0                yes      
+PORTS      1-10000          yes      
+RHOSTS                      yes      
+SNAPLEN    65535            yes      
+THREADS    1                yes      
+TIMEOUT    500              yes      
+</code></pre>
+
+
+
+<p>Set the&nbsp;<code>RHOSTS</code>&nbsp;to the target and&nbsp;<code>THREADS</code>&nbsp;to&nbsp;<code>100</code></p>
+
+
+
+<p><code>set RHOSTS 10.0.2.23</code><br><code>set THREADS 100</code></p>
+
+
+
+<p>Type&nbsp;<code>run</code>&nbsp;to launch the module.</p>
+
+
+
+<pre class="wp-block-code"><code>[+]  TCP OPEN 10.0.2.23:53
+[+]  TCP OPEN 10.0.2.23:80
+[+]  TCP OPEN 10.0.2.23:88
+[+]  TCP OPEN 10.0.2.23:135
+[+]  TCP OPEN 10.0.2.23:139
+[+]  TCP OPEN 10.0.2.23:389
+[+]  TCP OPEN 10.0.2.23:443
+[+]  TCP OPEN 10.0.2.23:445
+[+]  TCP OPEN 10.0.2.23:464
+[+]  TCP OPEN 10.0.2.23:593
+[+]  TCP OPEN 10.0.2.23:636
+...
+</code></pre>
+
+
+
+<p>This module will enumerate every open TCP services using a raw SYN scan.</p>
+
+
+
+<p>Next scan, let&rsquo;s find out the SMB version.<br>Load the&nbsp;<strong>scanner/smb/smb_version</strong>&nbsp;module:</p>
+
+
+
+<p><code>use scanner/smb/smb_version</code></p>
+
+
+
+<p>Type&nbsp;<code>show options</code>&nbsp;to see the configuration.</p>
+
+
+
+<p>Set the&nbsp;<code>RHOSTS</code>&nbsp;to the target and&nbsp;<code>THREADS</code>&nbsp;to&nbsp;<code>100</code></p>
+
+
+
+<p><code>set RHOSTS 10.0.2.23</code><br><code>set THREADS 100</code></p>
+
+
+
+<p>Type&nbsp;<code>run</code>&nbsp;to launch the module.</p>
+
+
+
+<p>Now type&nbsp;<code>hosts</code>&nbsp;and observe the field&nbsp;<strong>os_flavor</strong>&nbsp;of the host you scanned in the subnet.</p>
+
+
+
+<p>Conclusion:<br>You can collect different error messages to learn the vulnerabilities, and note the information disclosed about the network.</p>
+
+
+
+<h1 class="wp-block-heading" id="information-gathering-using-theharvester">Information Gathering using theHarvester</h1>
+
+
+
+<p>theHarvester is used to gather open source intelligence (OSINT) on a company or domain. theHarvester gathers emails, subdomains, hosts, employee names, open ports and banners from different public sources like search engines, PGP key servers and SHODAN computer database.</p>
+
+
+
+<p><em>Official repository:</em>&nbsp;https://github.com/laramies/theHarvester</p>
+
+
+
+<h2 class="wp-block-heading" id="overview-of-theharvester">Overview of theHarvester<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/6-theHarvester.html#overview-of-theharvester"></a></h2>
+
+
+
+<p>Has been developed in Python by Christian Martorella. It&rsquo;s a very helpful tool in the early stages of penetration test. Help to undestand the customer footprint on the internet. Some professionals also use theHarvester to review the information available to an attacker through the internet.</p>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/6-theHarvester.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux virtual machine.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/6-theHarvester.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Demonstrate how to identify vulnerabilities and information disclosures in search engines using theHarvester.</li>
+
+
+
+<li>Extract email, subdomain names, virtual hosts(&hellip;) from the web sites. ***</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="run-theharvester-against-a-target">Run theHarvester against a target<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/1-Footprinting-and-Reconnaissance/6-theHarvester.html#run-theharvester-against-a-target"></a></h2>
+
+
+
+<p>To view all the commands option, type:</p>
+
+
+
+<p><code>theHarvester -h</code></p>
+
+
+
+<p>Let&rsquo;s perform a full harvest on this target:</p>
+
+
+
+<p><code>theHarvester -d certifiedhacker.com -l 300 -b all</code></p>
+
+
+
+<p>On the&nbsp;<code>help</code>&nbsp;command you can see the meaning of these options, like&nbsp;<code>-d</code>&nbsp;stands for domain, and&nbsp;<code>-l</code>&nbsp;for limit the number of search results, and&nbsp;<code>-b</code>&nbsp;is the search engine/source.</p>
+
+
+
+<p>theHarvester may return too much information to go through, for better readability, you can write the output to an HTML file:</p>
+
+
+
+<p><code>theHarvester -d certifiedhacker.com -l 300 -b all -f report</code></p>
+
+
+
+<p>The file will be exported in your home folder in Kali Machine.</p>
+
+
+
+<p>Note: If you having trouble to export the HTML file, keep in mind it&rsquo;s a huge amount of information being collected, you can reduce the search engines/sources, instead to use them all at once.</p>
+
+
+
+<h1 class="wp-block-heading" id="another-tools-for-recon">Another tools for Recon</h1>
+
+
+
+<p>Sublist3r is a python tool designed to enumerate subdomains of websites using OSINT.</p>
+
+
+
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://github.com/aboul3la/Sublist3r
+</div></figure>
+
+
+
+<p>Log into your Kali machine and open the terminal</p>
+
+
+
+<p>Type this command to update the Kali rolling packages and install sublist3r:</p>
+
+
+
+<p><code>sudo apt update &amp;&amp; apt -y install sublist3r</code></p>
+
+
+
+<p>Type&nbsp;<code>sublist3r -h</code>&nbsp;for print an overview of all options that are available.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>To search subdomains, type:<br><code>sublist3r -d google.com -t 3 -e bing</code><br><code>-d</code>&nbsp;= target domain<br><code>-t</code>&nbsp;= number of threads<br><code>-e</code>&nbsp;= search engine</p>
+</blockquote>
+
+
+
+<p>You also can find in which subdomain port 80 is open in&nbsp;<code>google.com</code>&nbsp;for example.</p>
+
+
+
+<p><code>sublist3r -d google.com -p 80 -e bing</code></p>
+
+
+
+<h1 class="wp-block-heading" id="web-data-extractor">Web Data Extractor</h1>
+
+
+
+<p>Web Data Extractor is used to extract a targeted company&rsquo;s contact details or data such as emails, fax, phone through web for responsible b2b communication.</p>
+
+
+
+<p>This tool is exclusive for Windows, very easy to use.<br>Downside: trial version export only 10 lines of report.<br>http://www.webextractor.com/</p>
+
+
+
+<h1 class="wp-block-heading" id="httrack">HTTrack</h1>
+
+
+
+<p>Web site copier is an offline browser utility that downloads a Web site to a local directory.</p>
+
+
+
+<p>This application is available in GUI and CLI.</p>
+
+
+
+<p>Works on Linux/OSX/BSD/Unix, Windows and Android.<br>https://www.httrack.com/</p>
+
+
+
+<h1 class="wp-block-heading" id="tracing-emails">Tracing Emails</h1>
+
+
+
+<p>Tracing emails involves analyzing the&nbsp;<strong>email header</strong>&nbsp;to discover details about the sender. Email tracking is useful for identifying the company and network providing service for the address.</p>
+
+
+
+<p><strong>eMailTrackerPro</strong>&nbsp;is a tool to track, detect abnormalities in the email header.<br>http://www.emailtrackerpro.com/</p>
+
+
+
+<h1 class="wp-block-heading" id="gathering-ip-and-domain-name-info-using-whois-lookup">Gathering IP and Domain Name info. using Whois Lookup</h1>
+
+
+
+<p>Whois lookup reveals available information on a hostname, IP address or domain.</p>
+
+
+
+<ul class="wp-block-list">
+<li>For Windows:&nbsp;<a href="https://smartwhois.en.softonic.com/"><strong>SmartWhois</strong></a></li>
+
+
+
+<li>Kali Linux:&nbsp;<a href="https://www.cyberpratibha.com/blog/using-whois-a-command-for-information-gathering/"><strong>whois command</strong></a></li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="advanced-network-route-tracing-using-path-analyzer-pro">Advanced Network Route Tracing using Path Analyzer Pro</h1>
+
+
+
+<p>Path Analyzer Pro delivers advanced network route tracing with performance tests, DNS, whois, and network resolution to investigate network issues.</p>
+
+
+
+<p>Works on Linux/Mac/Windows.<br>Paid application with 10-day trial version.<br>https://www.pathanalyzer.com/</p>
+
+
+
+<h1 class="wp-block-heading" id="automated-fingerprinting-using-foca">Automated Fingerprinting using FOCA</h1>
+
+
+
+<p>Fingerprinting Organizations with Collected Archives (FOCA) is a tool that reveals metadata and shrouded data. These archives may be on site pages, and can be downloaded and dissected with FOCA.<br><em>Official repository:</em>&nbsp;https://github.com/ElevenPaths/FOCA</p>
+
+
+
+<p>Features:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Metadata Extraction</li>
+
+
+
+<li>Network Analysis</li>
+
+
+
+<li>DNS Snooping</li>
+
+
+
+<li>Search for common files</li>
+
+
+
+<li>Juicy Files</li>
+
+
+
+<li>Proxies Search</li>
+
+
+
+<li>Technologies Identification</li>
+
+
+
+<li>Fingerprinting</li>
+
+
+
+<li>Leaks</li>
+
+
+
+<li>Backups Search</li>
+
+
+
+<li>Error Forcing</li>
+
+
+
+<li>Open Directories Search</li>
+</ul>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer clearfix">
+		<span class="cat-links">Posted in <a href="../../../../category/ethical-hacking-with-kali-linux/index.html" rel="category tag">Ethical Hacking With Kali Linux</a>, <a href="../../../../category/ethical-hacking-botnets-mac-flooding-arp-attacks-ddos-sniffing-penetration-testing/index.html" rel="category tag">Ethical Hacking, Botnets, MAC Flooding, ARP Attacks, DDos, Sniffing &amp; Penetration Testing.</a>, <a href="../../../../category/sql-botnets-and-xss-attacks-tools-and-resources/index.html" rel="category tag">SQL, Botnets and XSS Attacks Tools and Resources</a></span>	</footer><!-- .entry-footer -->
+		
+	
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../../15/how-to-use-hydra-to-crack-passwords-penetration-testing/index.html" rel="prev"><i class="fa fa-arrow-alt-circle-left"></i><span class="nav-title">How to Use Hydra&#8202; to Crack Passwords &ndash; Penetration Testing.</span></a></div><div class="nav-next"><a href="../scanning-a-target-network/index.html" rel="next"><span class="nav-title">Scanning a Target Network</span><i class="fa fa-arrow-alt-circle-right"></i></a></div></div>
+	</nav>			
+</article><!-- #post-8838 -->
+	</main><!-- #main --> 
+
+
+<aside id="secondary" class="widget-area d-none">
+	<section id="block-4" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section><section id="block-5" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section><section id="block-6" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section></aside><!-- #secondary -->
+	</div><!--#.row-->
+	</div><!--.container-->	<footer id="footer-widgets">
+	<div class="container">
+		<div class="row">
+											</div>
+	</div>
+</footer>	<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		&copy;   2024		<span class="sep"> | </span>
+			Designed by <a rel="nofollow" href="">julisunkan</a>.	</div><!-- .site-info -->
+</footer><!-- #colophon -->	</div><!-- #page -->
+
+<div id="sidr">
+	<button class="go-to-bottom"><i class="fa fa-down"></i></button>
+	<button id="close-menu" class="toggle-menu-link"><i class="fa fa-times"></i></button>
+	<form role="search" method="get" class="search-form" action="../../../../index.html">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>		<div class="sidr-menu-wrapper">
+		<div id="mobile-menu-sidr" class="menu"><ul>
+<li class="page_item page-item-8534"><a href="../../../../index.html">Botnets Attacks: Tools and Resources.</a></li>
+<li class="page_item page-item-8676"><a href="../../../../cart/index.html">Cart</a></li>
+<li class="page_item page-item-8583"><a href="../../../../document-library/index.html">Document Library</a></li>
+<li class="page_item page-item-8584"><a href="../../../../document-search/index.html">Document Search Results</a></li>
+<li class="page_item page-item-8259 current_page_parent"><a href="../../../../ethical-hacking-tools-resources/index.html">ETHICAL HACKING TOOLS &amp; RESOURCES</a></li>
+<li class="page_item page-item-8221"><a href="../../../../password-cracking-resources-and-tools/index.html">Passwords Cracking Resources and Tools.</a></li>
+<li class="page_item page-item-8281"><a href="../../../../privacy-policy-2/index.html">Privacy Policy</a></li>
+<li class="page_item page-item-8677"><a href="../../../../purchases/index.html">Purchases</a></li>
+<li class="page_item page-item-2"><a href="../../../../1-2/index.html">The Ultimate Network Penetration Testing Guide.</a></li>
+<li class="page_item page-item-8589"><a href="../../../../video-courses/index.html">video Courses</a></li>
+</ul></div>
+	</div>
+	<button class="go-to-top"><i class="fa fa-up"></i></button>
+	
+</div>    <div id="amm_drcfw_toast_msg"></div>
+            <script>
+                jQuery(function($){
+
+                    
+                                    });
+            </script>
+            <div id="fb-root"></div>
+                    <style>
+
+            .wpdm-popover {
+                transition: all ease-in-out 400ms;
+                position: relative;display: inline-block;
+            }
+
+            .wpdm-popover .wpdm-hover-card {
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                width: 100%;
+                transition: all ease-in-out 400ms;
+                margin-bottom: 28px;
+                opacity: 0;
+                z-index: -999999;
+            }
+
+            .wpdm-popover:hover .wpdm-hover-card {
+                transition: all ease-in-out 400ms;
+                opacity: 1;
+                z-index: 999999;
+                bottom: 0px;
+            }
+
+            .wpdm-popover .wpdm-hover-card.hover-preview img {
+                width: 104px;
+                border-radius: 3px;
+            }
+
+            .wpdm-popover .card .card-footer{
+                background: rgba(0,0,0,0.02);
+            }
+
+            .packinfo {
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        </style>
+        <script>
+            jQuery(function ($) {
+                $('a[data-show-on-hover]').on('hover', function () {
+                    $($(this).data('show-on-hover')).fadeIn();
+                });
+            });
+        </script>
+                <div class="w3eden">
+            <div id="wpdm-popup-link" class="modal fade">
+                <div class="modal-dialog" style="width: 750px">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                              <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body" id="wpdm-modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
+        </div>
+        <script language="JavaScript">
+            <!--
+            jQuery(function () {
+                jQuery('.wpdm-popup-link').click(function (e) {
+                    e.preventDefault();
+                    jQuery('#wpdm-popup-link .modal-title').html(jQuery(this).data('title'));
+                    jQuery('#wpdm-modal-body').html('<i class="icon"><img align="left" style="margin-top: -1px" src="../../../../wp-content/plugins/download-manager/assets/images/loading-new.gif" />&nbsp;Please Wait...');
+                    jQuery('#wpdm-popup-link').modal('show');
+                    jQuery.post(this.href,{mode:'popup'}, function (res) {
+                        jQuery('#wpdm-modal-body').html(res);
+                    });
+                    return false;
+                });
+            });
+            //-->
+        </script>
+        <style type="text/css">
+            #wpdm-modal-body img {
+                max-width: 100% !important;
+            }
+            .wpdm-placeholder{
+                display: none;
+            }
+        </style>
+            <div class="w3eden">
+            <div class="modal" tabindex="-1" id="wpdm-pdf-preview">
+                <div class="modal-dialog modal-dialog-centered" style="width: 900px;max-width: 100%;">
+                    <div class="modal-content" style="box-shadow: 0 0 20px rgba(0,0,0,0.2);border-radius: 4px;overflow: hidden">
+                        <div class="modal-body p-0">
+                            <iframe id="wpdm-pdf-preview-frame" src="data:text/plain;base64,TG9hZGluZyBQREYgRmlsZS4uLg==" style="width: 100%;border: 0;height: 700px;margin: 0 0 -8px;padding: 0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            jQuery(function ($){
+                $('.wpdm-pdf-preview').on('click', function (){
+                    $('#wpdm-pdf-preview-frame').attr('src', "data:text/plain;base64,TG9hZGluZyBQREYgRmlsZS4uLg==");
+                    $('#wpdm-pdf-preview-frame').attr('src', $(this).attr('href'));
+                });
+            });
+        </script>
+        <style>
+            #wpdm-pdf-preview {
+                background: rgba(0,0,0,0.4);
+            }
+        </style>
+        <script id="custom-script-js-extra">
+var wpdata = {"object_id":"8838","site_url":"..\/..\/..\/..\/index.html"};
+</script>
+<script src="../../../../wp-content/plugins/wp-meta-and-date-remover/assets/js/inspector.js?ver=1.0" id="custom-script-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/js/navigation.js?ver=1.0.1.1" id="phnewsfeed-navigation-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/acmeticker/js/acmeticker.min.js?ver=6.7" id="acme-ticker-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/owl.carousel.js?ver=2.3.4" id="owl-carousel-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/sidr/jquery.sidr.min.js?ver=2.2.1" id="sidr-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/js/theme.js?ver=1.0.1.1" id="phnewsfeed-theme-js-js"></script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=1.0.0" id="remote_sdk-js" async data-wp-strategy="async"></script>
+
+</body>
+</html>
+<!-- Powered by Staatic (https://staatic.com/) -->

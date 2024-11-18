@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Networking 101</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="http://use.fontawesome.com">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../../../../feed/index.html">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"..\/..\/..\/..\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../wp-includes/css/dist/block-library/style.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="my-custom-block-frontend-css-css" href="../../../../wp-content/plugins/wpdm-gutenberg-blocks/build/style.css?ver=6.7" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="wpdm-font-awesome-css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdm-front-bootstrap-css" href="../../../../wp-content/plugins/download-manager/assets/bootstrap/css/bootstrap.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdm-front-css" href="../../../../wp-content/plugins/download-manager/assets/css/front.css?ver=6.7" media="all">
+<link rel="stylesheet" id="Rich_Web_Tabs-css" href="../../../../wp-content/plugins/tabbed//Style/Tabs-Rich-Web-Widget.css?ver=6.7" media="all">
+<link rel="stylesheet" id="rwtabs_fontawesome-css-css" href="../../../../wp-content/plugins/tabbed//Style/richwebicons.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdmpp-front-css" href="../../../../wp-content/plugins/wpdm-premium-packages/assets/css/wpdmpp.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wordpress-popular-posts-css-css" href="../../../../wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.4.0" media="all">
+<link rel="stylesheet" id="phnewsfeed-style-css" href="../../../../wp-content/themes/ph-news-feed/style.css?ver=1.0.1.1" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="../../../../wp-content/themes/ph-news-feed/lib/bootstrap/bootstrap.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="../../../../wp-content/themes/ph-news-feed/lib/font-awesome/css/all.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="acme-ticker-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/acmeticker/css/style.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="owl-carousel-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/assets/owl.carousel.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="owl-carousel-theme-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/assets/owl.theme.default.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="sidr-dark-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/sidr/stylesheets/jquery.sidr.dark.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-primary-font-css" href="http://fonts.googleapis.com/css2?family=Quicksand%3Awght%40100%3B200%3B300%3B400%3B500%3B600%3B700%3B900&amp;display=swap&amp;ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-secondary-font-css" href="http://fonts.googleapis.com/css2?family=Oswald%3Awght%40300%3B400%3B500%3B600%3B700&amp;display=swap&amp;ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-core-css" href="../../../../wp-content/themes/ph-news-feed/design-files/core/core.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-header-css" href="../../../../wp-content/themes/ph-news-feed/design-files/header/style3/header.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-blog-style1-css" href="../../../../wp-content/themes/ph-news-feed/design-files/blog-style/blog-style1.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-single-css" href="../../../../wp-content/themes/ph-news-feed/design-files/single/single.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-sidebar-css" href="../../../../wp-content/themes/ph-news-feed/design-files/sidebar/sidebar.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-footer-css" href="../../../../wp-content/themes/ph-news-feed/design-files/footer/footer.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-featured-modules-css" href="../../../../wp-content/themes/ph-news-feed/design-files/featured-modules/featured-modules.css?ver=6.7" media="all">
+<style id="posts-table-pro-head-inline-css">
+.posts-data-table { visibility: hidden; }
+</style>
+<script src="../../../../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="../../../../wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0" id="jquery-form-js"></script>
+<script src="../../../../wp-content/plugins/download-manager/assets/bootstrap/js/bootstrap.bundle.min.js?ver=6.7" id="wpdm-front-bootstrap-js"></script>
+<script id="wpdm-frontjs-js-extra">
+var wpdm_url = {"home":"..\/..\/..\/..\/index.html","site":"..\/..\/..\/..\/index.html","ajax":"..\/..\/..\/..\/wp-admin\/admin-ajax.php"};
+var wpdm_js = {"spinner":"<i class=\"fas fa-sun fa-spin\"><\/i>"};
+</script>
+<script src="../../../../wp-content/plugins/download-manager/assets/js/front.js?ver=6.1.0" id="wpdm-frontjs-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect.min.js?ver=1.13.3" id="jquery-effects-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-blind.min.js?ver=1.13.3" id="jquery-effects-blind-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-bounce.min.js?ver=1.13.3" id="jquery-effects-bounce-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-clip.min.js?ver=1.13.3" id="jquery-effects-clip-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-drop.min.js?ver=1.13.3" id="jquery-effects-drop-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-explode.min.js?ver=1.13.3" id="jquery-effects-explode-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-fade.min.js?ver=1.13.3" id="jquery-effects-fade-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-fold.min.js?ver=1.13.3" id="jquery-effects-fold-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.13.3" id="jquery-effects-highlight-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-pulsate.min.js?ver=1.13.3" id="jquery-effects-pulsate-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-size.min.js?ver=1.13.3" id="jquery-effects-size-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-scale.min.js?ver=1.13.3" id="jquery-effects-scale-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.13.3" id="jquery-effects-shake-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.13.3" id="jquery-effects-slide-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-puff.min.js?ver=1.13.3" id="jquery-effects-puff-js"></script>
+<script id="Rich_Web_Tabs-js-extra">
+var rwtabs_object = {"ajaxurl":"..\/..\/..\/..\/wp-admin\/admin-ajax.php"};
+</script>
+<script src="../../../../wp-content/plugins/tabbed//Scripts/Tabs-Rich-Web-Widget.js?ver=6.7" id="Rich_Web_Tabs-js"></script>
+<script src="../../../../wp-content/plugins/wpdm-premium-packages/assets/js/wpdmpp-front.js?ver=6.7" id="wpdm-pp-js-js"></script>
+<script id="wpp-json" type="application/json">
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"..\/..\/..\/..\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/index.html","api_url":"..\/..\/..\/..\/wp-json\/wordpress-popular-posts\/index.html","ID":8195,"token":"64a95df02c","lang":0,"debug":0}
+</script>
+<script src="../../../../wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=6.4.0" id="wpp-js-js"></script>
+<link rel="https://api.w.org/" href="../../../../wp-json/index.html"><link rel="alternate" title="JSON" type="application/json" href="../../../../wp-json/wp/v2/posts/8195/index.html"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7">
+<link rel="canonical" href="">
+<link rel="shortlink" href="../../../../index.html?p=8195">
+		<script type="text/javascript">
+			//<![CDATA[
+			var show_msg = '';
+			if (show_msg !== '0') {
+				var options = {view_src: "View Source is disabled!", inspect_elem: "Inspect Element is disabled!", right_click: "Right click is disabled!", copy_cut_paste_content: "Cut/Copy/Paste is disabled!", image_drop: "Image Drag-n-Drop is disabled!" }
+			} else {
+				var options = '';
+			}
+
+         	function nocontextmenu(e) { return false; }
+         	document.oncontextmenu = nocontextmenu;
+         	document.ondragstart = function() { return false;}
+
+			document.onmousedown = function (event) {
+				event = (event || window.event);
+				if (event.keyCode === 123) {
+					if (show_msg !== '0') {show_toast('inspect_elem');}
+					return false;
+				}
+			}
+			document.onkeydown = function (event) {
+				event = (event || window.event);
+				//alert(event.keyCode);   return false;
+				if (event.keyCode === 123 ||
+						event.ctrlKey && event.shiftKey && event.keyCode === 73 ||
+						event.ctrlKey && event.shiftKey && event.keyCode === 75) {
+					if (show_msg !== '0') {show_toast('inspect_elem');}
+					return false;
+				}
+				if (event.ctrlKey && event.keyCode === 85) {
+					if (show_msg !== '0') {show_toast('view_src');}
+					return false;
+				}
+			}
+			function addMultiEventListener(element, eventNames, listener) {
+				var events = eventNames.split(' ');
+				for (var i = 0, iLen = events.length; i < iLen; i++) {
+					element.addEventListener(events[i], function (e) {
+						e.preventDefault();
+						if (show_msg !== '0') {
+							show_toast(listener);
+						}
+					});
+				}
+			}
+			addMultiEventListener(document, 'contextmenu', 'right_click');
+			addMultiEventListener(document, 'cut copy paste print', 'copy_cut_paste_content');
+			addMultiEventListener(document, 'drag drop', 'image_drop');
+			function show_toast(text) {
+				var x = document.getElementById("amm_drcfw_toast_msg");
+				x.innerHTML = eval('options.' + text);
+				x.className = "show";
+				setTimeout(function () {
+					x.className = x.className.replace("show", "")
+				}, 3000);
+			}
+		//]]>
+		</script>
+		<style type="text/css">body * :not(input):not(textarea){user-select:none !important; -webkit-touch-callout: none !important;  -webkit-user-select: none !important; -moz-user-select:none !important; -khtml-user-select:none !important; -ms-user-select: none !important;}#amm_drcfw_toast_msg{visibility:hidden;min-width:250px;margin-left:-125px;background-color:#333;color:#fff;text-align:center;border-radius:2px;padding:16px;position:fixed;z-index:999;left:50%;bottom:30px;font-size:17px}#amm_drcfw_toast_msg.show{visibility:visible;-webkit-animation:fadein .5s,fadeout .5s 2.5s;animation:fadein .5s,fadeout .5s 2.5s}@-webkit-keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@-webkit-keyframes fadeout{from{bottom:30px;opacity:1}to{bottom:0;opacity:0}}@keyframes fadeout{from{bottom:30px;opacity:1}to{bottom:0;opacity:0}}</style>
+		<style>/* CSS added by WP Meta and Date Remover*/.wp-block-post-author__name{display:none !important;}
+.wp-block-post-date{display:none !important;}
+ .entry-meta {display:none !important;}
+	.home .entry-meta { display: none; }
+	.entry-footer {display:none !important;}
+	.home .entry-footer { display: none; }</style>    <script>
+        var wpdmpp_base_url = '../../../../wp-content/plugins/wpdm-premium-packages/index.html';
+        var wpdmpp_currency_sign = '$';
+        var wpdmpp_csign_before = '$';
+        var wpdmpp_csign_after = '';
+        var wpdmpp_currency_code = 'USD';
+        var wpdmpp_cart_url = '<br />
+<b>Warning:  Trying to access array offset on value of type bool in <b>C:\xampp\htdocs\wp-content\plugins\wpdm-premium-packages\includes\libs\functions.php on line <b>412<br />
+';
+
+        var wpdmpp_txt = {"cart_button_label":"<i class=\"fas fa-shopping-basket mr-2\"><\/i>Add To Cart","pay_now":"Complete Purchase","checkout_button_label":"Complete Purchase"};
+
+    </script>
+    <style>p.wpdmpp-notice {
+            margin: 5px;
+        }
+    .wpbtn-success {
+        color: var(--color-success) !important;border-color: var(--color-success ) !important;
+        background: rgba(var(--color-success-rgb),0.03) !important;
+        transition: all ease-in-out 300ms;
+    }
+        .wpbtn-success:active,
+        .wpbtn-success:hover {
+            color: var(--color-success-active) !important;
+            border-color: var(--color-success-active) !important;
+            background: rgba(var(--color-success-rgb),0.07) !important;
+        }
+    </style>
+                <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+             <style>
+ 	:root {
+		 --phnewsfeed-primary: #eded42;
+		 --phnewsfeed-primary-text: #000000;
+		 --phnewsfeed-background-main: #ffffff;
+		 --phnewsfeed-background-darker: #d6c5e2;
+		 
+		 --phnewsfeed-secondary: #1e73be;
+		 --phnewsfeed-secondary-text: #FFFFFF;
+		 --phnewsfeed-secondary-dark: #0e6bd6;
+		 
+		 --phnewsfeed-text-dark: #111;
+		 --phnewsfeed-text: #555;
+		 --phnewsfeed-text-light: #777;
+		 
+		 --phnewsfeed-header-background: #000000;
+		 --phnewsfeed-header-text: #FFFFFF;
+		 --phnewsfeed-header-lighter: #222222;
+		 --phnewsfeed-top-bar-text: #777777;
+		 
+		 --phnewsfeed-mobile-header-background: #000000;
+		 --phnewsfeed-mobile-header-text: #222222;
+	 }
+ </style>
+<style>
+			#masthead.style3 #middle-bar {
+				background: linear-gradient(90deg, 
+					#c90000,
+					#8158ff				 );
+			}
+		</style> <style>
+	 #masthead #site-branding .custom-logo {
+		 max-height: 100px !important;
+	 }
+ </style>
+      <meta name="onesignal" content="wordpress-plugin">
+            <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = 'OneSignalSDKUpdaterWorker.js';
+                      OneSignal.SERVICE_WORKER_PATH = 'OneSignalSDKWorker.js';
+                      OneSignal.SERVICE_WORKER_PARAM = { scope: '/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/push/onesignal/' };
+        OneSignal.setDefaultNotificationUrl("../../../../index.html");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '';
+oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
+oneSignal_options['httpPermissionRequest'] = { };
+oneSignal_options['httpPermissionRequest']['enable'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "../../../../wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/index.html";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+                OneSignal.init(window._oneSignalInitOptions);
+                      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+			}
+			</style>
+	<link rel="icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-32x32.png" sizes="32x32">
+<link rel="icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-180x180.png">
+<meta name="msapplication-TileImage" content="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-270x270.png">
+		<style id="wp-custom-css">
+			p {
+font-size:28px;
+}
+p { color:#000000; }
+@media all and (min-width: 56.25em) {
+
+  .post-title {
+    font-size: 28px;
+    line-height: 1.357;
+  }
+}
+@media all and (min-width: 68.75em) {
+
+  .post-title {
+    font-size: 38px;
+    line-height: 1.5;
+  }
+}
+
+/* Grid style */
+.display-posts-listing.grid {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.display-posts-listing.grid .title {
+	display: block;
+}
+
+.display-posts-listing.grid img { 
+	display: block; 
+	max-width: 100%; 
+	height: auto; 
+}
+
+@media (min-width: 600px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+}
+
+@media (min-width: 1024px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+}		</style>
+		<meta name="generator" content="WordPress Download Manager 6.1.0">
+                <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
+        <style>
+            .w3eden .fetfont,
+            .w3eden .btn,
+            .w3eden .btn.wpdm-front h3.title,
+            .w3eden .wpdm-social-lock-box .IN-widget a span:last-child,
+            .w3eden .card-header,
+            .w3eden .card-footer,
+            .w3eden .badge,
+            .w3eden .label,
+            .w3eden .table,
+            .w3eden .card-body,
+            .w3eden .wpdm-frontend-tabs a,
+            .w3eden .alert:before,
+            .w3eden .discount-msg,
+            .w3eden .panel.dashboard-panel h3,
+            .w3eden #wpdm-dashboard-sidebar .list-group-item,
+            .w3eden #package-description .wp-switch-editor,
+            .w3eden .w3eden.author-dashbboard .nav.nav-tabs li a,
+            .w3eden .wpdm_cart thead th,
+            .w3eden #csp .list-group-item,
+            .w3eden .modal-title {
+                font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+            .w3eden .btn
+            {
+                font-weight: 800 !important;
+            }
+            .w3eden .btn {
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .w3eden #csp .list-group-item {
+                text-transform: unset;
+            }
+
+
+        </style>
+            <style>
+        /* WPDM Link Template Styles */        </style>
+                <style>
+
+            :root {
+                --color-primary: #4a8eff;
+                --color-primary-rgb: 74, 142, 255;
+                --color-primary-hover: #5998ff;
+                --color-primary-active: #3281ff;
+                --color-secondary: #6c757d;
+                --color-secondary-rgb: 108, 117, 125;
+                --color-secondary-hover: #6c757d;
+                --color-secondary-active: #6c757d;
+                --color-success: #018e11;
+                --color-success-rgb: 1, 142, 17;
+                --color-success-hover: #0aad01;
+                --color-success-active: #0c8c01;
+                --color-info: #2CA8FF;
+                --color-info-rgb: 44, 168, 255;
+                --color-info-hover: #2CA8FF;
+                --color-info-active: #2CA8FF;
+                --color-warning: #FFB236;
+                --color-warning-rgb: 255, 178, 54;
+                --color-warning-hover: #FFB236;
+                --color-warning-active: #FFB236;
+                --color-danger: #ff5062;
+                --color-danger-rgb: 255, 80, 98;
+                --color-danger-hover: #ff5062;
+                --color-danger-active: #ff5062;
+                --color-green: #30b570;
+                --color-blue: #0073ff;
+                --color-purple: #8557D3;
+                --color-red: #ff5062;
+                --color-muted: rgba(69, 89, 122, 0.6);
+                --wpdm-font: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+
+            .wpdm-download-link.btn.btn-primary {
+                border-radius: 4px;
+            }
+
+
+        </style>
+                <script>
+            function wpdm_rest_url(request) {
+                return "../../../../wp-json/wpdm/index.html" + request;
+            }
+        </script>
+        </head>
+
+<body class="post-template-default single single-post postid-8195 single-format-standard wp-custom-logo">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+	
+				<header id="masthead" class="site-header style3 d-none d-sm-none d-md-block">
+				<div>
+										<div id="middle-bar">
+	<div class="container">
+		<div class="row">
+			<div id="site-branding" class="col">
+				<a href="../../../../index.html" class="custom-logo-link" rel="home"><img width="687" height="48" src="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png" class="custom-logo" alt="" decoding="async" srcset="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png 687w, ../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview-300x21.png 300w" sizes="(max-width: 687px) 100vw, 687px"></a>					<div class="site-title h1"><a href="../../../../index.html" rel="home"></a></div>
+			</div><!-- .site-branding -->
+			
+			<nav id="site-navigation" class="col main-navigation">
+				<div class="container">
+					<div class="menu-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-8280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8280"><a href="../../../../privacy-policy-2/index.html">Privacy Policy</a></li>
+<li id="menu-item-8562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8562"><a href="../../../../password-cracking-resources-and-tools/index.html">Passwords Cracking Resources and Tools.</a></li>
+<li id="menu-item-8563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8563"><a href="../../../../1-2/index.html">The Ultimate Network Penetration Testing Guide.</a></li>
+<li id="menu-item-8564" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8564"><a href="../../../07/28/sql-injection-with-shell-access/index.html">SQL Injection with Shell Access</a></li>
+<li id="menu-item-8565" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8565"><a href="../../../07/28/sql-injections-tools-and-attacks/index.html">SQL Injections: Tools and Attacks</a></li>
+<li id="menu-item-8566" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8566"><a href="../../../07/28/web-application-security-tools-and-attacks/index.html">Web Application Security: Tools and Attacks</a></li>
+<li id="menu-item-8574" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-8574"><a href="" aria-current="page">Networking 101</a></li>
+</ul></div>				</div>
+			</nav><!-- #site-navigation -->
+				
+			<div class="social-menu-wrapper col">
+							</div>
+			
+			<div id="top-search" class="col">
+				<form role="search" method="get" class="search-form" action="../../../../index.html">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>	
+			</div>
+			
+			
+		</div>
+	</div>
+</div>	
+				</div>		
+			</header><!-- #masthead -->		
+			
+	 
+	<header id="masthead-mobile" class="d-flex d-sm-flex d-md-none">
+		<a href="#sidr" id="sidr-toggle" class="toggle-menu-hamburger"><i class="fa fa-bars"></i></a>
+		<div id="site-branding-mobile">
+			<a href="../../../../index.html" class="custom-logo-link" rel="home"><img width="687" height="48" src="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png" class="custom-logo" alt="" decoding="async" srcset="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png 687w, ../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview-300x21.png 300w" sizes="(max-width: 687px) 100vw, 687px"></a>	</div><!-- .site-branding -->		<a href="#search-drop" class="search-toggle"><i class="fa fa-search"></i></a>
+	</header>	
+
+	<div class="container">
+		<div class="row">			<div class="acme-ticker-wrapper container d-none d-sm-none d-md-block">
+			<div class="acme-news-ticker">
+					<div class="acme-news-ticker-label">Latest Tools &amp; Resources</div>
+					<div class="acme-news-ticker-box">
+						<ul class="my-news-ticker">
+													
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/apache-tomcat-penetration-testing/index.html">
+									Apache Tomcat Penetration Testing																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/penetration-testing-on-mysql-port-3306/index.html">
+									Penetration Testing on MYSQL (Port 3306)																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/advanced-system-network-pen-testing-guides/index.html">
+									Advanced System &amp; Network Pen-Testing Guides																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/vulnerability-scanning/index.html">
+									Vulnerability Scanning																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/network-enumeration/index.html">
+									Network Enumeration																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/scanning-a-target-network/index.html">
+									Scanning a Target Network																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/18/what-is-footprinting-and-reconnaissance/index.html">
+									What is Footprinting and Reconnaissance?																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/15/how-to-use-hydra-to-crack-passwords-penetration-testing/index.html">
+									How to Use Hydra&#8202; to Crack Passwords &ndash; Penetration Testing.																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/15/password-cracking-hash-gathering/index.html">
+									Password Cracking &amp; Hash Gathering																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2024/11/15/cracking-passwords-with-john-the-ripper-a-comprehensive-guide/index.html">
+									Cracking Passwords with John the Ripper: A Comprehensive Guide&nbsp;																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../07/28/sql-injection-with-shell-access/index.html">
+									SQL Injection with Shell Access																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../07/28/sql-injections-tools-and-attacks/index.html">
+									SQL Injections: Tools and Attacks																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../07/28/web-application-security-tools-and-attacks/index.html">
+									Web Application Security: Tools and Attacks																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="">
+									Networking 101																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+													</ul>
+					</div>
+					<div class="acme-news-ticker-controls acme-news-ticker-vertical-controls">
+						<button class="acme-news-ticker-arrow acme-news-ticker-prev"></button>
+						<button class="acme-news-ticker-pause"></button>
+						<button class="acme-news-ticker-arrow acme-news-ticker-next"></button>
+					</div>
+			</div> 
+		</div>
+
+	<main id="primary" class="site-main col-md-12">
+
+		<article id="post-8195" class="single-style1 post-8195 post type-post status-publish format-standard has-post-thumbnail hentry category-ethical-hacking-with-kali-linux category-ethical-hacking-botnets-mac-flooding-arp-attacks-ddos-sniffing-penetration-testing category-sql-botnets-and-xss-attacks-tools-and-resources">
+
+	<header class="entry-header">
+		<h1 class="entry-title">Networking 101</h1>	
+			<div class="entry-meta">
+				<span class="posted-on">Posted on <a href="" rel="bookmark"><time class="entry-date published" datetime=""></time><time class="updated" datetime=""></time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="../../../../author/julisunkan/index.html"></a></span></span>			</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	
+			<div class="post-thumbnail">
+				<img width="1429" height="1104" src="../../../../wp-content/uploads/2022/07/word-image-80-66.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="../../../../wp-content/uploads/2022/07/word-image-80-66.png 1429w, ../../../../wp-content/uploads/2022/07/word-image-80-66-300x232.png 300w, ../../../../wp-content/uploads/2022/07/word-image-80-66-1024x791.png 1024w, ../../../../wp-content/uploads/2022/07/word-image-80-66-768x593.png 768w" sizes="(max-width: 1429px) 100vw, 1429px">			</div><!-- .post-thumbnail -->
+
+		
+	<div class="entry-content clearfix">
+		
+<h1 class="wp-block-heading" id="networking-101"></h1>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>??? Networking 101 is a simple introduction to the most important network concepts for ethical hacking. </p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading has-medium-font-size" id="objectives">Objectives<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Understand network basic concepts</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="this-module-follows-the-order"><strong>This module follows the order:</strong><a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#this-module-follows-the-order"></a></h3>
+
+
+
+<ol class="wp-block-list">
+<li>Introduction</li>
+
+
+
+<li>IP and MAC Addresses</li>
+
+
+
+<li>Subnetting</li>
+
+
+
+<li>TCP, UDP and 3-Way-Handshake</li>
+
+
+
+<li>Ports &amp; Protocols</li>
+
+
+
+<li>OSI Model</li>
+</ol>
+
+
+
+<h1 class="wp-block-heading" id="1-introduction">1. Introduction</h1>
+
+
+
+<h2 class="wp-block-heading" id="so-what-the-heck-is-a-network">So, what the heck is a Network?<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#so-what-the-heck-is-a-network"></a></h2>
+
+
+
+<p>A network consists of two or more computers that are linked in order to share resources. Computer networks are the basis of communication in IT. They are used in a huge variety of ways and can include many different types of network. A computer network is a set of computers that are connected together so that they can share information. The earliest examples of computer networks are from the 1960s, but they have come a long way in the half-century since then.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/5edc8fbef915a17c93fa91c95877134c8fac324c/net2.jpg" alt="net"></figure>
+
+
+
+<p><sub><sup>LAN Network Topology &ndash; SOHO / Small Home Network</sup></sub></p>
+
+
+
+<p><strong>Two very common types of networks include: LAN (Local Area Network) and WAN (Wide Area Network)</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="topologies">Topologies<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#topologies"></a></h2>
+
+
+
+<p>There are many different types of network, which can be used for different purposes and by different types of people and organization. Here are some of the network types that you might come across:</p>
+
+
+
+<h3 class="wp-block-heading" id="lan---local-area-network">LAN &ndash; Local Area Network<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#lan---local-area-network"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>A LAN is a network that has a logical and physical borders that a computer can broadcast</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.geocities.ws/alcantara97/starhttt.gif" alt=""></figure>
+
+
+
+<h3 class="wp-block-heading" id="wan---wide-area-network">WAN &ndash; Wide Area Network<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#wan---wide-area-network"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>WAN is a multiple LANs or additional WANs with routing functionality for interconnectivity.</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.github.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/a3f9b5f3f243467208da83e0d0e543b32233c5d6/wan-topo.jpg" alt=""></figure>
+
+
+
+<h3 class="wp-block-heading" id="man---metropolitan-area-network">MAN &ndash; Metropolitan Area Network<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#man---metropolitan-area-network"></a></h3>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/f37cec4e00f726cb4be3661f20ccad77751e003a/man-topo.jpg" alt=""></figure>
+
+
+
+<h3 class="wp-block-heading" id="internet">Internet<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#internet"></a></h3>
+
+
+
+<p>Connecting WANs through WANs until complete the entire world = Internet.</p>
+
+
+
+<ul class="wp-block-list">
+<li>The protocol which runs the internet is TCP/IP</li>
+
+
+
+<li>As long you???re using legitimate IPv4 address or IPv6</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/8c176b8a798fb5749c4391c45015ee5d14d56f13/internet.png" alt=""></figure>
+
+
+
+<h3 class="wp-block-heading" id="intranet">Intranet<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#intranet"></a></h3>
+
+
+
+<p>If you???re using the TCP/IP stack and making your own LAN or WAN = Intranet.</p>
+
+
+
+<ul class="wp-block-list">
+<li>Intranet is a private network which still runs TCP/IP</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/8c176b8a798fb5749c4391c45015ee5d14d56f13/intranet.png" alt=""></figure>
+
+
+
+<h2 class="wp-block-heading" id="common-terms-in-networking">Common Terms in Networking<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#common-terms-in-networking"></a></h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>IP (internet protocol) address</strong>: the network address of the system across the network, which is also known as the Logical Address).</li>
+
+
+
+<li><strong>MAC address</strong>: the MAC address or physical address uniquely identifies each host. It is associated with the Network Interface Card (NIC).</li>
+
+
+
+<li><strong>Open system</strong>: an open system is connected to the network and prepared for communication.</li>
+
+
+
+<li><strong>Closed system</strong>: a closed system is not connected to the network and so can???t be communicated with.</li>
+
+
+
+<li><strong>Port</strong>: a port is a channel through which data is sent and received.</li>
+
+
+
+<li><strong>Nodes</strong>: nodes is a term used to refer to any computing devices such as computers that send and receive network packets across the network.</li>
+
+
+
+<li><strong>Network packets</strong>: the data that is sent to and from the nodes in a network.</li>
+
+
+
+<li><strong>Routers</strong>: routers are pieces of hardware that manage router packets. They determine which node the information came from and where to send it to. A router has a routing protocol which defines how it communicates with other routers.</li>
+
+
+
+<li><strong>???Network address translation (NAT)</strong>: a technique that routers use to provide internet service to more devices using fewer public IPs. A router has a public IP address but devices connected to it are assigned private IPs that others outside of the network can???t see.</li>
+
+
+
+<li><strong>Dynamic host configuration protocol (DHCP)</strong>: assigns dynamic IP addresses to hosts and is maintained by the internet service provider.</li>
+
+
+
+<li><strong>Internet service providers (ISP)</strong>: companies that provide everyone with their internet connection, both to individuals and to businesses and other organizations.</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="2-ip--mac-address">2. IP &amp; MAC Address</h1>
+
+
+
+<h2 class="wp-block-heading" id="what-is-an-ip-address-internet-protocol">What is an IP Address (Internet Protocol)?<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#what-is-an-ip-address-internet-protocol"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://media.fs.com/images/community/upload/wangEditor/201912/24/_1577182449_2uLs0pQcuT.jpg" alt="ip"></figure>
+
+
+
+<p>An IP address is a unique address that identifies a device on the internet or a local network. IP stands for ???Internet Protocol,??? which is the set of rules governing the format of data sent via the internet or local network.</p>
+
+
+
+<h2 class="wp-block-heading" id="check-your-local-ip-address">Check your local IP address<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#check-your-local-ip-address"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>If you are using Linux or MacOS you can open your terminal and type&nbsp;<code>ifconfig</code>&nbsp;command</li>
+
+
+
+<li>For Windows machine you can open up the cmd prompt or powershell, then type&nbsp;<code>ipconfig /all</code></li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/5a56240010acbc33026413ad6b5c6f66e9450413/inet.png" alt="inet"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>inet IPv4:&nbsp;<code>192.168.64.3</code>
+<ul class="wp-block-list">
+<li><code>inet</code>&nbsp;???&gt; The inet (Internet protocol family) show the local IP address. This is IP version 4 (IPv4) Using 32-bit decimal number.</li>
+</ul>
+</li>
+
+
+
+<li>inet6 IPv6:&nbsp;<code>fe80::c83b:ccff:fe0e:1069</code>
+<ul class="wp-block-list">
+<li><code>inet6</code>&nbsp;???&gt; Is a new version of IP (IPv6), using 128 bits hexadecimal value.</li>
+</ul>
+</li>
+
+
+
+<li><code>ether</code>&nbsp;???&gt; MAC address &ndash; unique identifier assigned to a network interface controller (NIC)</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="more-about-the-ipv4-decimal-value">More about the IPv4 decimal value:<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#more-about-the-ipv4-decimal-value"></a></h2>
+
+
+
+<pre class="wp-block-code"><code>IPv4 = 32 bits range (4 octets of 8 bits, from 0-255 each(4))
+
+11000000.10101000.01000000.00000011   [IPv4 binary]
+   192  .   168  .   64   .  3        [IPv4 decimal]
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="the-arithmetic-behind-ipv4">The arithmetic behind IPv4:<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#the-arithmetic-behind-ipv4"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>One octet have 8 bits:</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>0 or 1</th><th>0 or 1</th><th>0 or 1</th><th>0 or 1</th><th>0 or 1</th><th>0 or 1</th><th>0 or 1</th><th>0 or 1</th></tr></thead><tbody><tr><td>8th bit</td><td>7th bit</td><td>6th bit</td><td>5th bit</td><td>4th bit</td><td>3rd bit</td><td>2nd bit</td><td>1st bit</td></tr><tr><td>128 (2^7)</td><td>64 (2^6)</td><td>32 (2^5)</td><td>16 (2^4)</td><td>8 (2^3)</td><td>4 (2^2)</td><td>2 (2^1)</td><td>1 (2^0)</td></tr></tbody></table></figure>
+
+
+
+<p>Here is how binary octets convert to decimal: The right most bit, or least significant bit, of an octet holds a value of 2^0. The bit just to the left of that holds a value of 2^1. This continues until the left-most bit, or most significant bit, which holds a value of 2^7. So if all binary bits are a one, the decimal equivalent would be 255 as shown here:</p>
+
+
+
+<pre class="wp-block-code"><code>  1   1   1   1   1   1   1   1
+  |   |   |   |   |   |   |   |
+(128 +64 +32 +16 +8  +4  +2  +1) --&gt; 255 
+
+Example of octet conversion:
+IP Address: 192.168.64.3
+
+To calculate the first octet (192.), from binary format to decimal:
+
+128  64  32  16  8   4   2   1         
+ |   |   |   |   |   |   |   |
+ 1   1   0   0   0   0   0   0          
+ |   |   |   |   |   |   |   |
+128+ 64+ 0+  0+  0+  0+  0+  0 = 192   ---&gt; final value (firt octet IPv4 in decimal)
+
+</code></pre>
+
+
+
+<ul class="wp-block-list">
+<li>Take the IP:&nbsp;<code>192.168.64.3</code></li>
+
+
+
+<li>The first octet&nbsp;<code>192</code>&nbsp;in 8-bit binary is&nbsp;<code>11000000</code>.</li>
+
+
+
+<li>Only the&nbsp;<code>8th</code>&nbsp;and&nbsp;<code>7th</code>&nbsp;bit is on and the rest of them (<code>6th to 1st bit</code>) is off, meaning the decimal value is the final sum of these values:&nbsp;<code>128 + 64 = 192</code></li>
+</ul>
+
+
+
+<p>??????&nbsp;<strong>Why? Computers see everything in terms of binaryll; on and off.</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="ipv4-and-ipv6">IPv4 and IPv6<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#ipv4-and-ipv6"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://academy.avast.com/hs-fs/hubfs/New_Avast_Academy/IPv4%20vs.%20IPv6%20What%E2%80%99s%20the%20Difference/IPv4-vs-IPv6.png?width=2750&amp;name=IPv4-vs-IPv6.png" alt="ipv"></figure>
+
+
+
+<h2 class="wp-block-heading" id="private-and-public-ip-addresses">Private and Public IP Addresses<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#private-and-public-ip-addresses"></a></h2>
+
+
+
+<p>All IPv4 addresses can be divided into two major groups:&nbsp;<strong>global (or public, external)</strong>&nbsp;&ndash; this group can also be called ???WAN addresses??? ??? those that are used on the Internet, and&nbsp;<strong>private (or local, internal) addresses</strong>&nbsp;??? those that are used in the local network (LAN).</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://wiki.teltonika-networks.com/wikibase/images/thumb/a/a7/Sip.png/1100px-Sip.png" alt="priv-pub"></figure>
+
+
+
+<h2 class="wp-block-heading" id="more-about-private-ip-addresses">More about&nbsp;<strong>Private IP</strong>&nbsp;addresses:<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#more-about-private-ip-addresses"></a></h2>
+
+
+
+<p>Private (internal) addresses are not routed on the Internet and no traffic can be sent to them from the Internet, they only supposed to work within the local network. Private addresses include IP addresses from the following subnets:</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://66.media.tumblr.com/02a533c1d55ca0ba83e0176168df06ec/tumblr_inline_o4m1taQugo1u4ytoo_1280.jpg" alt="private-ip"></figure>
+
+
+
+<h2 class="wp-block-heading" id="nat---network-address-translation">NAT &ndash; Network Address Translation<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#nat---network-address-translation"></a></h2>
+
+
+
+<p>NAT stands for network address translation. It???s a way to map multiple local private addresses to a public one before transferring the information. Organizations that want multiple devices to employ a single IP address use NAT, as do most home routers.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/8275f73b57bdcb982b1d69aa8d213d2bdb384657/nat2.png" alt="nat2"></figure>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Static NAT</strong>When the local address is converted to a public one, this NAT chooses the same one. This means there will be a consistent public IP address associated with that router or NAT device.</li>
+
+
+
+<li><strong>Dynamic NAT</strong>Instead of choosing the same IP address every time, this NAT goes through a pool of public IP addresses. This results in the router or NAT device getting a different address each time the router translates the local address to a public address.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="???-ip-addresses-operates-on-layer-3-of-osi-model">?????? IP Addresses operates on&nbsp;<strong>Layer 3 of OSI Model</strong><a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#%EF%B8%8F-ip-addresses-operates-on-layer-3-of-osi-model"></a></h3>
+
+
+
+<p><em>Note: This module will cover OSI model later.</em></p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/b9d7f33be654d299f6618feeacb97fc5fd5bd7d2/OSI_L3.png" alt="osi3"></figure>
+
+
+
+<h1 class="wp-block-heading" id="3-subnetting">3. Subnetting</h1>
+
+
+
+<h3 class="wp-block-heading" id="why-subnetting">Why subnetting?<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#why-subnetting"></a></h3>
+
+
+
+<p>The way IP addresses are constructed makes it relatively simple for Internet routers to find the right network to route data into. However, in a Class A network (for instance), there could be millions of connected devices, and it could take some time for the data to find the right device. This is why subnetting comes in handy: subnetting narrows down the IP address to usage within a range of devices.</p>
+
+
+
+<p>Because an IP address is limited to indicating the network and the device address, IP addresses cannot be used to indicate which subnet an IP packet should go to. Routers within a network use something called a subnet mask to sort data into subnetworks.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>?????? Subnetting is really important for penetration testers and aspiring hackers, eventually you will face several cases involving small or large networks in your future engagements. Understanding the IP address type, range, available hosts is crucial for any network analysis.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="cheat-sheet-makes-easier-for-subnetting">Cheat sheet makes easier for subnetting<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#cheat-sheet-makes-easier-for-subnetting"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/5ce4b7daa9c2c10ccd44675eadaceae646e487e2/cyber-mentor-subnetting.png" alt="subnetting"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>CyberMentor Subnetting Sheet: http://twitter.com/thecybermentor/status/1211335431406727169</li>
+
+
+
+<li>Subnetting Cheat sheet alternative: http://nsrc.org/workshops/2009/summer/presentations/day3/subnetting.pdf</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="exercises">Exercises:<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#exercises"></a></h2>
+
+
+
+<p>Subnetting comes in handy to awnser basic questions like:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Identify the network and broadcast address</li>
+
+
+
+<li>How many hosts available in the network/hosts range?</li>
+
+
+
+<li>What masks allow the particular host?</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>IP range</th><th>Subnet</th><th>Hosts</th><th>Network</th><th>Broadcast</th></tr></thead><tbody><tr><td>192.168.1.16/28</td><td>255.255.255.240</td><td>14</td><td>192.168.1.16</td><td>192.168.1.31</td></tr><tr><td>192.168.0.0/22</td><td>?</td><td>?</td><td>?</td><td>?</td></tr></tbody></table></figure>
+
+
+
+<ul class="wp-block-list">
+<li>Take the&nbsp;<code>192.168.0.0/22</code>&nbsp;IP range listed above</li>
+
+
+
+<li>You can easily figure out the subnet mask by look the cheat sheet, you can see the&nbsp;<code>252</code>&nbsp;column. Just replace the value of&nbsp;<code>x</code>. You will get&nbsp;<code>255.255.252.0</code>
+<ul class="wp-block-list">
+<li>Subnet masks can be 0, 128, 192, 224, 240, 248, 252, 254 and 255.</li>
+
+
+
+<li>To understand the basics of math behind the bits, check the next figure below:</li>
+</ul>
+</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/c1e01e29aedc394f2d75c4ccf57e72606775103a/bits.png" alt="bits"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>The number of hosts is&nbsp;<code>2^(n) - 2</code>.
+<ul class="wp-block-list">
+<li><code>n = off bits</code></li>
+
+
+
+<li>In this case, is 2^10 = 1024 -&gt; 1024 &ndash; 2 =&nbsp;<code>1022</code></li>
+</ul>
+</li>
+
+
+
+<li>The network portion is the first and lowest possible value.</li>
+
+
+
+<li>The broadcast is the last and highest possible value.</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>IP range</th><th>Subnet</th><th>Hosts</th><th>Network</th><th>Broadcast</th></tr></thead><tbody><tr><td>192.168.0.0/22</td><td>255.255.252.0</td><td>1022</td><td>192.168.0.0</td><td>192.168.3.255</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="other-relevant-information-about--ips">Other relevant information about IPs<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#other-relevant-information-about--ips"></a></h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>IPv4 Main Address Types</strong>
+<ul class="wp-block-list">
+<li><strong>Unicast</strong>&nbsp;&ndash; acted on by a single recipient</li>
+
+
+
+<li><strong>Multicast</strong>&nbsp;&ndash; acted on by members of a specific group</li>
+
+
+
+<li><strong>Broadcast</strong>&nbsp;&ndash; acted on by everyone on the network
+<ul class="wp-block-list">
+<li><strong>Limited</strong>&nbsp;&ndash; delivered to every system in the domain (255.255.255.255)</li>
+
+
+
+<li><strong>Directed</strong>&nbsp;&ndash; delivered to all devices on a subnet and use that broadcast address</li>
+</ul>
+</li>
+</ul>
+</li>
+
+
+
+<li><strong>Subnet mask</strong>&nbsp;&ndash; determines how many address available on a specific subnet
+<ul class="wp-block-list">
+<li>Represented by three methods
+<ul class="wp-block-list">
+<li><strong>Decimal</strong>&nbsp;&ndash; 255.240.0.0</li>
+
+
+
+<li><strong>Binary</strong>&nbsp;&ndash; 11111111.11110000.00000000.00000000</li>
+
+
+
+<li><strong>CIDR</strong>&nbsp;&ndash; x.x.x.x/12 (where x.x.x.x is an ip address on that range)</li>
+</ul>
+</li>
+
+
+
+<li>If all the bits in the host field are 1s, the address is the broadcast</li>
+
+
+
+<li>If they are all 0s, it???s the network address</li>
+
+
+
+<li>Any other combination indicates an address in the range</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="mac-addresses">MAC Addresses</h1>
+
+
+
+<ul class="wp-block-list">
+<li>MAC (Media Access Control) address is provided by NIC Card???d manufacturer and gives the physical address of a computer.</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://i1.wp.com/learntomato.flashrouters.com/wp-content/uploads/MAC-address-hardware.jpg?resize=560%2C315&amp;ssl=1" alt="macphys"></figure>
+
+
+
+<p>The first three bytes of a MAC address were originally known as&nbsp;<strong>OUI???s, or Organizational Unique Identifiers. Each manufacturer of networking equipment was assigned an OUI, and was free to assign their own numbers in that block.</strong></p>
+
+
+
+<pre class="wp-block-code"><code>   OUI     NIC
+    |       |
+________ ________
+00:0c:29:99:98:ca
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="checking-vendor-behind-mac-addresse">Checking vendor behind MAC addresse<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#checking-vendor-behind-mac-addresse"></a></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Check your MAC address use the command&nbsp;<code>ifconfig</code>&nbsp;(Linux) or&nbsp;<code>/ipconfig</code>&nbsp;(Windows)&nbsp;<img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/214242916f8947f09fc15d5bdde6a668fd4a4c1f/mac2.png" alt="mac"></li>
+
+
+
+<li>Copy and save the&nbsp;<strong>first three bytes</strong>&nbsp;of your address.&nbsp;<em>(The first three bytes from image above is&nbsp;<code>00:0c:29</code>)</em></li>
+
+
+
+<li>Validate the information by performing a&nbsp;<strong>MAC Address Lookup</strong>&nbsp;on the internet. For this example I???m using: http://aruljohn.com/&nbsp;<img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/c82686452d3e671f9a4d351cd5c02171914dd16d/mac2lookup.png" alt="mac2"></li>
+
+
+
+<li>As you can see the OUI lookup identify a virtual network interface provided by VMware</li>
+</ol>
+
+
+
+<p><em>So, to summarize, the&nbsp;<strong>first three bytes</strong>&nbsp;are assigned to a manufacturer of networking equipment and the manufacturer assigns the last three bytes of an address.</em></p>
+
+
+
+<h3 class="wp-block-heading" id="???-mac-addresses-operates-on-layer-2-of-osi-model">?????? MAC Addresses operates on Layer 2 of OSI Model<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#%EF%B8%8F-mac-addresses-operates-on-layer-2-of-osi-model"></a></h3>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/b9d7f33be654d299f6618feeacb97fc5fd5bd7d2/OSI_L2.png" alt="osil2"></figure>
+
+
+
+<h1 class="wp-block-heading" id="4-tcpip-udp-and-3-way-handshake">4. TCP/IP, UDP and 3-Way-Handshake</h1>
+
+
+
+<h2 class="wp-block-heading" id="transmission-control-protocolinternet-protocol-tcpip">Transmission Control Protocol/Internet Protocol (TCP/IP)<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#transmission-control-protocolinternet-protocol-tcpip"></a></h2>
+
+
+
+<ul class="wp-block-list">
+<li>What is TCP used for?</li>
+</ul>
+
+
+
+<p>TCP enables data to be transferred between applications and devices on a network. It is designed to break down a message, such as an email, into packets of data to ensure the message reaches its destination successfully and as quickly as possible.</p>
+
+
+
+<ul class="wp-block-list">
+<li>What does TCP mean?</li>
+</ul>
+
+
+
+<p>TCP means Transmission Control Protocol, which is a communications standard for delivering data and messages through networks. TCP is a basic standard that defines the rules of the internet and is a common protocol used to deliver data in digital network communications.</p>
+
+
+
+<ul class="wp-block-list">
+<li>The TCP/IP model consists of several types of protocols, including:
+<ul class="wp-block-list">
+<li>TCP and IP</li>
+
+
+
+<li>Address Resolution Protocol (ARP)</li>
+
+
+
+<li>Internet Control Message Protocol (ICMP)</li>
+
+
+
+<li>Reverse Address Resolution Protocol (RARP)</li>
+
+
+
+<li>User Datagram Protocol (UDP)</li>
+</ul>
+</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/bccff9a7c15aa11636c03686ef344ae2d433f699/tcpmodel.png" alt="tcpmod"></figure>
+
+
+
+<p><sub><sup>TCP/IP Model</sup></sub></p>
+
+
+
+<p>TCP is the most commonly used of these protocols and accounts for the most traffic used on a TCP/IP network.&nbsp;<strong>UDP is an alternative to TCP that does not provide error correction, is less reliable, and has less overhead, which makes it ideal for streaming.</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="the-user-datagram-protocol-udp">The User Datagram Protocol (UDP)<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#the-user-datagram-protocol-udp"></a></h2>
+
+
+
+<p>Is a lightweight data transport protocol that works on top of IP. UDP provides a mechanism to detect corrupt data in packets, but it does not attempt to solve other problems that arise with packets, such as lost or out of order packets. That???s why UDP is sometimes known as the Unreliable Data Protocol. UDP is simple but fast, at least in comparison to other protocols that work over IP. It???s often used for time-sensitive applications (such as real-time video streaming) where speed is more important than accuracy.</p>
+
+
+
+<ul class="wp-block-list">
+<li>On Linux and Unix systems you can issue the&nbsp;<code>lsof</code>&nbsp;command to see which processes is using UDP ports&nbsp;<img decoding="async" src="http://cdn.kastatic.org/ka-perseus-images/edbdf593300fc4a51c60a97998c4d01a51ccd3b1.png" alt="udp"></li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="the-tcp-format">The TCP format<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#the-tcp-format"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://cdn.kastatic.org/ka-perseus-images/e5fdf560fdb40a1c0b3c3ce96f570e5f00fff161.svg" alt="tc"></figure>
+
+
+
+<h2 class="wp-block-heading" id="the-udp-format">The UDP format<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#the-udp-format"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://cdn.kastatic.org/ka-perseus-images/9d185d3d44c7ef1e2cd61655e47befb4d383e907.svg" alt="udp"></figure>
+
+
+
+<h2 class="wp-block-heading" id="tcp-handshake">TCP Handshake<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#tcp-handshake"></a></h2>
+
+
+
+<p>TCP uses a three-way handshake to establish a reliable connection. The connection is full duplex, and both sides synchronize (SYN) and acknowledge (ACK) each other. The exchange of these four flags is performed in three steps:</p>
+
+
+
+<ol class="wp-block-list">
+<li>SYN</li>
+
+
+
+<li>SYN-ACK</li>
+
+
+
+<li>ACK</li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/bd38a6a2d83ea02a4715d6cb7fd8e0d74af3bd26/3wayhs.jpg" alt="3wayhandshake"></figure>
+
+
+
+<p>The three message mechanism is designed so that two computers that want to pass information back and forth to each other can negotiate the parameters of the connection before transmitting data such as HTTP browser requests.</p>
+
+
+
+<h2 class="wp-block-heading" id="more-tcp-flags">More TCP Flags<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#more-tcp-flags"></a></h2>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Flag</th><th>Name</th><th>Function</th></tr></thead><tbody><tr><td>SYN</td><td>Synchronize</td><td>Set during initial communication. Negotiating of parameters and sequence numbers</td></tr><tr><td>ACK</td><td>Acknowledgment</td><td>Set as an acknowledgement to the SYN flag. Always set after initial SYN</td></tr><tr><td>RST</td><td>Reset</td><td>Forces the termination of a connection (in both directions)</td></tr><tr><td>FIN</td><td>Finish</td><td>Ordered close to communications</td></tr><tr><td>PSH</td><td>Push</td><td>Forces the delivery of data without concern for buffering</td></tr><tr><td>URG</td><td>Urgent</td><td>Data inside is being sent out of band. Example is cancelling a message</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="capturing-3-way-handshakes-example">Capturing 3 Way handshakes (Example)<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#capturing-3-way-handshakes-example"></a></h2>
+
+
+
+<ul class="wp-block-list">
+<li>The figure below shows the 3-way-handshake packets captured by&nbsp;<a href="http://www.wireshark.org/">Wireshark</a></li>
+</ul>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/5213becc28e3f9f46c976d05cd090ffd070ff5d1/wireshark0.png" alt="wireshark"></figure>
+
+
+
+<h1 class="wp-block-heading" id="5-ports--protocols">5. Ports &amp; Protocols</h1>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-port">What is a Port?<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#what-is-a-port"></a></h2>
+
+
+
+<p>In computer networking, a port is a communication endpoint. At the software level, within an operating system, a port is a logical construct that identifies a specific process or a type of network service.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-most-common-ports">The most common ports<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#the-most-common-ports"></a></h2>
+
+
+
+<p>As a penetration tester or ethical hacker you should be familiar with the common ports and protocols used by popular services.</p>
+
+
+
+<h3 class="wp-block-heading" id="port-numbers">Port Numbers<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#port-numbers"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Internet Assigned Numbers Authority</strong>&nbsp;(IANA) &ndash; maintains Service Name and Transport Protocol Port Number Registry which lists all port number reservations</li>
+
+
+
+<li>Ranges
+<ul class="wp-block-list">
+<li><strong>Well-known ports</strong>&nbsp;&ndash; 0 &ndash; 1023</li>
+
+
+
+<li><strong>Registered ports</strong>&nbsp;&ndash; 1024 &ndash; 49,151</li>
+
+
+
+<li><strong>Dynamic ports</strong>&nbsp;&ndash; 49,152 &ndash; 65,535Port NumberProtocolTransport Protocol20/21FTPTCP22SSHTCP23TelnetTCP25SMTPTCP53DNSTCP/UDP67DHCPUDP69TFTPUDP80HTTPTCP110POP3TCP135RPCTCP137-139NetBIOSTCP/UDP143IMAPTCP161/162SNMPUDP389LDAPTCP/UDP443HTTPSTCP445SMBTCP514SYSLOGUDP</li>
+
+
+
+<li>A service is said to be&nbsp;<strong>listening</strong>&nbsp;for a port when it has that specific port open</li>
+
+
+
+<li>Once a service has made a connection, the port is in an&nbsp;<strong>established</strong>&nbsp;state</li>
+
+
+
+<li><strong><code>netstat</code></strong>&nbsp;command:
+<ul class="wp-block-list">
+<li>Shows open ports on computer</li>
+
+
+
+<li><strong>netstat -an</strong>&nbsp;displays connections in numerical form</li>
+
+
+
+<li><strong>netstat -b</strong>&nbsp;displays executables tied to the open port (admin only)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="6-osi-model">6. OSI Model</h1>
+
+
+
+<p>OSI Model is a hypothetical networking framework that uses specific protocols and mechanisms in every layer of it. This model is used to divide the network architecture into seven different layers conceptually. These layers are:</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://gist.githubusercontent.com/Samsar4/62886aac358c3d484a0ec17e8eb11266/raw/3e2dc59e7c341f4d79b2b93bac03fd8378c7ae3a/tcpmo.jpg" alt="osi-model"></figure>
+
+
+
+<p>There also involves some security postures and mechanisms that a security professional must know to detect and put the security method effectively in every layer.</p>
+
+
+
+<h2 class="wp-block-heading" id="more-about-the-layers">More about the Layers:<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#more-about-the-layers"></a></h2>
+
+
+
+<h2 class="wp-block-heading" id="layer-7---application">Layer 7 &ndash; Application<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-7---application"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/7-application-layer.svg" alt="l7"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>This is the only layer that directly interacts with data from the user. Software applications like web browsers and email clients rely on the application layer to initiate communications. But it should be made clear that client software applications are not part of the application layer; rather the application layer is responsible for the protocols and data manipulation that the software relies on to present meaningful data to the user. Application layer protocols include HTTP as well as SMTP (Simple Mail Transfer Protocol is one of the protocols that enables email communications).</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="layer-6---presentation">Layer 6 &ndash; Presentation<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-6---presentation"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/6-presentation-layer.svg" alt="l6"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>This layer is primarily responsible for preparing data so that it can be used by the application layer; in other words, layer 6 makes the data presentable for applications to consume. The presentation layer is responsible for translation, encryption, and compression of data.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="layer-5---session-layer">Layer 5 &ndash; Session Layer<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-5---session-layer"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/5-session-layer.svg" alt="l5"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>This is the layer responsible for opening and closing communication between the two devices. The time between when the communication is opened and closed is known as the session. The session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="layer-4---transport-layer">Layer 4 &ndash; Transport Layer<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-4---transport-layer"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/4-transport-layer.svg" alt="l4"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>Layer 4 is responsible for end-to-end communication between the two devices. This includes taking data from the session layer and breaking it up into chunks called segments before sending it to layer 3. The transport layer on the receiving device is responsible for reassembling the segments into data the session layer can consume.</li>
+
+
+
+<li>The transport layer is also responsible for flow control and error control. Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn???t overwhelm a receiver with a slow connection. The transport layer performs error control on the receiving end by ensuring that the data received is complete, and requesting a retransmission if it isn???t.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="layer-3---network-layer">Layer 3 &ndash; Network Layer<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-3---network-layer"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/3-network-layer.svg" alt="l3"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>The network layer is responsible for facilitating data transfer between two different networks. If the two devices communicating are on the same network, then the network layer is unnecessary. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender???s device, and reassembling these packets on the receiving device. The network layer also finds the best physical path for the data to reach its destination; this is known as routing.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="layer-2---data-link-layer">Layer 2 &ndash; Data Link Layer<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-2---data-link-layer"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/2-data-link-layer.svg" alt="l2"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>The data link layer is very similar to the network layer, except the data link layer facilitates data transfer between two devices on the SAME network. The data link layer takes packets from the network layer and breaks them into smaller pieces called frames. Like the network layer, the data link layer is also responsible for flow control and error control in intra-network communication (The transport layer only does flow control and error control for inter-network communications).</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="layer-1---physical-layer">Layer 1 &ndash; Physical Layer<a href="http://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/0-Core-Knowledge/0-Networking-101.html#layer-1---physical-layer"></a></h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="http://www.cloudflare.com/img/learning/ddos/glossary/open-systems-interconnection-model-osi/1-physical-layer.svg" alt="l1"></figure>
+
+
+
+<ul class="wp-block-list">
+<li>This layer includes the physical equipment involved in the data transfer, such as the cables and switches. This is also the layer where the data gets converted into a bit stream, which is a string of 1s and 0s. The physical layer of both devices must also agree on a signal convention so that the 1s can be distinguished from the 0s on both devices.</li>
+</ul>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer clearfix">
+		<span class="cat-links">Posted in <a href="../../../../category/ethical-hacking-with-kali-linux/index.html" rel="category tag">Ethical Hacking With Kali Linux</a>, <a href="../../../../category/ethical-hacking-botnets-mac-flooding-arp-attacks-ddos-sniffing-penetration-testing/index.html" rel="category tag">Ethical Hacking, Botnets, MAC Flooding, ARP Attacks, DDos, Sniffing &amp; Penetration Testing.</a>, <a href="../../../../category/sql-botnets-and-xss-attacks-tools-and-resources/index.html" rel="category tag">SQL, Botnets and XSS Attacks Tools and Resources</a></span>	</footer><!-- .entry-footer -->
+		
+	
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-next"><a href="../../../07/28/web-application-security-tools-and-attacks/index.html" rel="next"><span class="nav-title">Web Application Security: Tools and Attacks</span><i class="fa fa-arrow-alt-circle-right"></i></a></div></div>
+	</nav>			
+</article><!-- #post-8195 -->
+	</main><!-- #main --> 
+
+
+<aside id="secondary" class="widget-area d-none">
+	<section id="block-4" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section><section id="block-5" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section><section id="block-6" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section></aside><!-- #secondary -->
+	</div><!--#.row-->
+	</div><!--.container-->	<footer id="footer-widgets">
+	<div class="container">
+		<div class="row">
+											</div>
+	</div>
+</footer>	<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		&copy;   2024		<span class="sep"> | </span>
+			Designed by <a rel="nofollow" href="">julisunkan</a>.	</div><!-- .site-info -->
+</footer><!-- #colophon -->	</div><!-- #page -->
+
+<div id="sidr">
+	<button class="go-to-bottom"><i class="fa fa-down"></i></button>
+	<button id="close-menu" class="toggle-menu-link"><i class="fa fa-times"></i></button>
+	<form role="search" method="get" class="search-form" action="../../../../index.html">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>		<div class="sidr-menu-wrapper">
+		<div id="mobile-menu-sidr" class="menu"><ul>
+<li class="page_item page-item-8534"><a href="../../../../index.html">Botnets Attacks: Tools and Resources.</a></li>
+<li class="page_item page-item-8676"><a href="../../../../cart/index.html">Cart</a></li>
+<li class="page_item page-item-8583"><a href="../../../../document-library/index.html">Document Library</a></li>
+<li class="page_item page-item-8584"><a href="../../../../document-search/index.html">Document Search Results</a></li>
+<li class="page_item page-item-8259 current_page_parent"><a href="../../../../ethical-hacking-tools-resources/index.html">ETHICAL HACKING TOOLS &amp; RESOURCES</a></li>
+<li class="page_item page-item-8221"><a href="../../../../password-cracking-resources-and-tools/index.html">Passwords Cracking Resources and Tools.</a></li>
+<li class="page_item page-item-8281"><a href="../../../../privacy-policy-2/index.html">Privacy Policy</a></li>
+<li class="page_item page-item-8677"><a href="../../../../purchases/index.html">Purchases</a></li>
+<li class="page_item page-item-2"><a href="../../../../1-2/index.html">The Ultimate Network Penetration Testing Guide.</a></li>
+<li class="page_item page-item-8589"><a href="../../../../video-courses/index.html">video Courses</a></li>
+</ul></div>
+	</div>
+	<button class="go-to-top"><i class="fa fa-up"></i></button>
+	
+</div>    <div id="amm_drcfw_toast_msg"></div>
+            <script>
+                jQuery(function($){
+
+                    
+                                    });
+            </script>
+            <div id="fb-root"></div>
+                    <style>
+
+            .wpdm-popover {
+                transition: all ease-in-out 400ms;
+                position: relative;display: inline-block;
+            }
+
+            .wpdm-popover .wpdm-hover-card {
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                width: 100%;
+                transition: all ease-in-out 400ms;
+                margin-bottom: 28px;
+                opacity: 0;
+                z-index: -999999;
+            }
+
+            .wpdm-popover:hover .wpdm-hover-card {
+                transition: all ease-in-out 400ms;
+                opacity: 1;
+                z-index: 999999;
+                bottom: 0px;
+            }
+
+            .wpdm-popover .wpdm-hover-card.hover-preview img {
+                width: 104px;
+                border-radius: 3px;
+            }
+
+            .wpdm-popover .card .card-footer{
+                background: rgba(0,0,0,0.02);
+            }
+
+            .packinfo {
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        </style>
+        <script>
+            jQuery(function ($) {
+                $('a[data-show-on-hover]').on('hover', function () {
+                    $($(this).data('show-on-hover')).fadeIn();
+                });
+            });
+        </script>
+                <div class="w3eden">
+            <div id="wpdm-popup-link" class="modal fade">
+                <div class="modal-dialog" style="width: 750px">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                              <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body" id="wpdm-modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
+        </div>
+        <script language="JavaScript">
+            <!--
+            jQuery(function () {
+                jQuery('.wpdm-popup-link').click(function (e) {
+                    e.preventDefault();
+                    jQuery('#wpdm-popup-link .modal-title').html(jQuery(this).data('title'));
+                    jQuery('#wpdm-modal-body').html('<i class="icon"><img align="left" style="margin-top: -1px" src="../../../../wp-content/plugins/download-manager/assets/images/loading-new.gif" />&nbsp;Please Wait...');
+                    jQuery('#wpdm-popup-link').modal('show');
+                    jQuery.post(this.href,{mode:'popup'}, function (res) {
+                        jQuery('#wpdm-modal-body').html(res);
+                    });
+                    return false;
+                });
+            });
+            //-->
+        </script>
+        <style type="text/css">
+            #wpdm-modal-body img {
+                max-width: 100% !important;
+            }
+            .wpdm-placeholder{
+                display: none;
+            }
+        </style>
+            <div class="w3eden">
+            <div class="modal" tabindex="-1" id="wpdm-pdf-preview">
+                <div class="modal-dialog modal-dialog-centered" style="width: 900px;max-width: 100%;">
+                    <div class="modal-content" style="box-shadow: 0 0 20px rgba(0,0,0,0.2);border-radius: 4px;overflow: hidden">
+                        <div class="modal-body p-0">
+                            <iframe id="wpdm-pdf-preview-frame" src="data:text/plain;base64,TG9hZGluZyBQREYgRmlsZS4uLg==" style="width: 100%;border: 0;height: 700px;margin: 0 0 -8px;padding: 0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            jQuery(function ($){
+                $('.wpdm-pdf-preview').on('click', function (){
+                    $('#wpdm-pdf-preview-frame').attr('src', "data:text/plain;base64,TG9hZGluZyBQREYgRmlsZS4uLg==");
+                    $('#wpdm-pdf-preview-frame').attr('src', $(this).attr('href'));
+                });
+            });
+        </script>
+        <style>
+            #wpdm-pdf-preview {
+                background: rgba(0,0,0,0.4);
+            }
+        </style>
+        <script id="custom-script-js-extra">
+var wpdata = {"object_id":"8195","site_url":"..\/..\/..\/..\/index.html"};
+</script>
+<script src="../../../../wp-content/plugins/wp-meta-and-date-remover/assets/js/inspector.js?ver=1.0" id="custom-script-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/js/navigation.js?ver=1.0.1.1" id="phnewsfeed-navigation-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/acmeticker/js/acmeticker.min.js?ver=6.7" id="acme-ticker-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/owl.carousel.js?ver=2.3.4" id="owl-carousel-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/sidr/jquery.sidr.min.js?ver=2.2.1" id="sidr-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/js/theme.js?ver=1.0.1.1" id="phnewsfeed-theme-js-js"></script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=1.0.0" id="remote_sdk-js" async data-wp-strategy="async"></script>
+
+</body>
+</html>
+<!-- Powered by Staatic (https://staatic.com/) -->

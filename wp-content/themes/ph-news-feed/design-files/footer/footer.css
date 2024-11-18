@@ -1,0 +1,73 @@
+:root {
+  --phnewsfeed-primary: #d2a7ef;
+  --phnewsfeed-primary-text: #f9ffe7;
+  --phnewsfeed-background-main: #ffffff;
+  --phnewsfeed-background-darker: #eeeeee;
+  --phnewsfeed-secondary: #3d405b;
+  --phnewsfeed-secondary-dark: #33202a;
+  --phnewsfeed-secondary-text: #FFF;
+  --phnewsfeed-text-dark: #111;
+  --phnewsfeed-text: #555;
+  --phnewsfeed-text-light: #777;
+  --phnewsfeed-header-background: #000000;
+  --phnewsfeed-header-lighter: #222;
+  --phnewsfeed-header-text: #FFFFFF;
+  --phnewsfeed-top-bar-text: #777777;
+  --phnewsfeed-mobile-header-background: #FFFFFF;
+  --phnewsfeed-mobile-header-text: #222222;
+}
+#footer-widgets {
+  background: var(--phnewsfeed-background-darker);
+  padding: 20px 0;
+  margin-top: 45px;
+}
+#footer-widgets .widget h2,
+#footer-widgets .widget h3,
+#footer-widgets .widget h4,
+#footer-widgets .widget h1,
+#footer-widgets .widget .widget-title {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px var(--phnewsfeed-background-darker);
+}
+#footer-widgets .widget ul,
+#footer-widgets .widget ol {
+  margin-left: 3px;
+  padding-left: 0px;
+  list-style: none;
+}
+#footer-widgets .widget li {
+  padding: 8px 0;
+  border-bottom: solid 1px var(--phnewsfeed-background-darker);
+}
+#footer-widgets .widget li:last-child {
+  border-bottom: none;
+}
+#footer-widgets .widget li a {
+  color: var(--phnewsfeed-text-light);
+  text-decoration: none;
+}
+#footer-widgets .widget li a:hover {
+  color: var(--phnewsfeed-secondary-dark);
+}
+#footer-widgets .widget_block h1:only-child,
+#footer-widgets .widget_block h2:only-child,
+#footer-widgets .widget_block h3:only-child,
+#footer-widgets .widget_block h4:only-child,
+#footer-widgets .widget_block h5:only-child,
+#footer-widgets .widget_block h6:only-child {
+  margin-bottom: -40px;
+}
+#colophon {
+  background: var(--phnewsfeed-primary);
+  color: var(--phnewsfeed-primary-text);
+  padding: 15px;
+  text-align: center;
+}
+#colophon a {
+  color: var(--phnewsfeed-primary-text);
+  font-weight: bold;
+  text-decoration: none;
+}
+/*# sourceMappingURL=footer.css.map */

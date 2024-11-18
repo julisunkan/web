@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Network Enumeration</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="http://use.fontawesome.com">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../../../../feed/index.html">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"..\/..\/..\/..\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="../../../../wp-includes/css/dist/block-library/style.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="my-custom-block-frontend-css-css" href="../../../../wp-content/plugins/wpdm-gutenberg-blocks/build/style.css?ver=6.7" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="wpdm-font-awesome-css" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdm-front-bootstrap-css" href="../../../../wp-content/plugins/download-manager/assets/bootstrap/css/bootstrap.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdm-front-css" href="../../../../wp-content/plugins/download-manager/assets/css/front.css?ver=6.7" media="all">
+<link rel="stylesheet" id="Rich_Web_Tabs-css" href="../../../../wp-content/plugins/tabbed//Style/Tabs-Rich-Web-Widget.css?ver=6.7" media="all">
+<link rel="stylesheet" id="rwtabs_fontawesome-css-css" href="../../../../wp-content/plugins/tabbed//Style/richwebicons.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wpdmpp-front-css" href="../../../../wp-content/plugins/wpdm-premium-packages/assets/css/wpdmpp.css?ver=6.7" media="all">
+<link rel="stylesheet" id="wordpress-popular-posts-css-css" href="../../../../wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.4.0" media="all">
+<link rel="stylesheet" id="phnewsfeed-style-css" href="../../../../wp-content/themes/ph-news-feed/style.css?ver=1.0.1.1" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="../../../../wp-content/themes/ph-news-feed/lib/bootstrap/bootstrap.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="../../../../wp-content/themes/ph-news-feed/lib/font-awesome/css/all.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="acme-ticker-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/acmeticker/css/style.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="owl-carousel-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/assets/owl.carousel.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="owl-carousel-theme-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/assets/owl.theme.default.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="sidr-dark-css-css" href="../../../../wp-content/themes/ph-news-feed/lib/sidr/stylesheets/jquery.sidr.dark.min.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-primary-font-css" href="http://fonts.googleapis.com/css2?family=Quicksand%3Awght%40100%3B200%3B300%3B400%3B500%3B600%3B700%3B900&amp;display=swap&amp;ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-secondary-font-css" href="http://fonts.googleapis.com/css2?family=Oswald%3Awght%40300%3B400%3B500%3B600%3B700&amp;display=swap&amp;ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-core-css" href="../../../../wp-content/themes/ph-news-feed/design-files/core/core.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-header-css" href="../../../../wp-content/themes/ph-news-feed/design-files/header/style3/header.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-blog-style1-css" href="../../../../wp-content/themes/ph-news-feed/design-files/blog-style/blog-style1.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-single-css" href="../../../../wp-content/themes/ph-news-feed/design-files/single/single.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-sidebar-css" href="../../../../wp-content/themes/ph-news-feed/design-files/sidebar/sidebar.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-footer-css" href="../../../../wp-content/themes/ph-news-feed/design-files/footer/footer.css?ver=6.7" media="all">
+<link rel="stylesheet" id="phnewsfeed-featured-modules-css" href="../../../../wp-content/themes/ph-news-feed/design-files/featured-modules/featured-modules.css?ver=6.7" media="all">
+<style id="posts-table-pro-head-inline-css">
+.posts-data-table { visibility: hidden; }
+</style>
+<script src="../../../../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="../../../../wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0" id="jquery-form-js"></script>
+<script src="../../../../wp-content/plugins/download-manager/assets/bootstrap/js/bootstrap.bundle.min.js?ver=6.7" id="wpdm-front-bootstrap-js"></script>
+<script id="wpdm-frontjs-js-extra">
+var wpdm_url = {"home":"..\/..\/..\/..\/index.html","site":"..\/..\/..\/..\/index.html","ajax":"..\/..\/..\/..\/wp-admin\/admin-ajax.php"};
+var wpdm_js = {"spinner":"<i class=\"fas fa-sun fa-spin\"><\/i>"};
+</script>
+<script src="../../../../wp-content/plugins/download-manager/assets/js/front.js?ver=6.1.0" id="wpdm-frontjs-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect.min.js?ver=1.13.3" id="jquery-effects-core-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-blind.min.js?ver=1.13.3" id="jquery-effects-blind-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-bounce.min.js?ver=1.13.3" id="jquery-effects-bounce-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-clip.min.js?ver=1.13.3" id="jquery-effects-clip-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-drop.min.js?ver=1.13.3" id="jquery-effects-drop-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-explode.min.js?ver=1.13.3" id="jquery-effects-explode-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-fade.min.js?ver=1.13.3" id="jquery-effects-fade-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-fold.min.js?ver=1.13.3" id="jquery-effects-fold-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.13.3" id="jquery-effects-highlight-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-pulsate.min.js?ver=1.13.3" id="jquery-effects-pulsate-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-size.min.js?ver=1.13.3" id="jquery-effects-size-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-scale.min.js?ver=1.13.3" id="jquery-effects-scale-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.13.3" id="jquery-effects-shake-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.13.3" id="jquery-effects-slide-js"></script>
+<script src="../../../../wp-includes/js/jquery/ui/effect-puff.min.js?ver=1.13.3" id="jquery-effects-puff-js"></script>
+<script id="Rich_Web_Tabs-js-extra">
+var rwtabs_object = {"ajaxurl":"..\/..\/..\/..\/wp-admin\/admin-ajax.php"};
+</script>
+<script src="../../../../wp-content/plugins/tabbed//Scripts/Tabs-Rich-Web-Widget.js?ver=6.7" id="Rich_Web_Tabs-js"></script>
+<script src="../../../../wp-content/plugins/wpdm-premium-packages/assets/js/wpdmpp-front.js?ver=6.7" id="wpdm-pp-js-js"></script>
+<script id="wpp-json" type="application/json">
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"..\/..\/..\/..\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/index.html","api_url":"..\/..\/..\/..\/wp-json\/wordpress-popular-posts\/index.html","ID":8863,"token":"64a95df02c","lang":0,"debug":0}
+</script>
+<script src="../../../../wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=6.4.0" id="wpp-js-js"></script>
+<link rel="https://api.w.org/" href="../../../../wp-json/index.html"><link rel="alternate" title="JSON" type="application/json" href="../../../../wp-json/wp/v2/posts/8863/index.html"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.7">
+<link rel="canonical" href="">
+<link rel="shortlink" href="../../../../index.html?p=8863">
+		<script type="text/javascript">
+			//<![CDATA[
+			var show_msg = '';
+			if (show_msg !== '0') {
+				var options = {view_src: "View Source is disabled!", inspect_elem: "Inspect Element is disabled!", right_click: "Right click is disabled!", copy_cut_paste_content: "Cut/Copy/Paste is disabled!", image_drop: "Image Drag-n-Drop is disabled!" }
+			} else {
+				var options = '';
+			}
+
+         	function nocontextmenu(e) { return false; }
+         	document.oncontextmenu = nocontextmenu;
+         	document.ondragstart = function() { return false;}
+
+			document.onmousedown = function (event) {
+				event = (event || window.event);
+				if (event.keyCode === 123) {
+					if (show_msg !== '0') {show_toast('inspect_elem');}
+					return false;
+				}
+			}
+			document.onkeydown = function (event) {
+				event = (event || window.event);
+				//alert(event.keyCode);   return false;
+				if (event.keyCode === 123 ||
+						event.ctrlKey && event.shiftKey && event.keyCode === 73 ||
+						event.ctrlKey && event.shiftKey && event.keyCode === 75) {
+					if (show_msg !== '0') {show_toast('inspect_elem');}
+					return false;
+				}
+				if (event.ctrlKey && event.keyCode === 85) {
+					if (show_msg !== '0') {show_toast('view_src');}
+					return false;
+				}
+			}
+			function addMultiEventListener(element, eventNames, listener) {
+				var events = eventNames.split(' ');
+				for (var i = 0, iLen = events.length; i < iLen; i++) {
+					element.addEventListener(events[i], function (e) {
+						e.preventDefault();
+						if (show_msg !== '0') {
+							show_toast(listener);
+						}
+					});
+				}
+			}
+			addMultiEventListener(document, 'contextmenu', 'right_click');
+			addMultiEventListener(document, 'cut copy paste print', 'copy_cut_paste_content');
+			addMultiEventListener(document, 'drag drop', 'image_drop');
+			function show_toast(text) {
+				var x = document.getElementById("amm_drcfw_toast_msg");
+				x.innerHTML = eval('options.' + text);
+				x.className = "show";
+				setTimeout(function () {
+					x.className = x.className.replace("show", "")
+				}, 3000);
+			}
+		//]]>
+		</script>
+		<style type="text/css">body * :not(input):not(textarea){user-select:none !important; -webkit-touch-callout: none !important;  -webkit-user-select: none !important; -moz-user-select:none !important; -khtml-user-select:none !important; -ms-user-select: none !important;}#amm_drcfw_toast_msg{visibility:hidden;min-width:250px;margin-left:-125px;background-color:#333;color:#fff;text-align:center;border-radius:2px;padding:16px;position:fixed;z-index:999;left:50%;bottom:30px;font-size:17px}#amm_drcfw_toast_msg.show{visibility:visible;-webkit-animation:fadein .5s,fadeout .5s 2.5s;animation:fadein .5s,fadeout .5s 2.5s}@-webkit-keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@-webkit-keyframes fadeout{from{bottom:30px;opacity:1}to{bottom:0;opacity:0}}@keyframes fadeout{from{bottom:30px;opacity:1}to{bottom:0;opacity:0}}</style>
+		<style>/* CSS added by WP Meta and Date Remover*/.wp-block-post-author__name{display:none !important;}
+.wp-block-post-date{display:none !important;}
+ .entry-meta {display:none !important;}
+	.home .entry-meta { display: none; }
+	.entry-footer {display:none !important;}
+	.home .entry-footer { display: none; }</style>    <script>
+        var wpdmpp_base_url = '../../../../wp-content/plugins/wpdm-premium-packages/index.html';
+        var wpdmpp_currency_sign = '$';
+        var wpdmpp_csign_before = '$';
+        var wpdmpp_csign_after = '';
+        var wpdmpp_currency_code = 'USD';
+        var wpdmpp_cart_url = '<br />
+<b>Warning:  Trying to access array offset on value of type bool in <b>C:\xampp\htdocs\wp-content\plugins\wpdm-premium-packages\includes\libs\functions.php on line <b>412<br />
+';
+
+        var wpdmpp_txt = {"cart_button_label":"<i class=\"fas fa-shopping-basket mr-2\"><\/i>Add To Cart","pay_now":"Complete Purchase","checkout_button_label":"Complete Purchase"};
+
+    </script>
+    <style>p.wpdmpp-notice {
+            margin: 5px;
+        }
+    .wpbtn-success {
+        color: var(--color-success) !important;border-color: var(--color-success ) !important;
+        background: rgba(var(--color-success-rgb),0.03) !important;
+        transition: all ease-in-out 300ms;
+    }
+        .wpbtn-success:active,
+        .wpbtn-success:hover {
+            color: var(--color-success-active) !important;
+            border-color: var(--color-success-active) !important;
+            background: rgba(var(--color-success-rgb),0.07) !important;
+        }
+    </style>
+                <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+             <style>
+ 	:root {
+		 --phnewsfeed-primary: #eded42;
+		 --phnewsfeed-primary-text: #000000;
+		 --phnewsfeed-background-main: #ffffff;
+		 --phnewsfeed-background-darker: #d6c5e2;
+		 
+		 --phnewsfeed-secondary: #1e73be;
+		 --phnewsfeed-secondary-text: #FFFFFF;
+		 --phnewsfeed-secondary-dark: #0e6bd6;
+		 
+		 --phnewsfeed-text-dark: #111;
+		 --phnewsfeed-text: #555;
+		 --phnewsfeed-text-light: #777;
+		 
+		 --phnewsfeed-header-background: #000000;
+		 --phnewsfeed-header-text: #FFFFFF;
+		 --phnewsfeed-header-lighter: #222222;
+		 --phnewsfeed-top-bar-text: #777777;
+		 
+		 --phnewsfeed-mobile-header-background: #000000;
+		 --phnewsfeed-mobile-header-text: #222222;
+	 }
+ </style>
+<style>
+			#masthead.style3 #middle-bar {
+				background: linear-gradient(90deg, 
+					#c90000,
+					#8158ff				 );
+			}
+		</style> <style>
+	 #masthead #site-branding .custom-logo {
+		 max-height: 100px !important;
+	 }
+ </style>
+      <meta name="onesignal" content="wordpress-plugin">
+            <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = 'OneSignalSDKUpdaterWorker.js';
+                      OneSignal.SERVICE_WORKER_PATH = 'OneSignalSDKWorker.js';
+                      OneSignal.SERVICE_WORKER_PARAM = { scope: '/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/push/onesignal/' };
+        OneSignal.setDefaultNotificationUrl("../../../../index.html");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '';
+oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
+oneSignal_options['httpPermissionRequest'] = { };
+oneSignal_options['httpPermissionRequest']['enable'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "../../../../wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/index.html";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+                OneSignal.init(window._oneSignalInitOptions);
+                      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+			}
+			</style>
+	<link rel="icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-32x32.png" sizes="32x32">
+<link rel="icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-180x180.png">
+<meta name="msapplication-TileImage" content="../../../../wp-content/uploads/2022/02/cropped-cropped-text2image_P1487918_20220215_120124-270x270.png">
+		<style id="wp-custom-css">
+			p {
+font-size:28px;
+}
+p { color:#000000; }
+@media all and (min-width: 56.25em) {
+
+  .post-title {
+    font-size: 28px;
+    line-height: 1.357;
+  }
+}
+@media all and (min-width: 68.75em) {
+
+  .post-title {
+    font-size: 38px;
+    line-height: 1.5;
+  }
+}
+
+/* Grid style */
+.display-posts-listing.grid {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.display-posts-listing.grid .title {
+	display: block;
+}
+
+.display-posts-listing.grid img { 
+	display: block; 
+	max-width: 100%; 
+	height: auto; 
+}
+
+@media (min-width: 600px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+}
+
+@media (min-width: 1024px) {
+	.display-posts-listing.grid {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+}		</style>
+		<meta name="generator" content="WordPress Download Manager 6.1.0">
+                <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
+        <style>
+            .w3eden .fetfont,
+            .w3eden .btn,
+            .w3eden .btn.wpdm-front h3.title,
+            .w3eden .wpdm-social-lock-box .IN-widget a span:last-child,
+            .w3eden .card-header,
+            .w3eden .card-footer,
+            .w3eden .badge,
+            .w3eden .label,
+            .w3eden .table,
+            .w3eden .card-body,
+            .w3eden .wpdm-frontend-tabs a,
+            .w3eden .alert:before,
+            .w3eden .discount-msg,
+            .w3eden .panel.dashboard-panel h3,
+            .w3eden #wpdm-dashboard-sidebar .list-group-item,
+            .w3eden #package-description .wp-switch-editor,
+            .w3eden .w3eden.author-dashbboard .nav.nav-tabs li a,
+            .w3eden .wpdm_cart thead th,
+            .w3eden #csp .list-group-item,
+            .w3eden .modal-title {
+                font-family: Rubik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+            .w3eden .btn
+            {
+                font-weight: 800 !important;
+            }
+            .w3eden .btn {
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .w3eden #csp .list-group-item {
+                text-transform: unset;
+            }
+
+
+        </style>
+            <style>
+        /* WPDM Link Template Styles */        </style>
+                <style>
+
+            :root {
+                --color-primary: #4a8eff;
+                --color-primary-rgb: 74, 142, 255;
+                --color-primary-hover: #5998ff;
+                --color-primary-active: #3281ff;
+                --color-secondary: #6c757d;
+                --color-secondary-rgb: 108, 117, 125;
+                --color-secondary-hover: #6c757d;
+                --color-secondary-active: #6c757d;
+                --color-success: #018e11;
+                --color-success-rgb: 1, 142, 17;
+                --color-success-hover: #0aad01;
+                --color-success-active: #0c8c01;
+                --color-info: #2CA8FF;
+                --color-info-rgb: 44, 168, 255;
+                --color-info-hover: #2CA8FF;
+                --color-info-active: #2CA8FF;
+                --color-warning: #FFB236;
+                --color-warning-rgb: 255, 178, 54;
+                --color-warning-hover: #FFB236;
+                --color-warning-active: #FFB236;
+                --color-danger: #ff5062;
+                --color-danger-rgb: 255, 80, 98;
+                --color-danger-hover: #ff5062;
+                --color-danger-active: #ff5062;
+                --color-green: #30b570;
+                --color-blue: #0073ff;
+                --color-purple: #8557D3;
+                --color-red: #ff5062;
+                --color-muted: rgba(69, 89, 122, 0.6);
+                --wpdm-font: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+
+            .wpdm-download-link.btn.btn-primary {
+                border-radius: 4px;
+            }
+
+
+        </style>
+                <script>
+            function wpdm_rest_url(request) {
+                return "../../../../wp-json/wpdm/index.html" + request;
+            }
+        </script>
+        </head>
+
+<body class="post-template-default single single-post postid-8863 single-format-standard wp-custom-logo">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+	
+				<header id="masthead" class="site-header style3 d-none d-sm-none d-md-block">
+				<div>
+										<div id="middle-bar">
+	<div class="container">
+		<div class="row">
+			<div id="site-branding" class="col">
+				<a href="../../../../index.html" class="custom-logo-link" rel="home"><img width="687" height="48" src="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png" class="custom-logo" alt="" decoding="async" srcset="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png 687w, ../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview-300x21.png 300w" sizes="(max-width: 687px) 100vw, 687px"></a>					<div class="site-title h1"><a href="../../../../index.html" rel="home"></a></div>
+			</div><!-- .site-branding -->
+			
+			<nav id="site-navigation" class="col main-navigation">
+				<div class="container">
+					<div class="menu-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-8280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8280"><a href="../../../../privacy-policy-2/index.html">Privacy Policy</a></li>
+<li id="menu-item-8562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8562"><a href="../../../../password-cracking-resources-and-tools/index.html">Passwords Cracking Resources and Tools.</a></li>
+<li id="menu-item-8563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8563"><a href="../../../../1-2/index.html">The Ultimate Network Penetration Testing Guide.</a></li>
+<li id="menu-item-8564" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8564"><a href="../../../../2022/07/28/sql-injection-with-shell-access/index.html">SQL Injection with Shell Access</a></li>
+<li id="menu-item-8565" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8565"><a href="../../../../2022/07/28/sql-injections-tools-and-attacks/index.html">SQL Injections: Tools and Attacks</a></li>
+<li id="menu-item-8566" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8566"><a href="../../../../2022/07/28/web-application-security-tools-and-attacks/index.html">Web Application Security: Tools and Attacks</a></li>
+<li id="menu-item-8574" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-8574"><a href="../../../../2022/06/03/the-metasploit-framework/index.html">Networking 101</a></li>
+</ul></div>				</div>
+			</nav><!-- #site-navigation -->
+				
+			<div class="social-menu-wrapper col">
+							</div>
+			
+			<div id="top-search" class="col">
+				<form role="search" method="get" class="search-form" action="../../../../index.html">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>	
+			</div>
+			
+			
+		</div>
+	</div>
+</div>	
+				</div>		
+			</header><!-- #masthead -->		
+			
+	 
+	<header id="masthead-mobile" class="d-flex d-sm-flex d-md-none">
+		<a href="#sidr" id="sidr-toggle" class="toggle-menu-hamburger"><i class="fa fa-bars"></i></a>
+		<div id="site-branding-mobile">
+			<a href="../../../../index.html" class="custom-logo-link" rel="home"><img width="687" height="48" src="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png" class="custom-logo" alt="" decoding="async" srcset="../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview.png 687w, ../../../../wp-content/uploads/2022/06/cropped-output-onlinetexttools-removebg-preview-300x21.png 300w" sizes="(max-width: 687px) 100vw, 687px"></a>	</div><!-- .site-branding -->		<a href="#search-drop" class="search-toggle"><i class="fa fa-search"></i></a>
+	</header>	
+
+	<div class="container">
+		<div class="row">			<div class="acme-ticker-wrapper container d-none d-sm-none d-md-block">
+			<div class="acme-news-ticker">
+					<div class="acme-news-ticker-label">Latest Tools &amp; Resources</div>
+					<div class="acme-news-ticker-box">
+						<ul class="my-news-ticker">
+													
+							<li class="ticker-post"> 
+								<a href="../apache-tomcat-penetration-testing/index.html">
+									Apache Tomcat Penetration Testing																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../penetration-testing-on-mysql-port-3306/index.html">
+									Penetration Testing on MYSQL (Port 3306)																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../advanced-system-network-pen-testing-guides/index.html">
+									Advanced System &amp; Network Pen-Testing Guides																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../vulnerability-scanning/index.html">
+									Vulnerability Scanning																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="">
+									Network Enumeration																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../scanning-a-target-network/index.html">
+									Scanning a Target Network																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../what-is-footprinting-and-reconnaissance/index.html">
+									What is Footprinting and Reconnaissance?																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../15/how-to-use-hydra-to-crack-passwords-penetration-testing/index.html">
+									How to Use Hydra&#8202; to Crack Passwords &ndash; Penetration Testing.																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../15/password-cracking-hash-gathering/index.html">
+									Password Cracking &amp; Hash Gathering																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../15/cracking-passwords-with-john-the-ripper-a-comprehensive-guide/index.html">
+									Cracking Passwords with John the Ripper: A Comprehensive Guide&nbsp;																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/07/28/sql-injection-with-shell-access/index.html">
+									SQL Injection with Shell Access																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/07/28/sql-injections-tools-and-attacks/index.html">
+									SQL Injections: Tools and Attacks																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/07/28/web-application-security-tools-and-attacks/index.html">
+									Web Application Security: Tools and Attacks																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+														
+							<li class="ticker-post"> 
+								<a href="../../../../2022/06/03/the-metasploit-framework/index.html">
+									Networking 101																		<span class="footer-meta"><time class="entry-date published updated" datetime=""></time></span>
+								</a>
+							</li>
+							
+													</ul>
+					</div>
+					<div class="acme-news-ticker-controls acme-news-ticker-vertical-controls">
+						<button class="acme-news-ticker-arrow acme-news-ticker-prev"></button>
+						<button class="acme-news-ticker-pause"></button>
+						<button class="acme-news-ticker-arrow acme-news-ticker-next"></button>
+					</div>
+			</div> 
+		</div>
+
+	<main id="primary" class="site-main col-md-12">
+
+		<article id="post-8863" class="single-style1 post-8863 post type-post status-publish format-standard has-post-thumbnail hentry category-ethical-hacking-with-kali-linux category-ethical-hacking-botnets-mac-flooding-arp-attacks-ddos-sniffing-penetration-testing">
+
+	<header class="entry-header">
+		<h1 class="entry-title">Network Enumeration</h1>	
+			<div class="entry-meta">
+				<span class="posted-on">Posted on <a href="" rel="bookmark"><time class="entry-date published" datetime=""></time><time class="updated" datetime=""></time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="../../../../author/julisunkan/index.html"></a></span></span>			</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	
+			<div class="post-thumbnail">
+				<img width="640" height="480" src="../../../../wp-content/uploads/2024/11/zr30wgyb.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchpriority="high">			</div><!-- .post-thumbnail -->
+
+		
+	<div class="entry-content clearfix">
+		
+<h1 class="wp-block-heading" id="what-is-enumeration">What is Enumeration?</h1>
+
+
+
+<p>Enumeration is the process of extracting user names, machine names, network resources, shares, and services from a system, and its conducted in an intranet environment.</p>
+
+
+
+<p>In this phase, the attacker creates an active connection to the system and performs directed queries to gain more information about the target. The gathered information is used to identify the vulnerabilities or weak points in system security and tries to exploit in the System gaining phase.</p>
+
+
+
+<h1 class="wp-block-heading" id="enumerating-services">Enumerating Services</h1>
+
+
+
+<p>Extracting user names, machine names, network resources, shares, and services from a system.</p>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#objectives"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Scan all the machines on a given network or subnet.</li>
+
+
+
+<li>List all alive hosts.</li>
+
+
+
+<li>Determine open ports on a given node.</li>
+
+
+
+<li>Find if any port has firewall restriction.</li>
+
+
+
+<li>Enumerate all the services running on the port along with their respective versions.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="requisites">Requisites:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#requisites"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Windows Server 2012 or 2016 machine.</li>
+
+
+
+<li>Kali Linux machine.</li>
+
+
+
+<li>Another version of Windows (7, 8, 10 or Server).</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="ping-sweep---nmap">Ping Sweep &ndash;&nbsp;<code>Nmap</code><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#ping-sweep---nmap"></a></h2>
+
+
+
+<p>You can perform a ping sweep in Nmap by using ping scan only (<code>-sP</code>) on the whole subnet.</p>
+
+
+
+<p>The ping sweep on Nmap will scan all the nodes on the subnet and starts displaying all the hosts that are up and running, along with their respective MAC Addresses and device information.</p>
+
+
+
+<p>Open a new Terminal window on your Kali Linux and type::</p>
+
+
+
+<p><code>nmap -sP 10.0.2.1/24</code></p>
+
+
+
+<pre class="wp-block-code"><code>Nmap scan report for 10.0.2.1
+Host is up (0.0011s latency).
+MAC Address: 22:44:99:33:11:55 QEMU virtual NIC)
+Nmap scan report for 10.0.2.2
+Host is up (0.00084s latency).
+MAC Address: 22:44:99:33:11:55 (QEMU virtual NIC)
+Nmap scan report for 10.0.2.3
+Host is up (0.00097s latency).
+MAC Address: 11:22:33:44:55:66 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.0.2.22
+Host is up (0.00075s latency).
+MAC Address: 11:22:33:44:55:66 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.0.2.23
+Host is up (0.00066s latency).
+MAC Address: 11:22:33:44:55:66 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.0.2.37
+Host is up (0.00051s latency).
+MAC Address: 11:22:33:44:55:66 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.0.2.15
+Host is up.
+Nmap done: 256 IP addresses (7 hosts up) scanned in 2.29 seconds
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="ping-sweep---bash">Ping Sweep &ndash;&nbsp;<code>Bash</code><a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#ping-sweep---bash"></a></h2>
+
+
+
+<p>I will show another way to check live hosts on the subnet with a little bit of&nbsp;<strong>Bash scripting</strong>. You can scroll to the next section if you are not interested.</p>
+
+
+
+<h3 class="wp-block-heading" id="1-test-the-one-liner-command-to-grab-only-ip-addresses">1. Test the one-liner command to grab only IP addresses<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#1-test-the-one-liner-command-to-grab-only-ip-addresses"></a></h3>
+
+
+
+<p>First of, I will use the&nbsp;<code>ping</code>&nbsp;command on a given subnet range, to check if the hosts are alive.<br><strong>The goal is: ping every single host on a given range with a clean output for it.</strong></p>
+
+
+
+<p>The clean output part is because when we use&nbsp;<code>ping</code>&nbsp;command, they return a bunch of strings, the goal is remove all the unnecessary information and stick only to the IP addresses.&nbsp;<strong>Example:</strong></p>
+
+
+
+<p><code>ping -c 1 8.8.8.8</code></p>
+
+
+
+<pre class="wp-block-code"><code>PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=155 ms
+--- 8.8.8.8 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+</code></pre>
+
+
+
+<p>We only need the second line of this output starting with&nbsp;<strong>&ldquo;64 bytes(&hellip;)&rdquo;</strong>&nbsp;that have the IP address of the alive host.</p>
+
+
+
+<pre class="wp-block-code"><code>64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=155 m
+</code></pre>
+
+
+
+<p><strong>Grabbing only IP addresses:</strong></p>
+
+
+
+<p><code>ping -c 5 8.8.8.8 | grep "64" | cut -d " " -f 4 | tr -d ":" ; &gt; iptest.txt</code></p>
+
+
+
+<pre class="wp-block-code"><code>8.8.8.8
+8.8.8.8
+8.8.8.8
+8.8.8.8
+8.8.8.8
+</code></pre>
+
+
+
+<p>Breaking down the one-liner command (by pipe):</p>
+
+
+
+<ol class="wp-block-list">
+<li>Ping the IP 5 times;</li>
+
+
+
+<li>Grep the first string characters of the line (<strong>64</strong>&nbsp;bytes&hellip;);</li>
+
+
+
+<li>Cut the whitespaces on 4 slices to reach the IP string;</li>
+
+
+
+<li>Use translate command to trim/delete the &ldquo;:&rdquo; symbol;</li>
+
+
+
+<li>Export the results to a .txt file;</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="2-transforming-into-script">2. Transforming into script<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#2-transforming-into-script"></a></h3>
+
+
+
+<ol class="wp-block-list">
+<li>Create a file .sh (pingsweep.sh)</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code><em>#!/bin/bash </em>
+ 
+<strong>if</strong> <strong>[</strong> "$1" <strong>==</strong> "" <strong>]</strong>
+<strong>then
+</strong>echo "[-] You forgot the IP address!"
+echo "[-] Syntax: ./ipsweep.sh 10.10.10"
+
+<strong>else
+for </strong>ip <strong>in</strong> `seq 1 254`; <strong>do 
+</strong>ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &amp;
+<strong>done
+fi</strong>
+</code></pre>
+
+
+
+<p>Is more convenient to take the user&rsquo;s input on the first three octets and the last octet is the loop (1 &ndash; 254).<br><strong>Input example: 192.168.1</strong></p>
+
+
+
+<p>The script below is very barebone, have one conditional statement for grab the correct user&rsquo;s input, a loop through the subnet range, and the one-liner command using the user&rsquo;s input with the loop variable.</p>
+
+
+
+<ol class="wp-block-list">
+<li>Save the file, change the permissions and make executable:</li>
+</ol>
+
+
+
+<p><code>chmod 770 pingsweep.sh</code><br><code>chmod +x pingsweep.sh</code></p>
+
+
+
+<ol class="wp-block-list">
+<li>Test it out:</li>
+</ol>
+
+
+
+<p><code>./pingsweep.sh 10.0.2 &gt; ping-results.txt</code><br><code>cat ping-results.txt</code></p>
+
+
+
+<pre class="wp-block-code"><code>10.0.2.3
+10.0.2.1
+10.0.2.15
+10.0.2.22
+10.0.2.23
+10.0.2.37
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="perform-stealth-syn-scan">Perform Stealth Syn Scan<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#perform-stealth-syn-scan"></a></h2>
+
+
+
+<p>Now, choose and IP address from the results, and perform a&nbsp;<strong>stealthy syn scan</strong>&nbsp;on&nbsp;<strong>Nmap</strong>.</p>
+
+
+
+<p><code>nmap -sS &lt;Target IP Address&gt;</code></p>
+
+
+
+<pre class="wp-block-code"><code>...
+Host is up (0.00092s latency).
+Not shown: 977 closed ports
+PORT      STATE SERVICE
+53/tcp    open  domain
+80/tcp    open  http
+88/tcp    open  kerberos-sec
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+389/tcp   open  ldap
+443/tcp   open  https
+...
+</code></pre>
+
+
+
+<p>SYN scan is the default and most popular scan option for good reason. It can be performed quickly, scanning thousands of ports per second on a fast network not hampered by intrusive firewalls.</p>
+
+
+
+<h2 class="wp-block-heading" id="stealth-syn-scan-with-version-and-os-detection">Stealth Syn Scan with Version and OS Detection<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#stealth-syn-scan-with-version-and-os-detection"></a></h2>
+
+
+
+<p>Version Detection collects information about the specific service running on an open port, including the product name and version number. This information can be critical in determining an entry point for an attack</p>
+
+
+
+<p>Nmap will perform a stealth scan with version detection along with OS detection.</p>
+
+
+
+<p><code>nmap -sSV -O &lt;Target IP Address&gt; -oN Enumeration.txt</code></p>
+
+
+
+<pre class="wp-block-code"><code>Host is up (0.0017s latency).
+Not shown: 977 closed ports
+PORT      STATE SERVICE            VERSION
+53/tcp    open  domain?
+80/tcp    open  http               Microsoft IIS httpd 8.5
+88/tcp    open  kerberos-sec       Microsoft Windows Kerberos (server time: 2019-12-06 20:56:57Z)
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+389/tcp   open  ldap               Microsoft Windows Active Directory LDAP (Domain: Lab.local, Site: Default-First-Site-Name)
+443/tcp   open  ssl/https?
+</code></pre>
+
+
+
+<p>The&nbsp;<code>-oN</code>&nbsp;stands for output / export the results into a text file that will save in your home /root/ directory with name&nbsp;<code>Enumeration.txt</code>.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h3 class="wp-block-heading" id="conclusion">Conclusion<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/1-Enumerating-with-Nmap.html#conclusion"></a></h3>
+
+
+
+<p>By performing services enumeration, an attacker might attempt to find vulnerabilities associated with that particular application and exploit them to gain access to the target machine.</p>
+
+
+
+<h1 class="wp-block-heading" id="snmp-enumeration-using-snmp_enum">SNMP Enumeration using&nbsp;<code>snmp_enum</code></h1>
+
+
+
+<p><strong>snmp_enum</strong>&nbsp;module in Metasploit allows enumeration of any devices with SNMP protocol support. It supports hardware, software, and network information. The default community used is &lsquo;public&rsquo;.</p>
+
+
+
+<p>SNMP enumeration is the process of enumerating the users accounts and devices on a SNMP enabled computer.</p>
+
+
+
+<p>SNMP service comes with two passwords, which are used to configure and access the SNMP agent from the management station. They are: Read community string and Read/Write community string. These strings (passwords) come with a default value, which is same for all the systems. They become easy entry points for attackers if left unchanged by administrator.</p>
+
+
+
+<p>Attackers enumerate SNMP to extract information about network resources such as hosts, routers, devices, shares(&hellip;) Network information such as ARP tables, routing tables, device specific information and traffic statistics.</p>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/2-SNMP-Enumeration.html#objectives"></a></h3>
+
+
+
+<p>Enumeration:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Connected devices</li>
+
+
+
+<li>Hostname and information</li>
+
+
+
+<li>Domain</li>
+
+
+
+<li>Hardware and storage information</li>
+
+
+
+<li>Software components</li>
+
+
+
+<li>Total memory</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements:<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/2-SNMP-Enumeration.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux machine (Attacker)</li>
+
+
+
+<li>Windows Server 2012 / 2016 (Victim/Target)</li>
+
+
+
+<li>Ubuntu&nbsp;<a href="https://www.vulnhub.com/entry/bwapp-bee-box-v16,53/">BeeBox</a>&nbsp;(Victim/Target)</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="test-for-snmp-port-status">Test for SNMP Port Status<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/2-SNMP-Enumeration.html#test-for-snmp-port-status"></a></h2>
+
+
+
+<p>First we need to find out whether the SNMP port is opened.&nbsp;<strong>SNMP uses port 161 by default</strong>. To check this information, we first need to run Nmap port scan.</p>
+
+
+
+<p><strong>Note</strong>: Remember to activate the SNMP service on your Windows Server.</p>
+
+
+
+<p><code>-sU</code>: Scans UDP port.<br><code>-p</code>: Port scan range.</p>
+
+
+
+<p><code>nmap -sU -p 161 &lt;Target IP Address&gt;</code></p>
+
+
+
+<pre class="wp-block-code"><code>Nmap scan report for 10.0.2.38
+Host is up (0.00070s latency).
+
+PORT    STATE SERVICE
+161/udp open  snmp
+MAC Address: 11:22:33:44:55:66 (Oracle VirtualBox virtual NIC)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="enumerate-community-string">Enumerate Community String<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/2-SNMP-Enumeration.html#enumerate-community-string"></a></h2>
+
+
+
+<p>To perform SNMP enumeration, you have many tools available.<br>This tutorial demonstrate two ways to do the same thing: using&nbsp;<strong>Metasploit</strong>&nbsp;and&nbsp;<strong>snmp-check</strong>.</p>
+
+
+
+<p>On Metasploit, you can use&nbsp;<strong>snmp_enum</strong>&nbsp;module:</p>
+
+
+
+<p><code>auxiliary/scanner/snmp/snmp_enum</code></p>
+
+
+
+<p>The other way to do this is to use snmp-check.<br>snmp-check is a package built-in on Kali Linux, just open the terminal and type:</p>
+
+
+
+<p><code>snmp-check &lt;Target IP Address&gt;</code></p>
+
+
+
+<p>Both methods enumerates the target machine information, and retrieve the same&nbsp;<strong>comprehensive list</strong>&nbsp;displaying the&nbsp;<strong>System Information</strong>. These tools supports the following enumerations:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Host IP</li>
+
+
+
+<li>Hostname</li>
+
+
+
+<li>Hardware description</li>
+
+
+
+<li>System uptime</li>
+
+
+
+<li>SNMP uptime</li>
+
+
+
+<li>Domain if system is connected in Domain</li>
+
+
+
+<li>User Accounts</li>
+
+
+
+<li>MAC Addresses</li>
+
+
+
+<li>Running Processes</li>
+
+
+
+<li><a href="https://tools.kali.org/information-gathering/snmp-check">Etc</a></li>
+</ul>
+
+
+
+<h1 class="wp-block-heading" id="enumerating-windows-and-samba-using-enum4linux">Enumerating Windows and Samba using Enum4linux</h1>
+
+
+
+<p>A Linux alterantive to enum.exe for enumerating data from Windows and Samba hosts.</p>
+
+
+
+<p>Enum4linux is a tool for enumerating information from Windows and Samba systems. As a security person you have to secure process where the attacker can establish an active connection with the victim and try to discover as many attack vectors as possible, which can be used to exploit the systems further.</p>
+
+
+
+<h3 class="wp-block-heading" id="objectives">Objectives<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#objectives"></a></h3>
+
+
+
+<p>Enumeration:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Connected Devices</li>
+
+
+
+<li>Hostname and information</li>
+
+
+
+<li>Domain</li>
+
+
+
+<li>Hardware and storage information</li>
+
+
+
+<li>Software Components</li>
+
+
+
+<li>Total Memory</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="requirements">Requirements<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#requirements"></a></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Kali Linux (Attacker)</li>
+
+
+
+<li>Windows Server 2012 R2 (Target)</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="get-user-info">Get user info<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#get-user-info"></a></h2>
+
+
+
+<p>Go to the Kali Linux and Open a new Terminal window.<br>Type&nbsp;<code>enum4linux -h</code>&nbsp;to view the options.</p>
+
+
+
+<p>Next, type some existing credentials:</p>
+
+
+
+<p><code>enum4linux -u CEH -p Pa55w.rd -U 10.0.2.23</code></p>
+
+
+
+<p>-u: Username, -p Password, -U users information</p>
+
+
+
+<p>The enum4linux starts enumerating the workgroups/domains first and displays the results all the results.</p>
+
+
+
+<p>It lists out the Users info with their respective RIDs as show below:</p>
+
+
+
+<pre class="wp-block-code"><code>index: 0xf4d RID: 0x1f4 acb: 0x00000010 Account: Administrator  Name: (null)    Desc: Built-in account for administering the computer/domain
+index: 0x1025 RID: 0x453 acb: 0x00000014 Account: bobby Name: Bobby     Desc: (null)
+index: 0x1024 RID: 0x452 acb: 0x00000010 Account: CEH   Name: (null)    Desc: (null)
+index: 0xf4e RID: 0x1f5 acb: 0x00000214 Account: Guest  Name: (null)    Desc: Built-in account for guest access to the computer/domain
+index: 0xf85 RID: 0x1f6 acb: 0x00020011 Account: krbtgt Name: (null)    Desc: Key Distribution Center Service Account
+index: 0x102b RID: 0x459 acb: 0x00000010 Account: shmurdance    Name: (null)    Desc: (null)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="get-os-info">Get OS info<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#get-os-info"></a></h2>
+
+
+
+<p>This option enumerates the target system and lists out its OS details as show below</p>
+
+
+
+<p><code>enum4linux -u CEH -p Pa55w.rd -o 10.0.2.23</code></p>
+
+
+
+<p>-o: Get OS information</p>
+
+
+
+<pre class="wp-block-code"><code> =================================== 
+|    OS information on 10.0.2.23    |
+ =================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 10.0.2.23 from smbclient: 
+[+] Got OS info for 10.0.2.23 from srvinfo:
+        10.0.2.23      Wk Sv Sql PDC Tim NT 
+        platform_id     :       500
+        os version      :       6.3
+        server type     :       0x80102f
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="get-password-policy-info">Get Password Policy info<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#get-password-policy-info"></a></h2>
+
+
+
+<p>This options enumerates the target system and displays its entire password policy information as show below:</p>
+
+
+
+<p><code>enum4linux -u CEH -p Pa55w.rd -P 10.0.2.23</code></p>
+
+
+
+<p>-P: Get password policy information</p>
+
+
+
+<pre class="wp-block-code"><code> ================================================= 
+|    Password Policy Information for 10.0.2.23    |
+ ================================================= 
+
+[+] Attaching to 10.0.2.23 using shmurdance:Pa55w.rd
+[+] Trying protocol 445/SMB...
+[+] Found domain(s):
+
+        [+] LAB
+        [+] Builtin
+
+[+] Password Info for Domain: LAB
+
+        [+] Minimum password length: 7
+        [+] Password history length: 24
+        [+] Maximum password age: 41 days 23 hours 53 minutes 
+        [+] Password Complexity Flags: 000001
+
+                [+] Domain Refuse Password Change: 0
+                [+] Domain Password Store Cleartext: 0
+                [+] Domain Password Lockout Admins: 0
+                [+] Domain Password No Clear Change: 0
+                [+] Domain Password No Anon Change: 0
+                [+] Domain Password Complex: 1
+
+        [+] Minimum password age: 1 day 4 minutes 
+        [+] Reset Account Lockout Counter: 30 minutes 
+        [+] Locked Account Duration: 30 minutes 
+        [+] Account Lockout Threshold: None
+        [+] Forced Log off Time: Not Set
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Enabled
+Minimum Password Length: 7
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="get-group-info">Get Group Info<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#get-group-info"></a></h2>
+
+
+
+<p>This options enumerates the target system and displays the group policy information, showing domain groups, memberships, local groups and so on.</p>
+
+
+
+<p><code>enum4linux -u CEH -p Pa55w.rd -G 10.0.2.23</code></p>
+
+
+
+<h2 class="wp-block-heading" id="get-share-info">Get Share info<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/3-Enum4linux-Win-and-Samba-Enumeration.html#get-share-info"></a></h2>
+
+
+
+<p>This option enumerate the share policy information of the target machine</p>
+
+
+
+<p><code>enum4linux -u CEH -p Pa55w.rd -S 10.0.2.23</code></p>
+
+
+
+<p>-S: Get sharelist</p>
+
+
+
+<h1 class="wp-block-heading" id="gui-tools-for-enumeration-in-windows">GUI Tools for Enumeration in Windows</h1>
+
+
+
+<h2 class="wp-block-heading" id="global-network-inventory">Global Network Inventory<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/4-Windows-EnumerationTools.html#global-network-inventory"></a></h2>
+
+
+
+<p>Global Network Inventory is used as an audit scanner in zero deployment and agent-free environments. It scans computers by IP range, by domain, and single or multiple computers, as defined by the Global Network Inventory host file. You can enumerate NetBIOS, Users Groups, Users, Software running, BIOS and so on.<br>[Trial/Paid]<br>http://www.magnetosoft.com/product/global_network_inventory/download</p>
+
+
+
+<h2 class="wp-block-heading" id="advanced-ip-scanner">Advanced IP Scanner<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/4-Windows-EnumerationTools.html#advanced-ip-scanner"></a></h2>
+
+
+
+<p>Free network scanner to analyse LAN. The program shows all network devices, gives you access to shared folders, provides remote control of computers (via RDP and Radmin), and can even remotely switch computers off. It is easy to use and runs as a portable edition. It should be the first choice for every network admin.<br>[Free]<br>https://www.advanced-ip-scanner.com/</p>
+
+
+
+<h2 class="wp-block-heading" id="hyena">Hyena<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/4-Windows-EnumerationTools.html#hyena"></a></h2>
+
+
+
+<p>Hyena provides extensive Active Directory (AD) reporting, with built-in tools for customizable queries, filtering, management of object properties, advanced attribute management, and many other AD administration features.<br>[Trial/Paid]<br>https://systemtools.com/</p>
+
+
+
+<h2 class="wp-block-heading" id="superscan">SuperScan<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/4-Windows-EnumerationTools.html#superscan"></a></h2>
+
+
+
+<p>Free Port scanner for Windows. You can use the program to scan IPs, HTTPS, FTP, and more.<br>[Free]<br>https://superscan.en.softonic.com/</p>
+
+
+
+<h2 class="wp-block-heading" id="softperfect-networkscanner">SoftPerfect NetworkScanner<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/4-Windows-EnumerationTools.html#softperfect-networkscanner"></a></h2>
+
+
+
+<p>Network scanner can ping computers, scan ports, discover shared folders and so on.<br>[Trial/Paid] https://www.softperfect.com/products/networkscanner/</p>
+
+
+
+<h2 class="wp-block-heading" id="adexplorer">ADExplorer<a href="https://julisunkan.github.io/Network-Servers-Penetration-Guides-and-Tools/3-Enumeration/4-Windows-EnumerationTools.html#adexplorer"></a></h2>
+
+
+
+<p>Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database, define favorite locations, view object properties and attributes without having to open dialog boxes, edit permissions, view an object&rsquo;s schema, and execute sophisticated searches that you can save and re-execute.</p>
+
+
+
+<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
+https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer
+</div></figure>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer clearfix">
+		<span class="cat-links">Posted in <a href="../../../../category/ethical-hacking-with-kali-linux/index.html" rel="category tag">Ethical Hacking With Kali Linux</a>, <a href="../../../../category/ethical-hacking-botnets-mac-flooding-arp-attacks-ddos-sniffing-penetration-testing/index.html" rel="category tag">Ethical Hacking, Botnets, MAC Flooding, ARP Attacks, DDos, Sniffing &amp; Penetration Testing.</a></span>	</footer><!-- .entry-footer -->
+		
+	
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../scanning-a-target-network/index.html" rel="prev"><i class="fa fa-arrow-alt-circle-left"></i><span class="nav-title">Scanning a Target Network</span></a></div><div class="nav-next"><a href="../vulnerability-scanning/index.html" rel="next"><span class="nav-title">Vulnerability Scanning</span><i class="fa fa-arrow-alt-circle-right"></i></a></div></div>
+	</nav>			
+</article><!-- #post-8863 -->
+	</main><!-- #main --> 
+
+
+<aside id="secondary" class="widget-area d-none">
+	<section id="block-4" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section><section id="block-5" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section><section id="block-6" class="widget widget_block">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+</section></aside><!-- #secondary -->
+	</div><!--#.row-->
+	</div><!--.container-->	<footer id="footer-widgets">
+	<div class="container">
+		<div class="row">
+											</div>
+	</div>
+</footer>	<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		&copy;   2024		<span class="sep"> | </span>
+			Designed by <a rel="nofollow" href="">julisunkan</a>.	</div><!-- .site-info -->
+</footer><!-- #colophon -->	</div><!-- #page -->
+
+<div id="sidr">
+	<button class="go-to-bottom"><i class="fa fa-down"></i></button>
+	<button id="close-menu" class="toggle-menu-link"><i class="fa fa-times"></i></button>
+	<form role="search" method="get" class="search-form" action="../../../../index.html">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>		<div class="sidr-menu-wrapper">
+		<div id="mobile-menu-sidr" class="menu"><ul>
+<li class="page_item page-item-8534"><a href="../../../../index.html">Botnets Attacks: Tools and Resources.</a></li>
+<li class="page_item page-item-8676"><a href="../../../../cart/index.html">Cart</a></li>
+<li class="page_item page-item-8583"><a href="../../../../document-library/index.html">Document Library</a></li>
+<li class="page_item page-item-8584"><a href="../../../../document-search/index.html">Document Search Results</a></li>
+<li class="page_item page-item-8259 current_page_parent"><a href="../../../../ethical-hacking-tools-resources/index.html">ETHICAL HACKING TOOLS &amp; RESOURCES</a></li>
+<li class="page_item page-item-8221"><a href="../../../../password-cracking-resources-and-tools/index.html">Passwords Cracking Resources and Tools.</a></li>
+<li class="page_item page-item-8281"><a href="../../../../privacy-policy-2/index.html">Privacy Policy</a></li>
+<li class="page_item page-item-8677"><a href="../../../../purchases/index.html">Purchases</a></li>
+<li class="page_item page-item-2"><a href="../../../../1-2/index.html">The Ultimate Network Penetration Testing Guide.</a></li>
+<li class="page_item page-item-8589"><a href="../../../../video-courses/index.html">video Courses</a></li>
+</ul></div>
+	</div>
+	<button class="go-to-top"><i class="fa fa-up"></i></button>
+	
+</div>    <div id="amm_drcfw_toast_msg"></div>
+            <script>
+                jQuery(function($){
+
+                    
+                                    });
+            </script>
+            <div id="fb-root"></div>
+                    <style>
+
+            .wpdm-popover {
+                transition: all ease-in-out 400ms;
+                position: relative;display: inline-block;
+            }
+
+            .wpdm-popover .wpdm-hover-card {
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                width: 100%;
+                transition: all ease-in-out 400ms;
+                margin-bottom: 28px;
+                opacity: 0;
+                z-index: -999999;
+            }
+
+            .wpdm-popover:hover .wpdm-hover-card {
+                transition: all ease-in-out 400ms;
+                opacity: 1;
+                z-index: 999999;
+                bottom: 0px;
+            }
+
+            .wpdm-popover .wpdm-hover-card.hover-preview img {
+                width: 104px;
+                border-radius: 3px;
+            }
+
+            .wpdm-popover .card .card-footer{
+                background: rgba(0,0,0,0.02);
+            }
+
+            .packinfo {
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        </style>
+        <script>
+            jQuery(function ($) {
+                $('a[data-show-on-hover]').on('hover', function () {
+                    $($(this).data('show-on-hover')).fadeIn();
+                });
+            });
+        </script>
+                <div class="w3eden">
+            <div id="wpdm-popup-link" class="modal fade">
+                <div class="modal-dialog" style="width: 750px">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                              <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body" id="wpdm-modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
+        </div>
+        <script language="JavaScript">
+            <!--
+            jQuery(function () {
+                jQuery('.wpdm-popup-link').click(function (e) {
+                    e.preventDefault();
+                    jQuery('#wpdm-popup-link .modal-title').html(jQuery(this).data('title'));
+                    jQuery('#wpdm-modal-body').html('<i class="icon"><img align="left" style="margin-top: -1px" src="../../../../wp-content/plugins/download-manager/assets/images/loading-new.gif" />&nbsp;Please Wait...');
+                    jQuery('#wpdm-popup-link').modal('show');
+                    jQuery.post(this.href,{mode:'popup'}, function (res) {
+                        jQuery('#wpdm-modal-body').html(res);
+                    });
+                    return false;
+                });
+            });
+            //-->
+        </script>
+        <style type="text/css">
+            #wpdm-modal-body img {
+                max-width: 100% !important;
+            }
+            .wpdm-placeholder{
+                display: none;
+            }
+        </style>
+            <div class="w3eden">
+            <div class="modal" tabindex="-1" id="wpdm-pdf-preview">
+                <div class="modal-dialog modal-dialog-centered" style="width: 900px;max-width: 100%;">
+                    <div class="modal-content" style="box-shadow: 0 0 20px rgba(0,0,0,0.2);border-radius: 4px;overflow: hidden">
+                        <div class="modal-body p-0">
+                            <iframe id="wpdm-pdf-preview-frame" src="data:text/plain;base64,TG9hZGluZyBQREYgRmlsZS4uLg==" style="width: 100%;border: 0;height: 700px;margin: 0 0 -8px;padding: 0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            jQuery(function ($){
+                $('.wpdm-pdf-preview').on('click', function (){
+                    $('#wpdm-pdf-preview-frame').attr('src', "data:text/plain;base64,TG9hZGluZyBQREYgRmlsZS4uLg==");
+                    $('#wpdm-pdf-preview-frame').attr('src', $(this).attr('href'));
+                });
+            });
+        </script>
+        <style>
+            #wpdm-pdf-preview {
+                background: rgba(0,0,0,0.4);
+            }
+        </style>
+        <script id="custom-script-js-extra">
+var wpdata = {"object_id":"8863","site_url":"..\/..\/..\/..\/index.html"};
+</script>
+<script src="../../../../wp-content/plugins/wp-meta-and-date-remover/assets/js/inspector.js?ver=1.0" id="custom-script-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/js/navigation.js?ver=1.0.1.1" id="phnewsfeed-navigation-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/acmeticker/js/acmeticker.min.js?ver=6.7" id="acme-ticker-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/owl-carousel/dist/owl.carousel.js?ver=2.3.4" id="owl-carousel-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/lib/sidr/jquery.sidr.min.js?ver=2.2.1" id="sidr-js"></script>
+<script src="../../../../wp-content/themes/ph-news-feed/js/theme.js?ver=1.0.1.1" id="phnewsfeed-theme-js-js"></script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=1.0.0" id="remote_sdk-js" async data-wp-strategy="async"></script>
+
+</body>
+</html>
+<!-- Powered by Staatic (https://staatic.com/) -->
